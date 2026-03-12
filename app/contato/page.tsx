@@ -2,12 +2,12 @@
 
 export default function ContatoPage() {
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-10">
-      <header className="space-y-3">
+    <div className="mx-auto flex max-w-6xl flex-col gap-6 sm:gap-8 md:gap-10">
+      <header className="space-y-2 sm:space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
           Fale com a HD
         </p>
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+        <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
           Contato
         </h1>
         <p className="max-w-2xl text-sm text-slate-400">
@@ -17,9 +17,9 @@ export default function ContatoPage() {
         </p>
       </header>
 
-      <section className="grid gap-6 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)]">
+      <section className="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] md:gap-6">
         {/* Blocos de contato direto */}
-        <div className="space-y-4 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-5 text-sm text-slate-300">
+        <div className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-sm text-slate-300 sm:p-5 sm:space-y-4">
           <h2 className="text-base font-semibold text-slate-50 sm:text-lg">
             Canais diretos
           </h2>
@@ -49,7 +49,7 @@ export default function ContatoPage() {
         </div>
 
         {/* Formulário */}
-        <form className="space-y-4 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-5 text-sm text-slate-300">
+        <form className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-sm text-slate-300 sm:p-5 sm:space-y-4">
           <h2 className="text-base font-semibold text-slate-50 sm:text-lg">
             Envie uma mensagem
           </h2>

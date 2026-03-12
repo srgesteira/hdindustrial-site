@@ -83,13 +83,13 @@ const etapasMetodologia = [
 export default function ProjetosHvacPage() {
   return (
     <div className="h-screen min-h-0 overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 pb-16 pt-20 sm:gap-12 sm:pt-24 md:gap-16 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="space-y-5">
+        <section className="space-y-3 sm:space-y-5">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Portfólio técnico
           </p>
-          <h1 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-[2rem]">
+          <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
             Projetos HVAC
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed text-slate-300">
@@ -103,7 +103,7 @@ export default function ProjetosHvacPage() {
           <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
             Tipos de Projetos
           </h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {tiposProjetos.map((item) => (
               <div
                 key={item.titulo}
@@ -125,7 +125,7 @@ export default function ProjetosHvacPage() {
           <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
             Exemplos de Projetos
           </h2>
-          <div className="grid gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6">
             {exemplosProjetos.map((projeto) => (
               <article
                 key={projeto.titulo}
@@ -176,11 +176,11 @@ export default function ProjetosHvacPage() {
           <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
             Metodologia
           </h2>
-          <div className="relative rounded-3xl border border-slate-800/80 bg-slate-950/80 px-4 py-6 sm:px-6">
+          <div className="relative rounded-2xl border border-slate-800/80 bg-slate-950/80 px-3 py-4 sm:rounded-3xl sm:px-6 sm:py-6">
             <div className="absolute left-6 right-6 top-1/2 hidden -translate-y-1/2 sm:block">
               <div className="flow-line" />
             </div>
-            <div className="relative grid gap-6 sm:grid-cols-4">
+            <div className="relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
               {etapasMetodologia.map((etapa, index) => (
                 <div
                   key={etapa.titulo}
@@ -205,8 +205,8 @@ export default function ProjetosHvacPage() {
 
         {/* CTA */}
         <section>
-          <div className="rounded-3xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-slate-900 to-slate-950 px-6 py-7 text-sm text-slate-200 shadow-[0_20px_70px_rgba(8,47,73,0.9)] sm:px-8 lg:px-10">
-            <div className="flex flex-wrap items-center justify-between gap-6">
+          <div className="rounded-2xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-slate-900 to-slate-950 px-4 py-5 text-sm text-slate-200 shadow-[0_20px_70px_rgba(8,47,73,0.9)] sm:rounded-3xl sm:px-6 sm:py-7 md:px-8 lg:px-10">
+            <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
               <div className="max-w-xl space-y-2">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
                   Projeto HVAC

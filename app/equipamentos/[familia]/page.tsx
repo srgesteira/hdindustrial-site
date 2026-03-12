@@ -257,8 +257,8 @@ export default function EquipamentosFamiliaPage() {
 
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 sm:gap-8 sm:py-10">
-        <header className="space-y-3">
+      <div className="mx-auto flex max-w-6xl flex-col gap-5 py-5 sm:gap-8 sm:py-10">
+        <header className="space-y-2 sm:space-y-3">
           {/* Breadcrumb: Equipamentos / Família */}
           <nav className="flex flex-wrap items-center gap-1 text-[11px] font-medium uppercase tracking-[0.22em] text-slate-400">
             <button
@@ -271,7 +271,7 @@ export default function EquipamentosFamiliaPage() {
             <span>/</span>
             <span className="text-cyan-300">{familia.nome}</span>
           </nav>
-          <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
+          <h1 className="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-3xl">
             {familia.nome}
           </h1>
           {familia.subtitulo && (
@@ -279,7 +279,7 @@ export default function EquipamentosFamiliaPage() {
               {familia.subtitulo}
             </p>
           )}
-          <div className="max-w-3xl space-y-3 text-sm text-slate-300">
+          <div className="max-w-3xl space-y-2 text-[13px] text-slate-300 sm:space-y-3 sm:text-sm">
             {familia.descricao.split("\n\n").map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -299,10 +299,10 @@ export default function EquipamentosFamiliaPage() {
                 href={`/equipamentos/${familia.slug}/${modeloSlug}`}
                 className="group block focus:outline-none"
               >
-                <article className="flex h-full flex-col gap-4 card-elevated transition-transform group-hover:-translate-y-1 group-hover:border-cyan-400/80">
+                <article className="flex h-full flex-col gap-3 card-elevated transition-transform group-hover:-translate-y-1 group-hover:border-cyan-400/80 sm:gap-4">
                   <div className="flex flex-1 flex-col gap-3">
                     {/* Imagem do modelo */}
-                    <div className="relative flex h-32 w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 ring-1 ring-slate-700/80 sm:h-40 md:h-44">
+                    <div className="relative flex h-28 w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 ring-1 ring-slate-700/80 sm:h-36 md:h-40 lg:h-44">
                       <Image
                         src={imgSrc}
                         alt={modelo.nome}

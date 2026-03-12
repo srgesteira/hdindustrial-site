@@ -5,13 +5,13 @@ import Link from "next/link";
 export default function ProjetosPage() {
   return (
     <div className="h-screen min-h-0 overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16 pt-20 sm:gap-8 sm:pt-24 md:gap-10 sm:px-6 lg:px-8">
       {/* Hero interno */}
-      <section className="space-y-4 rounded-3xl border border-slate-800/80 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 px-6 py-8 shadow-[0_22px_80px_rgba(15,23,42,0.9)] sm:px-8 lg:px-10">
+      <section className="space-y-3 rounded-2xl border border-slate-800/80 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 px-4 py-6 shadow-[0_22px_80px_rgba(15,23,42,0.9)] sm:space-y-4 sm:rounded-3xl sm:px-6 sm:py-8 md:px-8 lg:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
           Engenharia aplicada
         </p>
-        <h1 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+        <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
           Projetos HVAC e infraestrutura industrial
         </h1>
         <p className="max-w-2xl text-sm text-slate-400">
@@ -40,7 +40,7 @@ export default function ProjetosPage() {
             ar são determinantes para o processo.
           </p>
         </div>
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
           <div className="card-static text-sm text-slate-300">
             <h3 className="text-sm font-semibold text-slate-50">Salas limpas</h3>
             <p className="mt-2 text-xs leading-relaxed text-slate-400">
@@ -75,11 +75,11 @@ export default function ProjetosPage() {
         <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
           Fluxo do processo de projeto
         </h2>
-        <div className="relative rounded-3xl border border-slate-800/80 bg-slate-950/80 px-4 py-6 sm:px-6">
+        <div className="relative rounded-2xl border border-slate-800/80 bg-slate-950/80 px-3 py-4 sm:rounded-3xl sm:px-6 sm:py-6">
           <div className="absolute left-6 right-6 top-1/2 hidden -translate-y-1/2 sm:block">
             <div className="flow-line" />
           </div>
-          <div className="relative grid gap-4 sm:grid-cols-4">
+          <div className="relative grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
             {["Diagnóstico", "Projeto", "Dimensionamento", "Implementação"].map(
               (etapa, index) => (
                 <div
@@ -116,7 +116,7 @@ export default function ProjetosPage() {
         <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
           Tipos de projetos
         </h2>
-        <div className="grid gap-4 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:gap-4">
           <div className="card-static text-sm text-slate-300">
             <h3 className="text-sm font-semibold text-slate-50">
               Projetos HVAC completos
@@ -162,8 +162,8 @@ export default function ProjetosPage() {
 
       {/* CTA final */}
       <section className="space-y-4">
-        <div className="rounded-3xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-slate-900 to-slate-950 px-6 py-7 text-sm text-slate-200 shadow-[0_20px_70px_rgba(8,47,73,0.9)] sm:px-8 lg:px-10">
-          <div className="flex flex-wrap items-center justify-between gap-6">
+        <div className="rounded-2xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-slate-900 to-slate-950 px-4 py-5 text-sm text-slate-200 shadow-[0_20px_70px_rgba(8,47,73,0.9)] sm:rounded-3xl sm:px-6 sm:py-7 md:px-8 lg:px-10">
+          <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between sm:gap-6">
             <div className="max-w-xl space-y-2">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
                 Precisa de um projeto?

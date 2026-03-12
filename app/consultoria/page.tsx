@@ -1,17 +1,17 @@
 export default function ConsultoriaPage() {
   return (
     <div className="h-screen overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 pb-16 pt-20 sm:gap-12 sm:pt-24 md:gap-16 sm:px-6 lg:px-8">
         {/* Hero */}
-        <section className="grid gap-10 md:grid-cols-[1.2fr,0.9fr] md:items-center">
+        <section className="grid grid-cols-1 gap-6 md:grid-cols-[1.2fr,0.9fr] md:items-center md:gap-10">
           <div className="space-y-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
               Consultoria Industrial
             </p>
-            <h1 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-[2rem]">
+            <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
               Engenharia Industrial para operações de alto desempenho
             </h1>
-            <div className="flex flex-wrap items-center gap-1 text-[12px] font-medium uppercase tracking-[0.18em] text-slate-300/80">
+            <div className="flex flex-wrap items-center justify-center gap-1 text-[10px] font-medium uppercase tracking-[0.12em] text-slate-300/80 sm:justify-start sm:text-[12px] sm:tracking-[0.18em]">
               <span>HVAC</span>
               <span className="text-slate-600">•</span>
               <span>Filtração</span>
@@ -29,7 +29,7 @@ export default function ConsultoriaPage() {
               combinando engenharia de processos, sistemas HVAC, filtração e ferramentas
               digitais orientadas a dados.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
               <a
                 href="https://wa.me/5511988795861?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20consultoria%20industrial."
                 target="_blank"
@@ -47,7 +47,7 @@ export default function ConsultoriaPage() {
             </div>
           </div>
 
-          <div className="grid gap-3 rounded-3xl border border-slate-800/80 bg-slate-900/70 p-5 text-center text-slate-100 shadow-[0_18px_60px_rgba(15,23,42,0.9)] sm:p-6">
+          <div className="grid gap-2 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-center text-slate-100 shadow-[0_18px_60px_rgba(15,23,42,0.9)] sm:gap-3 sm:rounded-3xl sm:p-6">
             <div className="grid grid-cols-2 gap-3 text-sm">
               <div className="rounded-2xl bg-slate-950/70 px-3 py-3">
                 <div className="text-xl font-bold text-amber-400">23+</div>
@@ -78,7 +78,7 @@ export default function ConsultoriaPage() {
         </section>
 
         {/* Quem somos */}
-        <section className="space-y-10 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+        <section className="space-y-6 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:space-y-8 sm:rounded-3xl sm:p-6 md:p-8">
           <div className="space-y-2">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
               Quem somos
@@ -87,7 +87,7 @@ export default function ConsultoriaPage() {
               Engenharia industrial com DNA de chão de fábrica
             </h2>
           </div>
-          <div className="grid gap-8 md:grid-cols-[1.2fr,0.9fr] md:items-start">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.2fr,0.9fr] md:items-start md:gap-8">
             <div>
               <ul className="space-y-3 text-[13.5px] text-slate-200 sm:text-sm">
                 <li>
@@ -180,7 +180,7 @@ export default function ConsultoriaPage() {
               Consultoria técnica especializada para transformar sua operação.
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
             {[
               {
                 titulo: "Otimização de processos",
@@ -247,7 +247,7 @@ export default function ConsultoriaPage() {
         </section>
 
         {/* Engenharia HVAC */}
-        <section className="space-y-6 rounded-3xl border border-slate-800/80 bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900 p-6 sm:p-8">
+        <section className="space-y-4 rounded-2xl border border-slate-800/80 bg-gradient-to-br from-slate-950 via-slate-950 to-slate-900 p-4 sm:space-y-6 sm:rounded-3xl sm:p-6 md:p-8">
           <div className="space-y-2">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
               Engenharia HVAC
@@ -260,7 +260,7 @@ export default function ConsultoriaPage() {
               dutos e filtros industriais, aplicado à realidade da sua planta.
             </p>
           </div>
-          <div className="grid gap-3 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 md:grid-cols-3 md:gap-3">
             {[
               "Projeto de sistemas HVAC para ambientes industriais e salas limpas.",
               "Cálculo de vazão de ar, perda de carga e dimensionamento de dutos.",
@@ -281,7 +281,7 @@ export default function ConsultoriaPage() {
         </section>
 
         {/* Inovação digital */}
-        <section className="space-y-8 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+        <section className="space-y-6 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:space-y-8 sm:rounded-3xl sm:p-6 md:p-8">
           <div className="space-y-2">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
               Inovação digital
@@ -294,7 +294,7 @@ export default function ConsultoriaPage() {
               sob medida para automação, controle e análise da operação.
             </p>
           </div>
-          <div className="grid gap-8 md:grid-cols-[1.1fr,0.9fr] md:items-start">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-[1.1fr,0.9fr] md:items-start md:gap-8">
             <div className="space-y-3 text-[13.5px] text-slate-200 sm:text-sm">
               <p>
                 Aplicamos tecnologia de forma pragmática: apps leves, sistemas de
@@ -361,8 +361,8 @@ export default function ConsultoriaPage() {
         </section>
 
         {/* Diferenciais e resultados */}
-        <section className="grid gap-8 md:grid-cols-[1.1fr,1fr]">
-          <div className="space-y-5 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+        <section className="grid grid-cols-1 gap-6 md:grid-cols-[1.1fr,1fr] md:gap-8">
+            <div className="space-y-4 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:space-y-5 sm:rounded-3xl sm:p-6 md:p-8">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
               Diferenciais
             </p>
@@ -385,11 +385,11 @@ export default function ConsultoriaPage() {
               ))}
             </div>
           </div>
-          <div className="space-y-4 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+            <div className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
               Resultados típicos (referência)
             </p>
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 sm:gap-3">
               {[
                 {
                   label: "Redução de custos operacionais",
@@ -420,7 +420,7 @@ export default function ConsultoriaPage() {
         </section>
 
         {/* CTA final */}
-        <section className="space-y-4 rounded-3xl border border-emerald-600/60 bg-gradient-to-r from-emerald-600 via-emerald-500 to-cyan-500 p-6 text-slate-950 shadow-[0_20px_70px_rgba(16,185,129,0.55)] sm:p-8">
+        <section className="space-y-3 rounded-2xl border border-emerald-600/60 bg-gradient-to-r from-emerald-600 via-emerald-500 to-cyan-500 p-4 text-slate-950 shadow-[0_20px_70px_rgba(16,185,129,0.55)] sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">
           <h2 className="text-xl font-semibold tracking-tight sm:text-[1.5rem]">
             Vamos transformar a sua operação?
           </h2>
@@ -429,7 +429,7 @@ export default function ConsultoriaPage() {
             apoiar sua indústria em projetos de processos, HVAC, filtração ou
             transformação digital.
           </p>
-          <div className="flex flex-wrap gap-3">
+          <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-3">
             <a
               href="https://wa.me/5511988795861?text=Ol%C3%A1!%20Gostaria%20de%20conversar%20sobre%20consultoria%20industrial."
               target="_blank"

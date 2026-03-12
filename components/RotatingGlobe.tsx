@@ -49,7 +49,7 @@ export function RotatingGlobe({
         className="flex flex-col items-center gap-3"
       >
         <motion.div
-          className="relative h-36 w-36 sm:h-44 sm:w-44 md:h-52 md:w-52"
+          className="relative h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
           animate={{ rotate: 360 }}
           transition={{
             repeat: Infinity,
@@ -58,7 +58,7 @@ export function RotatingGlobe({
           }}
         >
           {/* Halo externo suave */}
-          <div className="pointer-events-none absolute -inset-5 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.55),transparent_65%)] opacity-50 transition-opacity group-hover:opacity-80" />
+          <div className="pointer-events-none absolute -inset-3 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.55),transparent_65%)] opacity-50 transition-opacity group-hover:opacity-80 sm:-inset-5" />
 
           {/* Globo dentro do anel branco – alinhamento geométrico perfeito */}
           <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border border-cyan-400/80 bg-slate-950/95 shadow-[0_0_65px_rgba(34,211,238,0.9)] backdrop-blur-2xl">
@@ -96,7 +96,7 @@ export function RotatingGlobe({
           </div>
         </motion.div>
 
-        <span className="text-center text-xs sm:text-sm font-semibold uppercase tracking-[0.32em] text-slate-50 drop-shadow-[0_0_12px_rgba(15,23,42,0.9)] group-hover:text-cyan-200 transition-colors">
+        <span className="text-center text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-50 drop-shadow-[0_0_12px_rgba(15,23,42,0.9)] group-hover:text-cyan-200 transition-colors sm:text-xs sm:tracking-[0.32em] md:text-sm">
           {label}
         </span>
       </motion.div>

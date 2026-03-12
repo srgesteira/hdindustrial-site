@@ -680,10 +680,10 @@ export default function EquipamentoModeloPage() {
 
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 sm:gap-8 sm:py-10">
+      <div className="mx-auto flex max-w-6xl flex-col gap-5 py-5 sm:gap-8 sm:py-10">
         {/* Breadcrumb premium */}
-        <header className="space-y-4">
-          <nav className="inline-flex flex-wrap items-center gap-1 rounded-full border border-slate-700/70 bg-slate-900/80 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-slate-300 shadow-[0_10px_35px_rgba(15,23,42,0.9)]">
+        <header className="space-y-3 sm:space-y-4">
+          <nav className="inline-flex flex-wrap items-center gap-1 rounded-full border border-slate-700/70 bg-slate-900/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-slate-300 shadow-[0_10px_35px_rgba(15,23,42,0.9)] sm:px-4 sm:py-1.5 sm:text-[11px] sm:tracking-[0.22em]">
             <Link href="/" className="hover:text-cyan-200">
               Home
             </Link>
@@ -704,12 +704,12 @@ export default function EquipamentoModeloPage() {
 
           {/* Cabeçalho técnico do produto */}
           <div className="space-y-2">
-            <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[1.9rem]">
+            <h1 className="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-[1.9rem]">
               {conteudoModelo
                 ? conteudoModelo.titulo
                 : `${modelo.codigo} · ${modelo.nome}`}
             </h1>
-            <p className="max-w-3xl text-[13px] leading-relaxed text-slate-300 sm:text-sm">
+            <p className="max-w-3xl text-xs leading-relaxed text-slate-300 sm:text-[13px] md:text-sm">
               {conteudoModelo ? conteudoModelo.subtitulo : familia.descricao}
             </p>
           </div>
@@ -717,10 +717,10 @@ export default function EquipamentoModeloPage() {
 
         {/* Card principal: mobile empilhado, desktop 2 colunas */}
         <section className="overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950/80 sm:rounded-3xl">
-          <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-start sm:gap-6 sm:p-6">
+          <div className="flex flex-col gap-3 p-3 sm:flex-row sm:items-start sm:gap-6 sm:p-6">
             {/* Coluna esquerda: imagem + mini-galeria */}
             <div className="flex flex-1 flex-col gap-3">
-              <div className="relative flex min-h-[180px] max-h-[280px] items-center justify-center overflow-hidden rounded-xl bg-slate-900 sm:max-h-[340px] sm:rounded-2xl">
+              <div className="relative flex min-h-[160px] max-h-[240px] items-center justify-center overflow-hidden rounded-xl bg-slate-900 sm:max-h-[300px] sm:rounded-2xl md:max-h-[340px]">
                 <Image
                   src={mainImg}
                   alt={modelo.nome}
@@ -783,12 +783,12 @@ export default function EquipamentoModeloPage() {
                   {conteudoModelo.highlights.map((item) => (
                     <div
                       key={item.label}
-                      className="rounded-2xl border border-slate-700/80 bg-slate-900/80 px-3 py-2"
+                      className="rounded-xl border border-slate-700/80 bg-slate-900/80 px-2.5 py-1.5 sm:rounded-2xl sm:px-3 sm:py-2"
                     >
-                      <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                      <p className="text-[9px] font-semibold uppercase tracking-[0.15em] text-slate-400 sm:text-[10px] sm:tracking-[0.2em]">
                         {item.label}
                       </p>
-                      <p className="mt-1 text-[12px] font-medium text-slate-50">
+                      <p className="mt-0.5 text-[11px] font-medium text-slate-50 sm:mt-1 sm:text-[12px]">
                         {item.value}
                       </p>
                     </div>
