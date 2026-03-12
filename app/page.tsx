@@ -57,12 +57,12 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative z-10 mt-2 flex flex-1 flex-col items-center justify-center gap-4 text-center sm:mt-6 sm:gap-6"
+          className="relative z-10 mt-1 flex flex-1 flex-col items-center justify-center gap-2 text-center sm:mt-6 sm:gap-6"
         >
-          <div className="space-y-2 px-1 sm:space-y-3 sm:px-0">
+          <div className="space-y-1 px-1 sm:space-y-3 sm:px-0">
             {/* Logo centralizado acima do título */}
-            <div className="mx-auto mb-2 flex justify-center sm:mb-3">
-              <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-40 lg:w-40">
+            <div className="mx-auto mb-1 flex justify-center sm:mb-3">
+              <div className="relative h-16 w-16 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-40 lg:w-40">
                 <Image
                   src="/logo-hd.webp"
                   alt="HD Soluções Industriais"
@@ -72,37 +72,40 @@ export default function Home() {
                 />
               </div>
             </div>
-            <h1 className="text-balance text-[1.35rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.6rem]">
+            <h1 className="text-balance text-[1.15rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.6rem]">
               HD Soluções Industriais
             </h1>
-            <p className="mx-auto max-w-2xl text-[13px] leading-relaxed text-slate-200 sm:text-sm sm:text-[15px]">
+            <p className="mx-auto max-w-2xl text-[11px] leading-snug text-slate-200 sm:text-sm sm:text-[15px]">
               Engenharia HVAC para ambientes críticos e infraestrutura
               industrial, conectando tecnologia, confiabilidade e performance
               operacional.
             </p>
           </div>
 
-          <div className="grid w-full max-w-sm grid-cols-1 gap-5 px-2 sm:max-w-none sm:grid-cols-3 sm:gap-6 sm:px-0">
+          <div className="grid w-full max-w-sm grid-cols-3 gap-2 px-2 sm:max-w-none sm:gap-6 sm:px-0">
             <RotatingGlobe
               label="Equipamentos HVAC"
               href="/equipamentos"
+              imageSrc="/hero/equipamentos-hvac.png"
               delay={0.1}
             />
             <RotatingGlobe
               label="Projetos HVAC"
               href="/projetos"
+              imageSrc="/hero/projetos-hvac.png"
               delay={0.2}
             />
             <RotatingGlobe
               label="Consultoria Industrial"
               href="/consultoria"
+              imageSrc="/hero/consultoria-industrial.png"
               delay={0.3}
             />
           </div>
 
           {/* Botão central Nossa história */}
           <motion.div
-            className="mt-2 inline-flex sm:mt-4"
+            className="mt-1 inline-flex sm:mt-4"
             whileHover={{ scale: 1.05, y: -6 }}
             transition={{ type: "spring", stiffness: 260, damping: 18 }}
           >
