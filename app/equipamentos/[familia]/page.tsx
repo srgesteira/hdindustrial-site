@@ -256,7 +256,7 @@ export default function EquipamentosFamiliaPage() {
   }
 
   return (
-    <div className="h-screen overflow-y-auto">
+    <div className="h-screen overflow-x-hidden overflow-y-auto">
       <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 pt-20 sm:gap-8 sm:py-10 sm:pt-24">
         <header className="space-y-2 sm:space-y-3">
           {/* Breadcrumb: Equipamentos / Família */}

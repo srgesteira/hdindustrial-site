@@ -1,6 +1,6 @@
 export default function ConsultoriaPage() {
   return (
-    <div className="h-screen overflow-y-auto bg-slate-950">
+    <div className="h-screen overflow-x-hidden overflow-y-auto bg-slate-950">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 pb-24 pt-20 sm:gap-12 sm:px-6 sm:pt-24 md:gap-16 lg:px-8">
         {/* Hero */}
         <section className="grid grid-cols-1 gap-6 md:grid-cols-[1.2fr,0.9fr] md:items-center md:gap-10">

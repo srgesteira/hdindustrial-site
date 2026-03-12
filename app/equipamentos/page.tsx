@@ -228,8 +228,8 @@ const familiaImagens: Record<string, string> = {
 
 export default function EquipamentosPage() {
   return (
-    <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 pt-20 sm:gap-10 sm:py-10 sm:pt-24">
+    <div className="h-screen overflow-x-hidden overflow-y-auto">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 py-6 pt-20 sm:gap-10 sm:py-10 sm:pt-24">
         <header className="space-y-2 sm:space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Portfólio HVAC
@@ -258,7 +258,7 @@ export default function EquipamentosPage() {
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   {/* Imagem da família */}
-                  <div className="relative flex h-24 w-full items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-28 sm:w-36">
+                  <div className="relative flex h-24 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-28 sm:w-36">
                     {imgSrc ? (
                       <Image
                         src={imgSrc}
@@ -266,7 +266,7 @@ export default function EquipamentosPage() {
                         fill
                         sizes="(max-width: 640px) 100px, 144px"
                         loading="lazy"
-                        className="object-cover"
+                        className="object-contain p-1"
                       />
                     ) : (
                       <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">

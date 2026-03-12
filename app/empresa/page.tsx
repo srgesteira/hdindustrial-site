@@ -20,7 +20,7 @@ const areasAtuacao = [
 
 export default function EmpresaPage() {
   return (
-    <div className="h-screen min-h-0 overflow-y-auto bg-slate-950">
+    <div className="h-screen min-h-0 overflow-x-hidden overflow-y-auto bg-slate-950">
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5 pb-24 pt-20 sm:gap-16 sm:px-6 sm:pb-16 sm:pt-24 lg:px-8">
         {/* Hero */}
         <section className="space-y-5">
