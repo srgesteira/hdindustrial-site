@@ -36,6 +36,30 @@ main {
   @apply px-4 sm:px-8 lg:px-20 xl:px-32;
 }
 
+/* Ajustes mobile – não afetam desktop */
+@media (max-width: 639px) {
+  main {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  /* Scroll suave em iOS */
+  .h-screen.overflow-y-auto,
+  [class*="overflow-y-auto"] {
+    -webkit-overflow-scrolling: touch;
+  }
+  /* Área segura para dispositivos com notch */
+  .site-shell {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+}
+
+/* Esconder cursor-glow em dispositivos touch (economia de performance) */
+@media (hover: none) and (pointer: coarse) {
+  .cursor-glow {
+    display: none;
+  }
+}
+
 /* Shell geral com fundo tecnológico */
 .site-shell {
   position: relative;
@@ -133,61 +157,6 @@ main {
     animation: none;
     transition: none;
   }
-}
-
-/* Container do viewer 3D de equipamentos */
-.equipment-viewer-3d {
-  width: 100%;
-  max-width: 520px;
-  aspect-ratio: 4 / 3;
-  border-radius: 1.75rem;
-  border: 1px solid rgba(148, 163, 184, 0.5);
-  background:
-    radial-gradient(
-      circle at 10% 0,
-      rgba(34, 211, 238, 0.35),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 90% 100%,
-      rgba(59, 130, 246, 0.35),
-      transparent 55%
-    ),
-    radial-gradient(
-      circle at 50% 110%,
-      rgba(15, 23, 42, 1),
-      rgba(2, 6, 23, 1)
-    );
-  box-shadow:
-    0 0 0 1px rgba(15, 23, 42, 0.9),
-    0 26px 70px rgba(15, 23, 42, 0.95),
-    0 0 60px rgba(15, 23, 42, 0.9);
-  overflow: hidden;
-}
-
-.equipment-viewer-3d model-viewer {
-  --poster-color: transparent;
-  --progress-bar-color: rgba(34, 211, 238, 0.7);
-  --progress-bar-height: 2px;
-  background: transparent;
-}
-
-.hotspot-chip {
-  padding: 4px 10px;
-  border-radius: 999px;
-  border: 1px solid rgba(148, 163, 184, 0.6);
-  background: radial-gradient(
-      circle at 0 0,
-      rgba(34, 211, 238, 0.25),
-      transparent 55%
-    ),
-    rgba(15, 23, 42, 0.95);
-  color: #e5e7eb;
-  font-size: 10px;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
 }
 
 /* Fundo em grid animado para o hero */
@@ -496,12 +465,24 @@ main {
     0 26px 80px rgba(8, 47, 73, 0.95);
 }
 
+@media (max-width: 639px) {
+  .card-elevated {
+    padding: 1.25rem;
+  }
+}
+
 /* Card estático – mesmo visual do card-elevated, sem movimento no hover */
 .card-static {
   @apply rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-xs text-slate-300;
   box-shadow:
     0 0 0 1px rgba(15, 23, 42, 0.9),
     0 18px 55px rgba(15, 23, 42, 0.95);
+}
+
+@media (max-width: 639px) {
+  .card-static {
+    padding: 1.25rem;
+  }
 }
 
 /* Partículas pequenas em órbita usadas nos globos 3D */

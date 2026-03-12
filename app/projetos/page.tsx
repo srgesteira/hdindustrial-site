@@ -5,13 +5,13 @@ import Link from "next/link";
 export default function ProjetosPage() {
   return (
     <div className="h-screen min-h-0 overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16 pt-20 sm:gap-8 sm:pt-24 md:gap-10 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 pb-20 pt-20 sm:gap-8 sm:px-6 sm:pt-24 md:gap-10 lg:px-8">
       {/* Hero interno */}
-      <section className="space-y-3 rounded-2xl border border-slate-800/80 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 px-4 py-6 shadow-[0_22px_80px_rgba(15,23,42,0.9)] sm:space-y-4 sm:rounded-3xl sm:px-6 sm:py-8 md:px-8 lg:px-10">
+      <section className="space-y-3 rounded-2xl border border-slate-800/80 bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 px-5 py-6 shadow-[0_22px_80px_rgba(15,23,42,0.9)] sm:space-y-4 sm:rounded-3xl sm:px-6 sm:py-8 md:px-8 lg:px-10">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
           Engenharia aplicada
         </p>
-        <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
+        <h1 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
           Projetos HVAC e infraestrutura industrial
         </h1>
         <p className="max-w-2xl text-sm text-slate-400">

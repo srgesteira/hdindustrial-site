@@ -680,10 +680,10 @@ export default function EquipamentoModeloPage() {
 
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-5 py-5 sm:gap-8 sm:py-10">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 pt-20 sm:gap-8 sm:py-10 sm:pt-24">
         {/* Breadcrumb premium */}
         <header className="space-y-3 sm:space-y-4">
-          <nav className="inline-flex flex-wrap items-center gap-1 rounded-full border border-slate-700/70 bg-slate-900/80 px-3 py-1 text-[10px] font-medium uppercase tracking-[0.18em] text-slate-300 shadow-[0_10px_35px_rgba(15,23,42,0.9)] sm:px-4 sm:py-1.5 sm:text-[11px] sm:tracking-[0.22em]">
+          <nav className="inline-flex flex-wrap items-center gap-1 rounded-full border border-slate-700/70 bg-slate-900/80 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.16em] text-slate-300 shadow-[0_10px_35px_rgba(15,23,42,0.9)] sm:px-4 sm:py-1.5 sm:text-[11px] sm:tracking-[0.22em]">
             <Link href="/" className="hover:text-cyan-200">
               Home
             </Link>
@@ -704,7 +704,7 @@ export default function EquipamentoModeloPage() {
 
           {/* Cabeçalho técnico do produto */}
           <div className="space-y-2">
-            <h1 className="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-[1.9rem]">
+            <h1 className="text-[1.15rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-[1.9rem]">
               {conteudoModelo
                 ? conteudoModelo.titulo
                 : `${modelo.codigo} · ${modelo.nome}`}

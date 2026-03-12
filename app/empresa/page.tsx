@@ -21,13 +21,13 @@ const areasAtuacao = [
 export default function EmpresaPage() {
   return (
     <div className="h-screen min-h-0 overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 pb-20 pt-20 sm:gap-16 sm:px-6 sm:pb-16 sm:pt-24 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-5 pb-24 pt-20 sm:gap-16 sm:px-6 sm:pb-16 sm:pt-24 lg:px-8">
         {/* Hero */}
         <section className="space-y-5">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Quem Somos · Nossa História
           </p>
-          <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
+          <h1 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
             Quem Somos
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed text-slate-300">

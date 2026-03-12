@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="mx-auto flex max-w-6xl flex-col">
       {/* PRIMEIRA TELA ÚNICA – HERO TECNOLÓGICO COM GLOBOS TERRESTRES */}
-      <section className="hero-bg relative flex min-h-[100dvh] min-h-[85vh] flex-col justify-between overflow-hidden px-4 pt-4 pb-24 sm:min-h-screen sm:px-6 sm:pt-8 sm:pb-12 lg:px-10">
+      <section className="hero-bg relative flex min-h-[100dvh] min-h-[85vh] flex-col justify-between overflow-hidden px-5 pt-6 pb-28 sm:min-h-screen sm:px-6 sm:pt-8 sm:pb-12 lg:px-10">
         {/* Vídeo de fundo com movimento de ar (mantido) */}
         <div className="hero-video-wrapper" aria-hidden>
           <video
@@ -57,12 +57,12 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative z-10 mt-2 flex flex-1 flex-col items-center justify-center gap-3 text-center sm:mt-6 sm:gap-6"
+          className="relative z-10 mt-2 flex flex-1 flex-col items-center justify-center gap-4 text-center sm:mt-6 sm:gap-6"
         >
-          <div className="space-y-2 px-2 sm:space-y-3 sm:px-0">
+          <div className="space-y-2 px-1 sm:space-y-3 sm:px-0">
             {/* Logo centralizado acima do título */}
             <div className="mx-auto mb-2 flex justify-center sm:mb-3">
-              <div className="relative h-20 w-20 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-40 lg:w-40">
+              <div className="relative h-24 w-24 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-40 lg:w-40">
                 <Image
                   src="/logo-hd.webp"
                   alt="HD Soluções Industriais"
@@ -72,17 +72,17 @@ export default function Home() {
                 />
               </div>
             </div>
-            <h1 className="text-balance text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.6rem]">
+            <h1 className="text-balance text-[1.35rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.6rem]">
               HD Soluções Industriais
             </h1>
-            <p className="mx-auto max-w-2xl text-xs leading-relaxed text-slate-200 sm:text-sm sm:text-[15px]">
+            <p className="mx-auto max-w-2xl text-[13px] leading-relaxed text-slate-200 sm:text-sm sm:text-[15px]">
               Engenharia HVAC para ambientes críticos e infraestrutura
               industrial, conectando tecnologia, confiabilidade e performance
               operacional.
             </p>
           </div>
 
-          <div className="grid w-full max-w-sm grid-cols-1 gap-3 px-2 sm:max-w-none sm:grid-cols-3 sm:gap-6 sm:px-0">
+          <div className="grid w-full max-w-sm grid-cols-1 gap-5 px-2 sm:max-w-none sm:grid-cols-3 sm:gap-6 sm:px-0">
             <RotatingGlobe
               label="Equipamentos HVAC"
               href="/equipamentos"
@@ -108,7 +108,7 @@ export default function Home() {
           >
             <Link
               href="/empresa"
-              className="inline-flex items-center justify-center rounded-full border border-slate-200/80 bg-slate-950/85 px-8 py-3 text-[12px] font-semibold uppercase tracking-[0.2em] text-slate-50 shadow-[0_16px_50px_rgba(15,23,42,0.95)] backdrop-blur-xl"
+              className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-slate-200/80 bg-slate-950/85 px-6 py-3.5 text-center text-[12px] font-semibold uppercase tracking-[0.2em] text-slate-50 shadow-[0_16px_50px_rgba(15,23,42,0.95)] backdrop-blur-xl active:bg-slate-900/90 sm:px-8"
             >
               Nossa história • +23 anos de experiência
             </Link>
@@ -116,10 +116,10 @@ export default function Home() {
         </motion.div>
 
         {/* Botões flutuantes – mobile: barra inferior; desktop: 4 cantos */}
-        <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center pb-4 pt-2 sm:hidden">
+        <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center pb-4 pt-2 sm:hidden" style={{ paddingBottom: "max(1rem, env(safe-area-inset-bottom))" }}>
           <Link
             href="/contato"
-            className="pointer-events-auto btn-primary w-[calc(100%-2rem)] max-w-[260px] px-5 py-2.5 text-xs"
+            className="pointer-events-auto btn-primary min-h-[48px] w-[calc(100%-2.5rem)] max-w-[280px] px-8 py-3.5 text-sm"
           >
             Contato
           </Link>

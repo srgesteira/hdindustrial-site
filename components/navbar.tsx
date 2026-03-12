@@ -50,11 +50,12 @@ export function Navbar() {
               alt="HD Soluções Industriais"
               width={120}
               height={40}
-              className="h-8 w-auto object-contain sm:h-10"
+              className="h-9 w-auto object-contain sm:h-10"
               priority
             />
             <span className="truncate text-xs font-semibold text-slate-100 sm:text-sm">
-              HD Soluções Industriais
+              <span className="sm:hidden">HD</span>
+              <span className="hidden sm:inline">HD Soluções Industriais</span>
             </span>
           </Link>
 
@@ -113,7 +114,7 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setMobileOpen((o) => !o)}
-              className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-slate-700/80 bg-slate-900/60 text-slate-300 transition hover:bg-slate-800/80 md:hidden"
+              className="flex h-12 min-h-[44px] w-12 min-w-[44px] flex-shrink-0 items-center justify-center rounded-xl border border-slate-700/80 bg-slate-900/60 text-slate-300 transition active:bg-slate-800/80 md:hidden"
               aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
               aria-expanded={mobileOpen}
             >
@@ -131,7 +132,7 @@ export function Navbar() {
 
         {/* Menu mobile expandido */}
         {mobileOpen && (
-          <div className="border-t border-slate-800/70 bg-slate-950/95 px-4 py-4 md:hidden">
+          <div className="border-t border-slate-800/70 bg-slate-950/95 px-4 py-4 pb-6 md:hidden">
             <div className="flex flex-col gap-1">
               {links.map((item) => {
                 const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
@@ -140,14 +141,21 @@ export function Navbar() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className={`rounded-lg px-4 py-3 text-sm font-medium transition ${
-                      active ? "bg-slate-100 text-slate-950" : "text-slate-300 hover:bg-slate-800/80 hover:text-cyan-300"
+                    className={`min-h-[48px] rounded-xl px-4 py-3.5 text-[15px] font-medium transition active:bg-slate-800/80 ${
+                      active ? "bg-slate-100 text-slate-950" : "text-slate-300 active:text-cyan-300"
                     }`}
                   >
                     {item.label}
                   </Link>
                 );
               })}
+              <Link
+                href="/contato"
+                onClick={() => setMobileOpen(false)}
+                className="btn-primary mt-3 min-h-[48px] w-full justify-center py-3.5 text-sm md:hidden"
+              >
+                Contato
+              </Link>
             </div>
           </div>
         )}

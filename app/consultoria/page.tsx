@@ -1,17 +1,17 @@
 export default function ConsultoriaPage() {
   return (
     <div className="h-screen overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 pb-16 pt-20 sm:gap-12 sm:pt-24 md:gap-16 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 pb-24 pt-20 sm:gap-12 sm:px-6 sm:pt-24 md:gap-16 lg:px-8">
         {/* Hero */}
         <section className="grid grid-cols-1 gap-6 md:grid-cols-[1.2fr,0.9fr] md:items-center md:gap-10">
           <div className="space-y-5">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
               Consultoria Industrial
             </p>
-            <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
+            <h1 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
               Engenharia Industrial para operações de alto desempenho
             </h1>
-            <div className="flex flex-wrap items-center justify-center gap-1 text-[10px] font-medium uppercase tracking-[0.12em] text-slate-300/80 sm:justify-start sm:text-[12px] sm:tracking-[0.18em]">
+            <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-1.5 text-[11px] font-medium uppercase tracking-[0.1em] text-slate-300/80 sm:justify-start sm:gap-x-1 sm:gap-y-0 sm:text-[12px] sm:tracking-[0.18em]">
               <span>HVAC</span>
               <span className="text-slate-600">•</span>
               <span>Filtração</span>

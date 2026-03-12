@@ -83,13 +83,13 @@ const etapasMetodologia = [
 export default function ProjetosHvacPage() {
   return (
     <div className="h-screen min-h-0 overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 pb-16 pt-20 sm:gap-12 sm:pt-24 md:gap-16 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-5 pb-24 pt-20 sm:gap-12 sm:px-6 sm:pt-24 md:gap-16 lg:px-8">
         {/* Hero */}
         <section className="space-y-3 sm:space-y-5">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Portfólio técnico
           </p>
-          <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
+          <h1 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
             Projetos HVAC
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed text-slate-300">

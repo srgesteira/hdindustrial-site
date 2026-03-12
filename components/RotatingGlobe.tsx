@@ -35,7 +35,7 @@ export function RotatingGlobe({
     <Link
       href={href}
       onClick={handleClick}
-      className="group block focus:outline-none"
+      className="group block min-h-[44px] focus:outline-none"
     >
       <motion.div
         initial={{ opacity: 0, y: 20, scale: 0.9 }}
@@ -49,7 +49,7 @@ export function RotatingGlobe({
         className="flex flex-col items-center gap-3"
       >
         <motion.div
-          className="relative h-28 w-28 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
+          className="relative h-32 w-32 sm:h-36 sm:w-36 md:h-44 md:w-44 lg:h-52 lg:w-52"
           animate={{ rotate: 360 }}
           transition={{
             repeat: Infinity,
@@ -96,7 +96,7 @@ export function RotatingGlobe({
           </div>
         </motion.div>
 
-        <span className="text-center text-[10px] font-semibold uppercase tracking-[0.24em] text-slate-50 drop-shadow-[0_0_12px_rgba(15,23,42,0.9)] group-hover:text-cyan-200 transition-colors sm:text-xs sm:tracking-[0.32em] md:text-sm">
+        <span className="text-center text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-50 drop-shadow-[0_0_12px_rgba(15,23,42,0.9)] transition-colors group-hover:text-cyan-200 sm:text-xs sm:tracking-[0.32em] md:text-sm">
           {label}
         </span>
       </motion.div>

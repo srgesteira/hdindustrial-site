@@ -257,7 +257,7 @@ export default function EquipamentosFamiliaPage() {
 
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-5 py-5 sm:gap-8 sm:py-10">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 pt-20 sm:gap-8 sm:py-10 sm:pt-24">
         <header className="space-y-2 sm:space-y-3">
           {/* Breadcrumb: Equipamentos / Família */}
           <nav className="flex flex-wrap items-center gap-1 text-[11px] font-medium uppercase tracking-[0.22em] text-slate-400">
@@ -271,7 +271,7 @@ export default function EquipamentosFamiliaPage() {
             <span>/</span>
             <span className="text-cyan-300">{familia.nome}</span>
           </nav>
-          <h1 className="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-3xl">
+          <h1 className="text-[1.15rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-3xl">
             {familia.nome}
           </h1>
           {familia.subtitulo && (

@@ -2,12 +2,12 @@
 
 export default function ContatoPage() {
   return (
-    <div className="mx-auto flex max-w-6xl flex-col gap-6 sm:gap-8 md:gap-10">
+    <div className="mx-auto flex max-w-6xl flex-col gap-6 pb-8 pt-20 sm:gap-8 sm:pt-24 md:gap-10">
       <header className="space-y-2 sm:space-y-3">
         <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
           Fale com a HD
         </p>
-        <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
+        <h1 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
           Contato
         </h1>
         <p className="max-w-2xl text-sm text-slate-400">
@@ -19,7 +19,7 @@ export default function ContatoPage() {
 
       <section className="grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] md:gap-6">
         {/* Blocos de contato direto */}
-        <div className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-sm text-slate-300 sm:p-5 sm:space-y-4">
+        <div className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-5 text-sm text-slate-300 sm:p-5 sm:space-y-4">
           <h2 className="text-base font-semibold text-slate-50 sm:text-lg">
             Canais diretos
           </h2>
@@ -49,7 +49,7 @@ export default function ContatoPage() {
         </div>
 
         {/* Formulário */}
-        <form className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-sm text-slate-300 sm:p-5 sm:space-y-4">
+        <form className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-5 text-sm text-slate-300 sm:p-5 sm:space-y-4">
           <h2 className="text-base font-semibold text-slate-50 sm:text-lg">
             Envie uma mensagem
           </h2>
@@ -65,7 +65,7 @@ export default function ContatoPage() {
               <input
                 id="nome"
                 name="nome"
-                className="w-full rounded-lg border border-slate-700/80 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80"
+                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
               />
             </div>
             <div className="space-y-1">
@@ -75,7 +75,7 @@ export default function ContatoPage() {
               <input
                 id="empresa"
                 name="empresa"
-                className="w-full rounded-lg border border-slate-700/80 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80"
+                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
               />
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function ContatoPage() {
                 id="email"
                 name="email"
                 type="email"
-                className="w-full rounded-lg border border-slate-700/80 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80"
+                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
               />
             </div>
             <div className="space-y-1">
@@ -98,7 +98,7 @@ export default function ContatoPage() {
               <input
                 id="telefone"
                 name="telefone"
-                className="w-full rounded-lg border border-slate-700/80 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80"
+                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
               />
             </div>
           </div>
@@ -109,7 +109,7 @@ export default function ContatoPage() {
             <input
               id="assunto"
               name="assunto"
-              className="w-full rounded-lg border border-slate-700/80 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80"
+              className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
             />
           </div>
           <div className="space-y-1">
@@ -120,12 +120,12 @@ export default function ContatoPage() {
               id="mensagem"
               name="mensagem"
               rows={4}
-              className="w-full rounded-lg border border-slate-700/80 bg-slate-950/60 px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80"
+              className="w-full min-h-[120px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
             />
           </div>
           <button
             type="submit"
-            className="mt-2 inline-flex items-center justify-center rounded-full bg-cyan-400 px-6 py-2.5 text-xs font-semibold text-slate-950 shadow-glow transition hover:bg-cyan-300 sm:text-sm"
+            className="mt-2 inline-flex min-h-[48px] items-center justify-center rounded-full bg-cyan-400 px-8 py-3 text-xs font-semibold text-slate-950 shadow-glow transition active:bg-cyan-300 sm:text-sm sm:hover:bg-cyan-300"
           >
             Enviar mensagem
           </button>

@@ -229,12 +229,12 @@ const familiaImagens: Record<string, string> = {
 export default function EquipamentosPage() {
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-5 py-5 sm:gap-10 sm:py-10">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 pt-20 sm:gap-10 sm:py-10 sm:pt-24">
         <header className="space-y-2 sm:space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Portfólio HVAC
           </p>
-          <h1 className="text-lg font-semibold tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-3xl">
+          <h1 className="text-[1.15rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-xl md:text-2xl lg:text-3xl">
             Equipamentos para ambientes críticos
           </h1>
           <p className="max-w-2xl text-sm text-slate-400">
@@ -252,7 +252,7 @@ export default function EquipamentosPage() {
               <motion.a
                 key={familia.slug}
                 href={`/equipamentos/${familia.slug}`}
-                className="group flex h-full flex-col overflow-hidden rounded-xl border border-slate-800/80 bg-slate-950/70 px-3 py-3 text-left transition-all hover:border-cyan-400/60 hover:bg-slate-900/80 sm:rounded-2xl sm:px-5 sm:py-5"
+                className="group flex min-h-[120px] flex-col overflow-hidden rounded-xl border border-slate-800/80 bg-slate-950/70 px-4 py-4 text-left transition-all active:border-cyan-400/60 active:bg-slate-900/80 sm:rounded-2xl sm:px-5 sm:py-5 sm:min-h-0 sm:hover:border-cyan-400/60 sm:hover:bg-slate-900/80"
                 whileHover={{ scale: 1.02, y: -4 }}
                 transition={{ type: "spring", stiffness: 260, damping: 18 }}
               >
