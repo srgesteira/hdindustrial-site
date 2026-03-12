@@ -1,0 +1,537 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+:root {
+  --background: #020617; /* slate-950 */
+  --foreground: #e5e7eb; /* gray-200 */
+  --accent: #22d3ee; /* cyan-400 */
+  --accent-soft: rgba(34, 211, 238, 0.12);
+}
+
+body {
+  @apply antialiased;
+  margin: 0;
+  background: radial-gradient(circle at top, #0f172a 0, #020617 55%, #000 100%);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+a {
+  @apply text-cyan-300 transition-colors;
+}
+
+a:hover {
+  @apply text-cyan-200;
+}
+
+main {
+  @apply px-4 sm:px-8 lg:px-20 xl:px-32;
+}
+
+/* Shell geral com fundo tecnológico */
+.site-shell {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Grid técnico de fundo (blueprint) */
+.tech-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(30, 64, 175, 0.35) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(30, 64, 175, 0.35) 1px,
+      transparent 1px
+    );
+  background-size: 64px 64px;
+  opacity: 0.18;
+  transform: translate3d(
+    calc(var(--tilt-x, 0) * 0.5px),
+    calc(var(--tilt-y, 0) * 0.5px),
+    0
+  );
+}
+
+/* Partículas suaves simulando fluxo de ar */
+.tech-particles {
+  position: absolute;
+  inset: -20%;
+  opacity: 0.45;
+  background:
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(34, 211, 238, 0.28),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(56, 189, 248, 0.22),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 30% 80%,
+      rgba(59, 130, 246, 0.18),
+      transparent 55%
+    );
+  filter: blur(18px);
+  mix-blend-mode: screen;
+  background-size: 200% 200%;
+  animation: tech-particles-drift 30s linear infinite alternate;
+}
+
+@keyframes tech-particles-drift {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 40% -20%;
+  }
+}
+
+/* Cursor com leve efeito de partículas/glow */
+.cursor-glow {
+  position: fixed;
+  width: 220px;
+  height: 220px;
+  pointer-events: none;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(56, 189, 248, 0.32),
+    transparent 60%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.45;
+  transform: translate3d(
+      calc(var(--pointer-x, 0px) - 110px),
+      calc(var(--pointer-y, 0px) - 110px),
+      0
+    )
+    scale(1);
+  transition:
+    transform 120ms ease-out,
+    opacity 200ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tech-particles,
+  .cursor-glow {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* Container do viewer 3D de equipamentos */
+.equipment-viewer-3d {
+  width: 100%;
+  max-width: 520px;
+  aspect-ratio: 4 / 3;
+  border-radius: 1.75rem;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background:
+    radial-gradient(
+      circle at 10% 0,
+      rgba(34, 211, 238, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 90% 100%,
+      rgba(59, 130, 246, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 50% 110%,
+      rgba(15, 23, 42, 1),
+      rgba(2, 6, 23, 1)
+    );
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 26px 70px rgba(15, 23, 42, 0.95),
+    0 0 60px rgba(15, 23, 42, 0.9);
+  overflow: hidden;
+}
+
+.equipment-viewer-3d model-viewer {
+  --poster-color: transparent;
+  --progress-bar-color: rgba(34, 211, 238, 0.7);
+  --progress-bar-height: 2px;
+  background: transparent;
+}
+
+.hotspot-chip {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: radial-gradient(
+      circle at 0 0,
+      rgba(34, 211, 238, 0.25),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.95);
+  color: #e5e7eb;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.9);
+}
+
+/* Fundo em grid animado para o hero */
+.bg-grid {
+  position: relative;
+  isolation: isolate;
+}
+
+.bg-grid::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  z-index: -2;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(148, 163, 184, 0.09) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(148, 163, 184, 0.09) 1px,
+      transparent 1px
+    );
+  background-size: 36px 36px;
+  mask-image: radial-gradient(circle at top, black, transparent 65%);
+  animation: grid-move 26s linear infinite;
+}
+
+.bg-grid::after {
+  content: "";
+  position: absolute;
+  inset: -80%;
+  z-index: -1;
+  background: radial-gradient(
+    circle at top,
+    rgba(34, 211, 238, 0.2),
+    transparent 55%
+  );
+  opacity: 0.6;
+  filter: blur(2px);
+}
+
+@keyframes grid-move {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 80px 80px, 80px 80px;
+  }
+}
+
+/* Linhas de fluxo de ar (airflow) no hero – movimento horizontal lento e sutil */
+.hero-airflow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 55%;
+  z-index: 1;
+  overflow: hidden;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent 80px,
+    rgba(56, 189, 248, 0.14) 80px,
+    rgba(56, 189, 248, 0.14) 82px
+  );
+  background-size: 200% 100%;
+  animation: airflow-drift 65s linear infinite;
+}
+
+@keyframes airflow-drift {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Camada do desenho técnico HVAC (dutos/filtragem) – muito leve */
+.hero-hvac-schematic {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: 0.07;
+}
+
+/* Imagem de fundo do hero (cleanroom HVAC) + overlay azul escuro */
+.hero-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(circle at top, rgba(30, 64, 175, 0.24), transparent 65%),
+    linear-gradient(
+      to bottom,
+      rgba(15, 23, 42, 0.55),
+      rgba(15, 23, 42, 0.82)
+    );
+}
+
+/* Hero específico para HVAC na home */
+.hero-hvac-flow {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-air-line {
+  stroke: rgba(226, 232, 240, 0.7);
+  stroke-width: 3;
+  stroke-linecap: round;
+  fill: none;
+  stroke-dasharray: 260 520;
+  stroke-dashoffset: 0;
+  filter: blur(1.4px);
+  mix-blend-mode: screen;
+  animation: hero-air-line-move 18s linear infinite;
+}
+
+.hero-air-line--2 {
+  stroke: rgba(191, 219, 254, 0.9);
+  stroke-width: 2.4;
+  animation-duration: 22s;
+  animation-delay: -4s;
+}
+
+.hero-air-line--3 {
+  stroke: rgba(56, 189, 248, 0.85);
+  stroke-width: 2.2;
+  animation-duration: 26s;
+  animation-delay: -8s;
+}
+
+@keyframes hero-air-line-move {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -780;
+  }
+}
+
+/* Linha luminosa do fluxo de engenharia */
+.flow-line {
+  height: 2px;
+  width: 100%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(15, 23, 42, 0),
+    rgba(34, 211, 238, 0.9),
+    rgba(56, 189, 248, 0.8),
+    rgba(129, 140, 248, 0.8),
+    rgba(15, 23, 42, 0)
+  );
+  filter: drop-shadow(0 0 18px rgba(34, 211, 238, 0.9));
+  background-size: 200% 100%;
+  animation: flow-line-move 16s linear infinite;
+}
+
+@keyframes flow-line-move {
+  0% {
+    background-position: 0% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Vídeo de fundo do hero */
+.hero-video-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+/* Cartões em vidro fosco */
+.glass-panel {
+  border-radius: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.9),
+      rgba(15, 23, 42, 0.82)
+    ),
+    radial-gradient(circle at top left, rgba(34, 211, 238, 0.1), transparent);
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 24px 80px rgba(15, 23, 42, 0.95),
+    0 0 40px rgba(15, 23, 42, 0.8);
+}
+
+.glass-panel-soft {
+  border-radius: 1.25rem;
+  border: 1px solid rgba(148, 163, 184, 0.32);
+  background: radial-gradient(
+      circle at top left,
+      rgba(34, 211, 238, 0.14),
+      transparent 55%
+    ),
+    rgba(15, 23, 42, 0.96);
+  box-shadow:
+    0 18px 60px rgba(15, 23, 42, 0.9),
+    0 0 30px rgba(15, 23, 42, 0.65);
+}
+
+.badge-chip {
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: radial-gradient(
+      circle at top left,
+      rgba(34, 211, 238, 0.24),
+      transparent 65%
+    ),
+    rgba(15, 23, 42, 0.9);
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.9);
+}
+
+.nav-blur {
+  backdrop-filter: blur(20px);
+  background: radial-gradient(
+      circle at top left,
+      rgba(34, 211, 238, 0.12),
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.96),
+      rgba(15, 23, 42, 0.9)
+    );
+  border-bottom: 1px solid rgba(30, 64, 175, 0.4);
+}
+
+.shadow-glow {
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.6),
+    0 0 35px rgba(34, 211, 238, 0.6);
+}
+
+/* Botão primário com glow tecnológico */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-2.5 text-xs font-semibold sm:text-sm;
+  background: radial-gradient(
+      circle at 10% 0,
+      rgba(255, 255, 255, 0.4),
+      transparent 55%
+    ),
+    linear-gradient(135deg, #22d3ee, #38bdf8);
+  color: #020617;
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.7),
+    0 0 35px rgba(56, 189, 248, 0.7);
+  transition:
+    transform 150ms ease-out,
+    box-shadow 180ms ease-out,
+    filter 180ms ease-out;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.02);
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.9),
+    0 0 45px rgba(56, 189, 248, 0.9);
+}
+
+.btn-primary:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.7),
+    0 0 25px rgba(56, 189, 248, 0.6);
+}
+
+/* Card elevado padrão com hover tecnológico */
+.card-elevated {
+  @apply rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-xs text-slate-300 transition-transform;
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 18px 55px rgba(15, 23, 42, 0.95);
+}
+
+.card-elevated:hover {
+  transform: translateY(-6px) rotate3d(0.06, -0.08, 0, 0.6deg);
+  border-color: rgba(34, 211, 238, 0.85);
+  box-shadow:
+    0 0 0 1px rgba(34, 211, 238, 0.7),
+    0 26px 80px rgba(8, 47, 73, 0.95);
+}
+
+/* Card estático – mesmo visual do card-elevated, sem movimento no hover */
+.card-static {
+  @apply rounded-2xl border border-slate-800/80 bg-slate-900/70 p-4 text-xs text-slate-300;
+  box-shadow:
+    0 0 0 1px rgba(15, 23, 42, 0.9),
+    0 18px 55px rgba(15, 23, 42, 0.95);
+}
+
+/* Partículas pequenas em órbita usadas nos globos 3D */
+.globe-particle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: radial-gradient(
+    circle,
+    rgba(248, 250, 252, 0.9),
+    rgba(56, 189, 248, 0.4)
+  );
+  box-shadow:
+    0 0 0 1px rgba(148, 163, 184, 0.5),
+    0 0 18px rgba(56, 189, 248, 0.9);
+  animation: globe-particle-orbit 9s linear infinite;
+}
+
+@keyframes globe-particle-orbit {
+  0% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate3d(6px, -4px, 0);
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+  }
+}
