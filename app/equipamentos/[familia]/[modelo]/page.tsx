@@ -720,7 +720,7 @@ export default function EquipamentoModeloPage() {
           <div className="flex flex-col gap-3 p-3 sm:flex-row sm:items-start sm:gap-6 sm:p-6">
             {/* Coluna esquerda: imagem + mini-galeria */}
             <div className="flex flex-1 flex-col gap-3">
-              <div className="relative flex min-h-[160px] max-h-[240px] items-center justify-center overflow-hidden rounded-xl bg-slate-900 sm:max-h-[300px] sm:rounded-2xl md:max-h-[340px]">
+              <div className="relative flex min-h-[220px] items-center justify-center overflow-hidden rounded-xl bg-slate-900 sm:min-h-[260px] md:min-h-[320px] lg:min-h-[360px]">
                 <Image
                   src={mainImg}
                   alt={modelo.nome}

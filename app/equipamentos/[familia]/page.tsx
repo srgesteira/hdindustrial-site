@@ -302,7 +302,7 @@ export default function EquipamentosFamiliaPage() {
                 <article className="flex h-full flex-col gap-3 card-elevated transition-transform group-hover:-translate-y-1 group-hover:border-cyan-400/80 sm:gap-4">
                   <div className="flex flex-1 flex-col gap-3">
                     {/* Imagem do modelo */}
-                    <div className="relative flex h-28 w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 ring-1 ring-slate-700/80 sm:h-36 md:h-40 lg:h-44">
+                    <div className="relative flex h-40 w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 ring-1 ring-slate-700/80 sm:h-48 md:h-56 lg:h-64">
                       <Image
                         src={imgSrc}
                         alt={modelo.nome}
@@ -326,7 +326,7 @@ export default function EquipamentosFamiliaPage() {
                   </div>
 
                   <div className="mt-2">
-                    <span className="inline-flex items-center rounded-full border border-slate-600 bg-slate-900/80 px-4 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-200 group-hover:border-cyan-400 group-hover:text-cyan-200">
+                    <span className="inline-flex items-center rounded-full border border-slate-600 bg-slate-900/80 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-200 group-hover:border-cyan-400 group-hover:text-cyan-200">
                       Ver detalhes
                     </span>
                   </div>
