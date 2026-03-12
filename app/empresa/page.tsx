@@ -21,13 +21,13 @@ const areasAtuacao = [
 export default function EmpresaPage() {
   return (
     <div className="h-screen min-h-0 overflow-y-auto bg-slate-950">
-      <div className="mx-auto flex w-full max-w-6xl flex-col gap-16 px-4 pb-16 pt-24 sm:px-6 lg:px-8">
+      <div className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 pb-20 pt-20 sm:gap-16 sm:px-6 sm:pb-16 sm:pt-24 lg:px-8">
         {/* Hero */}
         <section className="space-y-5">
           <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Quem Somos · Nossa História
           </p>
-          <h1 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-[2rem]">
+          <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[2rem]">
             Quem Somos
           </h1>
           <p className="max-w-2xl text-sm leading-relaxed text-slate-300">
@@ -53,7 +53,7 @@ export default function EmpresaPage() {
         </section>
 
         {/* Missão */}
-        <section className="space-y-4 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+        <section className="space-y-4 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:rounded-3xl sm:p-6 md:p-8">
           <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
             Missão
           </h2>
@@ -64,7 +64,7 @@ export default function EmpresaPage() {
         </section>
 
         {/* Visão */}
-        <section className="space-y-4 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+        <section className="space-y-4 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:rounded-3xl sm:p-6 md:p-8">
           <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
             Visão
           </h2>
@@ -75,11 +75,11 @@ export default function EmpresaPage() {
         </section>
 
         {/* Valores */}
-        <section className="space-y-6 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+        <section className="space-y-6 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:rounded-3xl sm:p-6 md:p-8">
           <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
             Valores
           </h2>
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {valores.map((valor) => (
               <div
                 key={valor}
@@ -95,7 +95,7 @@ export default function EmpresaPage() {
         </section>
 
         {/* Atuação */}
-        <section className="space-y-6 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-6 sm:p-8">
+        <section className="space-y-6 rounded-2xl border border-slate-800/80 bg-slate-950/80 p-4 sm:rounded-3xl sm:p-6 md:p-8">
           <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
             Atuação
           </h2>
@@ -117,8 +117,8 @@ export default function EmpresaPage() {
 
         {/* CTA */}
         <section>
-          <div className="rounded-3xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-slate-900 to-slate-950 px-6 py-7 text-sm text-slate-200 shadow-[0_20px_70px_rgba(8,47,73,0.9)] sm:px-8 lg:px-10">
-            <div className="flex flex-wrap items-center justify-between gap-6">
+          <div className="rounded-2xl border border-cyan-500/40 bg-gradient-to-r from-cyan-500/15 via-slate-900 to-slate-950 px-4 py-5 text-sm text-slate-200 shadow-[0_20px_70px_rgba(8,47,73,0.9)] sm:rounded-3xl sm:px-6 sm:py-7 md:px-8 lg:px-10">
+            <div className="flex flex-col flex-wrap items-stretch justify-between gap-4 sm:flex-row sm:items-center sm:gap-6">
               <div className="max-w-xl space-y-2">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
                   Projeto HVAC

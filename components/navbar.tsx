@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -15,6 +16,7 @@ const links = [
 
 export function Navbar() {
   const pathname = usePathname();
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const segments = pathname.split("/").filter(Boolean);
   const isEquipamentosSection = segments[0] === "equipamentos";
@@ -42,23 +44,23 @@ export function Navbar() {
       <div className="nav-blur">
         <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-8 lg:px-4">
           {/* Logo sempre visível à esquerda */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" onClick={() => setMobileOpen(false)}>
             <Image
-              src="/logo-hd.png"
+              src="/logo-hd.webp"
               alt="HD Soluções Industriais"
               width={120}
               height={40}
-              className="h-10 w-auto object-contain"
+              className="h-8 w-auto object-contain sm:h-10"
               priority
             />
-            <span className="text-sm font-semibold text-slate-100">
+            <span className="truncate text-xs font-semibold text-slate-100 sm:text-sm">
               HD Soluções Industriais
             </span>
           </Link>
 
           {/* Centro: ou menu padrão, ou rastro Home / Equipamentos / Família */}
           {isEquipamentosSection ? (
-            <div className="flex flex-1 justify-center">
+            <div className="hidden flex-1 justify-center md:flex">
               <nav className="inline-flex max-w-full flex-wrap items-center gap-1 rounded-full border border-slate-700/80 bg-slate-900/80 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-slate-300 shadow-lg shadow-slate-950/80">
                 <Link href="/" className="hover:text-cyan-200">
                   Home
@@ -106,17 +108,49 @@ export function Navbar() {
             </div>
           )}
 
-          {/* Direita: botão Contato sempre disponível em desktop;
-              em mobile mantemos o chip informativo */}
+          {/* Direita: menu hamburger mobile, botão Contato desktop */}
           <div className="flex items-center gap-2">
-            <div className="md:hidden">
-              <span className="badge-chip px-3 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-slate-200">
-                Engenharia aplicada a resultados
-              </span>
-            </div>
+            <button
+              type="button"
+              onClick={() => setMobileOpen((o) => !o)}
+              className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg border border-slate-700/80 bg-slate-900/60 text-slate-300 transition hover:bg-slate-800/80 md:hidden"
+              aria-label={mobileOpen ? "Fechar menu" : "Abrir menu"}
+              aria-expanded={mobileOpen}
+            >
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
             {contatoButton}
           </div>
         </nav>
+
+        {/* Menu mobile expandido */}
+        {mobileOpen && (
+          <div className="border-t border-slate-800/70 bg-slate-950/95 px-4 py-4 md:hidden">
+            <div className="flex flex-col gap-1">
+              {links.map((item) => {
+                const active = item.href === "/" ? pathname === "/" : pathname.startsWith(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={`rounded-lg px-4 py-3 text-sm font-medium transition ${
+                      active ? "bg-slate-100 text-slate-950" : "text-slate-300 hover:bg-slate-800/80 hover:text-cyan-300"
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

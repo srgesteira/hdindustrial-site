@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="mx-auto flex max-w-6xl flex-col">
       {/* PRIMEIRA TELA ÚNICA – HERO TECNOLÓGICO COM GLOBOS TERRESTRES */}
-      <section className="hero-bg relative flex min-h-screen flex-col justify-between overflow-hidden px-4 pt-6 pb-10 sm:px-6 lg:px-10 sm:pt-8 sm:pb-12">
+      <section className="hero-bg relative flex min-h-[100dvh] min-h-screen flex-col justify-between overflow-hidden px-4 pt-4 pb-20 sm:px-6 sm:pt-8 sm:pb-12 lg:px-10">
         {/* Vídeo de fundo com movimento de ar (mantido) */}
         <div className="hero-video-wrapper" aria-hidden>
           <video
@@ -24,6 +24,7 @@ export default function Home() {
             muted
             loop
             playsInline
+            preload="metadata"
           />
         </div>
         <div className="hero-overlay" aria-hidden />
@@ -56,14 +57,14 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           transition={{ duration: 0.7, ease: "easeOut" }}
-          className="relative z-10 mt-4 flex flex-1 flex-col items-center justify-center gap-6 text-center sm:mt-6"
+          className="relative z-10 mt-2 flex flex-1 flex-col items-center justify-center gap-4 text-center sm:mt-6 sm:gap-6"
         >
-          <div className="space-y-3 px-4 sm:px-0">
+          <div className="space-y-2 px-2 sm:space-y-3 sm:px-0">
             {/* Logo centralizado acima do título */}
-            <div className="mx-auto mb-3 flex justify-center">
-              <div className="relative h-32 w-32 sm:h-40 sm:w-40">
+            <div className="mx-auto mb-2 flex justify-center sm:mb-3">
+              <div className="relative h-24 w-24 sm:h-32 sm:w-32 lg:h-40 lg:w-40">
                 <Image
-                  src="/logo-hd.png"
+                  src="/logo-hd.webp"
                   alt="HD Soluções Industriais"
                   fill
                   className="object-contain"
@@ -71,17 +72,17 @@ export default function Home() {
                 />
               </div>
             </div>
-            <h1 className="text-balance text-3xl font-semibold tracking-tight text-slate-50 sm:text-4xl lg:text-[2.6rem]">
+            <h1 className="text-balance text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl sm:text-4xl lg:text-[2.6rem]">
               HD Soluções Industriais
             </h1>
-            <p className="mx-auto max-w-2xl text-sm text-slate-200 sm:text-[15px]">
+            <p className="mx-auto max-w-2xl text-xs leading-relaxed text-slate-200 sm:text-sm sm:text-[15px]">
               Engenharia HVAC para ambientes críticos e infraestrutura
               industrial, conectando tecnologia, confiabilidade e performance
               operacional.
             </p>
           </div>
 
-          <div className="grid w-full gap-6 px-4 sm:grid-cols-3 sm:px-0">
+          <div className="grid w-full grid-cols-1 gap-4 px-2 sm:grid-cols-3 sm:gap-6 sm:px-0">
             <RotatingGlobe
               label="Equipamentos HVAC"
               href="/equipamentos"
@@ -101,7 +102,7 @@ export default function Home() {
 
           {/* Botão central Nossa história */}
           <motion.div
-            className="mt-4 inline-flex"
+            className="mt-2 inline-flex sm:mt-4"
             whileHover={{ scale: 1.05, y: -6 }}
             transition={{ type: "spring", stiffness: 260, damping: 18 }}
           >
@@ -114,9 +115,16 @@ export default function Home() {
           </motion.div>
         </motion.div>
 
-        {/* Botões flutuantes fora da imagem de fundo – mesmo estilo do Contato */}
-        {/* Contato – lado esquerdo superior (fora do painel central) */}
-        <div className="pointer-events-none fixed left-4 top-28 z-30 sm:left-5 sm:top-32 lg:left-6">
+        {/* Botões flutuantes – mobile: barra inferior; desktop: 4 cantos */}
+        <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 flex justify-center pb-4 sm:hidden">
+          <Link
+            href="/contato"
+            className="pointer-events-auto btn-primary w-[calc(100%-2rem)] max-w-[280px] px-6 py-3 text-sm"
+          >
+            Contato
+          </Link>
+        </div>
+        <div className="pointer-events-none fixed left-4 top-28 z-30 hidden sm:block sm:left-5 sm:top-32 lg:left-6">
           <Link
             href="/contato"
             className="pointer-events-auto btn-primary w-32 h-12 px-4 text-[12px]"
@@ -124,46 +132,28 @@ export default function Home() {
             Contato
           </Link>
         </div>
-
-        {/* Falar com engenharia – canto inferior esquerdo, fora do painel (duas linhas) */}
-        <div className="pointer-events-none fixed bottom-24 left-4 z-30 sm:left-5 lg:left-6">
+        <div className="pointer-events-none fixed bottom-24 left-4 z-30 hidden sm:block sm:left-5 lg:left-6">
           <Link
             href="/contato"
             className="pointer-events-auto btn-primary w-32 h-12 px-4 text-[11px]"
           >
-            <span className="leading-[1.1]">
-              Falar com
-              <br />
-              engenharia
-            </span>
+            <span className="leading-[1.1]">Falar com<br />engenharia</span>
           </Link>
         </div>
-
-        {/* Solicitar orçamento – alinhado com Contato na direita, em duas linhas */}
-        <div className="pointer-events-none fixed right-4 top-28 z-30 sm:right-5 sm:top-32 lg:right-6">
+        <div className="pointer-events-none fixed right-4 top-28 z-30 hidden sm:block sm:right-5 sm:top-32 lg:right-6">
           <Link
             href="/contato"
             className="pointer-events-auto btn-primary w-32 h-12 px-4 text-[11px]"
           >
-            <span className="leading-[1.1]">
-              Solicitar
-              <br />
-              orçamento
-            </span>
+            <span className="leading-[1.1]">Solicitar<br />orçamento</span>
           </Link>
         </div>
-
-        {/* Falar com comercial – canto inferior direito, fora do painel (duas linhas) */}
-        <div className="pointer-events-none fixed bottom-24 right-4 z-30 sm:right-5 lg:right-6">
+        <div className="pointer-events-none fixed bottom-24 right-4 z-30 hidden sm:block sm:right-5 lg:right-6">
           <Link
             href="/contato"
             className="pointer-events-auto btn-primary w-32 h-12 px-4 text-[11px]"
           >
-            <span className="leading-[1.1]">
-              Falar com
-              <br />
-              comercial
-            </span>
+            <span className="leading-[1.1]">Falar com<br />comercial</span>
           </Link>
         </div>
       </section>

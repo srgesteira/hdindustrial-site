@@ -16,7 +16,7 @@ export function RotatingGlobe({
   label,
   href,
   delay = 0,
-  imageSrc = "/hero/globe-earth.png",
+  imageSrc = "/hero/globe-earth.webp",
 }: RotatingGlobeProps) {
   const router = useRouter();
   const [isEntering, setIsEntering] = useState(false);
@@ -49,7 +49,7 @@ export function RotatingGlobe({
         className="flex flex-col items-center gap-3"
       >
         <motion.div
-          className="relative h-44 w-44 sm:h-52 sm:w-52"
+          className="relative h-36 w-36 sm:h-44 sm:w-44 md:h-52 md:w-52"
           animate={{ rotate: 360 }}
           transition={{
             repeat: Infinity,
@@ -62,12 +62,20 @@ export function RotatingGlobe({
 
           {/* Globo dentro do anel branco – alinhamento geométrico perfeito */}
           <div className="relative flex h-full w-full items-center justify-center overflow-hidden rounded-full border border-cyan-400/80 bg-slate-950/95 shadow-[0_0_65px_rgba(34,211,238,0.9)] backdrop-blur-2xl">
-            {/* Globo ocupa praticamente todo o círculo interno */}
+            {/* Globo terrestre – imagem central */}
             <div className="pointer-events-none absolute inset-[3%] overflow-hidden rounded-full">
               <img
                 src={imageSrc}
                 alt={label}
+                loading="lazy"
+                decoding="async"
                 className="h-full w-full rounded-full object-cover"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.endsWith(".png")) {
+                    target.src = "/hero/globe-earth.png";
+                  }
+                }}
               />
             </div>
 

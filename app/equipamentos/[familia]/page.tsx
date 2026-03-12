@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -122,7 +123,7 @@ const familias: Familia[] = [
         codigo: "CFD",
         slug: "cfd",
         nome: "CFD · Caixa de Filtragem para Duto",
-        imagem: "/equipamentos/caixas-filtragem/CF1-2E-1.png",
+        imagem: "/equipamentos/caixas-filtragem/cf1-2e-1.webp",
         descricao:
           "Unidade de filtragem instalada em linhas de dutos para aplicação de estágios intermediários de filtragem em sistemas HVAC.",
         caracteristicas: [],
@@ -133,7 +134,7 @@ const familias: Familia[] = [
         codigo: "CFV",
         slug: "cfv",
         nome: "CFV · Caixa de Filtragem Vertical",
-        imagem: "/equipamentos/caixas-filtragem/CF2-2E-1.png",
+        imagem: "/equipamentos/caixas-filtragem/cf2-2e-1.webp",
         descricao:
           "Unidade de filtragem com acesso vertical projetada para facilitar manutenção e substituição de filtros.",
         caracteristicas: [],
@@ -181,7 +182,7 @@ const familias: Familia[] = [
         codigo: "BIBO-C",
         slug: "bibo-c",
         nome: "BIBO-C · Bag In Bag Out – Caixa de Filtragem",
-        imagem: "/equipamentos/bibo/BIBO-C-1.png",
+        imagem: "/equipamentos/bibo/bibo-c-1.webp",
         descricao:
           "Sistema de filtragem com troca segura de filtros contaminados através de bolsas seladas.",
         caracteristicas: [],
@@ -192,7 +193,7 @@ const familias: Familia[] = [
         codigo: "BIBO-V",
         slug: "bibo-v",
         nome: "BIBO-V · Bag In Bag Out – Caixa de Ventilação e Filtragem",
-        imagem: "/equipamentos/bibo/BIBO-V-1.png",
+        imagem: "/equipamentos/bibo/bibo-v-1.webp",
         descricao:
           "Equipamento integrado com ventilação, filtragem e troca segura de filtros contaminados para ambientes críticos.",
         caracteristicas: [],
@@ -230,12 +231,6 @@ const familias: Familia[] = [
   },
 ];
 
-const familiaImagens: Record<string, string> = {
-  "caixas-terminais": "/equipamentos/caixas-terminais/familia.png",
-  "fan-filter-unit": "/equipamentos/fan-filter-unit/familia.png",
-  "caixas-filtragem": "/equipamentos/caixas-filtragem/familia.png",
-};
-
 export default function EquipamentosFamiliaPage() {
   const params = useParams<{ familia: string }>();
   const router = useRouter();
@@ -262,17 +257,7 @@ export default function EquipamentosFamiliaPage() {
 
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 py-10">
-        {familiaImagens[familia.slug] && (
-          <div className="flex h-48 w-full items-center justify-center overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950/80 ring-1 ring-slate-700/70 sm:h-56">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={familiaImagens[familia.slug]}
-              alt={familia.nome}
-              className="h-full w-full object-contain"
-            />
-          </div>
-        )}
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 sm:gap-8 sm:py-10">
         <header className="space-y-3">
           {/* Breadcrumb: Equipamentos / Família */}
           <nav className="flex flex-wrap items-center gap-1 text-[11px] font-medium uppercase tracking-[0.22em] text-slate-400">
@@ -286,7 +271,7 @@ export default function EquipamentosFamiliaPage() {
             <span>/</span>
             <span className="text-cyan-300">{familia.nome}</span>
           </nav>
-          <h1 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-3xl">
+          <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
             {familia.nome}
           </h1>
           {familia.subtitulo && (
@@ -301,11 +286,11 @@ export default function EquipamentosFamiliaPage() {
           </div>
         </header>
 
-        <section className="grid gap-4 md:grid-cols-3">
+        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {familia.modelos.map((modelo) => {
             const imgSrc =
               modelo.imagem ??
-              `/equipamentos/${familia.slug}/${modelo.codigo.toLowerCase()}-1.png`;
+              `/equipamentos/${familia.slug}/${modelo.codigo.toLowerCase()}-1.webp`;
             const modeloSlug = (modelo.slug ?? modelo.codigo).toLowerCase();
 
             return (
@@ -317,12 +302,14 @@ export default function EquipamentosFamiliaPage() {
                 <article className="flex h-full flex-col gap-4 card-elevated transition-transform group-hover:-translate-y-1 group-hover:border-cyan-400/80">
                   <div className="flex flex-1 flex-col gap-3">
                     {/* Imagem do modelo */}
-                    <div className="flex h-40 w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 ring-1 ring-slate-700/80 sm:h-44">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                    <div className="relative flex h-32 w-full items-center justify-center overflow-hidden rounded-xl bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 ring-1 ring-slate-700/80 sm:h-40 md:h-44">
+                      <Image
                         src={imgSrc}
                         alt={modelo.nome}
-                        className="h-full w-full object-contain"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 384px"
+                        loading="lazy"
+                        className="object-contain"
                       />
                     </div>
                     <div className="flex-1 space-y-1.5">

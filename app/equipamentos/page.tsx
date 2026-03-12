@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 type Modelo = {
@@ -217,18 +218,18 @@ const familias: Familia[] = [
 ];
 
 const familiaImagens: Record<string, string> = {
-  "caixas-terminais": "/equipamentos/caixas-terminais/familia.png",
-  "fan-filter-unit": "/equipamentos/fan-filter-unit/familia.png",
-  "caixas-filtragem": "/equipamentos/caixas-filtragem/familia.png",
-  "ventilacao-exaustao": "/equipamentos/ventilacao-exaustao/familia.png",
-  bibo: "/equipamentos/bibo/familia.png",
-  "cabine-pintura": "/equipamentos/cabine-pintura/familia.png",
+  "caixas-terminais": "/equipamentos/caixas-terminais/familia.webp",
+  "fan-filter-unit": "/equipamentos/fan-filter-unit/familia.webp",
+  "caixas-filtragem": "/equipamentos/caixas-filtragem/familia.webp",
+  "ventilacao-exaustao": "/equipamentos/ventilacao-exaustao/familia.webp",
+  bibo: "/equipamentos/bibo/familia.webp",
+  "cabine-pintura": "/equipamentos/cabine-pintura/familia.webp",
 };
 
 export default function EquipamentosPage() {
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 py-10">
+      <div className="mx-auto flex max-w-6xl flex-col gap-8 py-6 sm:gap-10 sm:py-10">
         <header className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
             Portfólio HVAC
@@ -243,7 +244,7 @@ export default function EquipamentosPage() {
         </header>
 
         {/* Botões das famílias de equipamentos */}
-        <section className="grid gap-4 md:grid-cols-2">
+        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {familias.map((familia) => {
             const imgSrc = familiaImagens[familia.slug];
 
@@ -257,13 +258,15 @@ export default function EquipamentosPage() {
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   {/* Imagem da família */}
-                  <div className="flex h-24 w-full items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-28 sm:w-36">
+                  <div className="relative flex h-24 w-full items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-28 sm:w-36">
                     {imgSrc ? (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
+                      <Image
                         src={imgSrc}
                         alt={familia.nome}
-                        className="h-full w-full object-cover"
+                        fill
+                        sizes="(max-width: 640px) 100px, 144px"
+                        loading="lazy"
+                        className="object-cover"
                       />
                     ) : (
                       <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">

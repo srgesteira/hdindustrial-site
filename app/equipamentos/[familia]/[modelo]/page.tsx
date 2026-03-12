@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 
@@ -116,7 +117,7 @@ const familias: Familia[] = [
         codigo: "CFD",
         slug: "cfd",
         nome: "CFD · Caixa de Filtragem para Duto",
-        imagem: "/equipamentos/caixas-filtragem/CF1-2E-1.png",
+        imagem: "/equipamentos/caixas-filtragem/cf1-2e-1.webp",
         descricao:
           "Unidade de filtragem instalada em linhas de dutos para aplicação de estágios intermediários de filtragem em sistemas HVAC.",
         caracteristicas: [],
@@ -127,7 +128,7 @@ const familias: Familia[] = [
         codigo: "CFV",
         slug: "cfv",
         nome: "CFV · Caixa de Filtragem Vertical",
-        imagem: "/equipamentos/caixas-filtragem/CF2-2E-1.png",
+        imagem: "/equipamentos/caixas-filtragem/cf2-2e-1.webp",
         descricao:
           "Unidade de filtragem com acesso vertical projetada para facilitar manutenção e substituição de filtros.",
         caracteristicas: [],
@@ -173,7 +174,7 @@ const familias: Familia[] = [
         codigo: "BIBO-C",
         slug: "bibo-c",
         nome: "BIBO-C · Bag In Bag Out – Caixa de Filtragem",
-        imagem: "/equipamentos/bibo/BIBO-C-1.png",
+        imagem: "/equipamentos/bibo/bibo-c-1.webp",
         descricao:
           "Sistema de filtragem com troca segura de filtros contaminados através de bolsas seladas.",
         caracteristicas: [],
@@ -184,7 +185,7 @@ const familias: Familia[] = [
         codigo: "BIBO-V",
         slug: "bibo-v",
         nome: "BIBO-V · Bag In Bag Out – Caixa de Ventilação e Filtragem",
-        imagem: "/equipamentos/bibo/BIBO-V-1.png",
+        imagem: "/equipamentos/bibo/bibo-v-1.webp",
         descricao:
           "Equipamento integrado com ventilação, filtragem e troca segura de filtros contaminados para ambientes críticos.",
         caracteristicas: [],
@@ -626,25 +627,28 @@ export default function EquipamentoModeloPage() {
   // Imagem principal em destaque
   const mainImg =
     modelo.imagem ??
-    `/equipamentos/${familia.slug}/${modelo.codigo.toLowerCase()}-1.png`;
+    `/equipamentos/${familia.slug}/${modelo.codigo.toLowerCase()}-1.webp`;
 
   // Imagens adicionais (somente para caixas terminais, onde já existem múltiplas fotos)
   let extraImages: string[] = [];
   if (familia.slug === "caixas-terminais") {
     extraImages = Array.from({ length: 5 }, (_, i) => {
       const index = i + 2;
-      return `/equipamentos/${familia.slug}/${modelo.codigo}-${index}.png`;
+      return `/equipamentos/${familia.slug}/${modelo.codigo.toLowerCase()}-${index}.webp`;
     });
   }
   if (familia.slug === "bibo") {
     if (modelo.codigo === "BIBO-C") {
       extraImages = [
-        "/equipamentos/bibo/BIBO-C-2.png",
-        "/equipamentos/bibo/BIBO-C-3.png",
+        "/equipamentos/bibo/bibo-c-2.webp",
+        "/equipamentos/bibo/bibo-c-3.webp",
       ];
     } else if (modelo.codigo === "BIBO-V") {
-      extraImages = ["/equipamentos/bibo/BIBO-V-2.png"];
+      extraImages = ["/equipamentos/bibo/bibo-v-2.webp"];
     }
+  }
+  if (familia.slug === "cabine-pintura" && modelo.codigo === "PEM") {
+    extraImages = ["/equipamentos/cabine-pintura/pem-2.webp"];
   }
 
   const conteudoModelo =
@@ -676,7 +680,7 @@ export default function EquipamentoModeloPage() {
 
   return (
     <div className="h-screen overflow-y-auto">
-      <div className="mx-auto flex max-w-6xl flex-col gap-8 py-10">
+      <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 sm:gap-8 sm:py-10">
         {/* Breadcrumb premium */}
         <header className="space-y-4">
           <nav className="inline-flex flex-wrap items-center gap-1 rounded-full border border-slate-700/70 bg-slate-900/80 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.22em] text-slate-300 shadow-[0_10px_35px_rgba(15,23,42,0.9)]">
@@ -700,7 +704,7 @@ export default function EquipamentoModeloPage() {
 
           {/* Cabeçalho técnico do produto */}
           <div className="space-y-2">
-            <h1 className="text-2xl font-semibold tracking-tight text-slate-50 sm:text-[1.9rem]">
+            <h1 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-2xl md:text-[1.9rem]">
               {conteudoModelo
                 ? conteudoModelo.titulo
                 : `${modelo.codigo} · ${modelo.nome}`}
@@ -711,35 +715,40 @@ export default function EquipamentoModeloPage() {
           </div>
         </header>
 
-        {/* Card principal em 2 colunas */}
-        <section className="overflow-hidden rounded-3xl border border-slate-800/80 bg-slate-950/80">
-          <div className="flex flex-col gap-6 p-4 sm:flex-row sm:items-start sm:p-6">
+        {/* Card principal: mobile empilhado, desktop 2 colunas */}
+        <section className="overflow-hidden rounded-2xl border border-slate-800/80 bg-slate-950/80 sm:rounded-3xl">
+          <div className="flex flex-col gap-4 p-4 sm:flex-row sm:items-start sm:gap-6 sm:p-6">
             {/* Coluna esquerda: imagem + mini-galeria */}
             <div className="flex flex-1 flex-col gap-3">
-              <div className="flex max-h-[340px] items-center justify-center overflow-hidden rounded-2xl bg-slate-900">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+              <div className="relative flex min-h-[180px] max-h-[280px] items-center justify-center overflow-hidden rounded-xl bg-slate-900 sm:max-h-[340px] sm:rounded-2xl">
+                <Image
                   src={mainImg}
                   alt={modelo.nome}
-                  className="h-full w-full object-contain"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  loading="lazy"
+                  className="object-contain"
                 />
               </div>
               {familia.slug !== "fan-filter-unit" &&
                 familia.slug !== "caixas-filtragem" &&
-                familia.slug !== "bibo" && (
+                familia.slug !== "bibo" &&
+                extraImages.length > 0 && (
                 <div className="flex gap-2">
                   {extraImages.map((src) => (
                     <div
                       key={src}
-                      className="flex h-16 flex-1 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70"
+                      className="relative flex h-16 flex-1 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70"
                     >
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={src}
                         alt={modelo.nome}
-                        className="h-full w-full object-cover"
-                        onError={(event) => {
-                          event.currentTarget.parentElement?.classList.add(
+                        fill
+                        sizes="80px"
+                        loading="lazy"
+                        className="object-cover"
+                        onError={(e) => {
+                          e.currentTarget.parentElement?.parentElement?.classList.add(
                             "hidden",
                           );
                         }}
@@ -770,7 +779,7 @@ export default function EquipamentoModeloPage() {
               )}
 
               {conteudoModelo && (
-                <div className="mt-2 grid gap-2 text-[11px] text-slate-200 sm:grid-cols-3">
+                <div className="mt-2 grid grid-cols-2 gap-2 text-[11px] text-slate-200 sm:grid-cols-3">
                   {conteudoModelo.highlights.map((item) => (
                     <div
                       key={item.label}
