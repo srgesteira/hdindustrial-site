@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "HD Soluções Industriais",
   description: "Engenharia aplicada a resultados industriais.",
+  verification: {
+    google: "EuSlUZlkJB-08lFProfuBAugV9TVMn4s_cWapuqgl7o",
+  },
 };
 
 export default function RootLayout({
