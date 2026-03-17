@@ -5,6 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { RotatingGlobe } from "@/components/RotatingGlobe";
 
+export const metadata = {
+  title:
+    "HD Soluções Industriais | Engenharia HVAC e Consultoria Industrial em São Paulo",
+  description:
+    "Equipamentos HVAC industriais, projetos de salas limpas, filtração HEPA e consultoria operacional. Mais de 23 anos atendendo multinacionais.",
+};
+
 const sectionVariants = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0 },

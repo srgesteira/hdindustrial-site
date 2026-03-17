@@ -1,5 +1,11 @@
 "use client";
 
+export const metadata = {
+  title: "Contato | HD Soluções Industriais",
+  description:
+    "Fale com nossa engenharia para orçamentos de equipamentos HVAC, projetos de salas limpas e consultoria industrial.",
+};
+
 export default function ContatoPage() {
   return (
     <div className="mx-auto flex max-w-6xl flex-col gap-6 pb-8 pt-20 sm:gap-8 sm:pt-24 md:gap-10">

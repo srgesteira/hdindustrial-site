@@ -1,3 +1,10 @@
+export const metadata = {
+  title:
+    "Consultoria Industrial | Otimização de Processos e Reestruturação Operacional",
+  description:
+    "Consultoria em engenharia industrial com foco em otimização de processos, KPIs, eficiência operacional e reestruturação para multinacionais.",
+};
+
 export default function ConsultoriaPage() {
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-slate-950">

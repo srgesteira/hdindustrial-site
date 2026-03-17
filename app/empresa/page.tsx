@@ -2,6 +2,12 @@
 
 import Link from "next/link";
 
+export const metadata = {
+  title: "Sobre a HD Soluções Industriais | 23+ Anos em Engenharia HVAC",
+  description:
+    "Mais de 23 anos conectando tecnologia, confiabilidade e performance operacional para indústrias multinacionais.",
+};
+
 const valores = [
   "Engenharia aplicada",
   "Confiabilidade operacional",

@@ -2,6 +2,13 @@
 
 import Link from "next/link";
 
+export const metadata = {
+  title:
+    "Projetos HVAC Industriais | Salas Limpas e Ambientes Controlados",
+  description:
+    "Projetos completos de HVAC industrial: dimensionamento, instalação e comissionamento para salas limpas e ambientes críticos.",
+};
+
 export default function ProjetosPage() {
   return (
     <div className="h-screen min-h-0 overflow-x-hidden overflow-y-auto bg-slate-950">
