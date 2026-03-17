@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getAllPosts, getPostBySlug } from "../posts";
+import { getAllPosts } from "../posts";
 
 type BlogPostPageProps = {
   params: {
@@ -12,7 +12,9 @@ type BlogPostPageProps = {
 export function generateMetadata(
   { params }: BlogPostPageProps,
 ): Metadata {
-  const post = getPostBySlug(params.slug);
+  const slug = params.slug;
+  const posts = getAllPosts();
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
     return {
@@ -27,9 +29,13 @@ export function generateMetadata(
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const post = getPostBySlug(params.slug);
+  const slug = params.slug;
+  const posts = getAllPosts();
+  const post = posts.find((p) => p.slug === slug);
 
   if (!post) {
+    const availableSlugs = posts.map((p) => p.slug).join(", ");
+
     return (
       <div className="h-screen overflow-x-hidden overflow-y-auto bg-slate-950">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-5 pb-20 pt-20 sm:gap-6 sm:px-6 sm:pt-24 lg:px-8">
@@ -43,6 +49,12 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </header>
           <p className="text-sm text-slate-400">
             O conteúdo que você tentou acessar não está disponível.
+          </p>
+          <p className="text-xs text-slate-500">
+            <span className="font-semibold">Slug recebido:</span> {slug}
+          </p>
+          <p className="text-xs text-slate-500">
+            <span className="font-semibold">Slugs disponíveis:</span> {availableSlugs}
           </p>
           <Link
             href="/blog"
