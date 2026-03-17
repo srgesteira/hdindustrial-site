@@ -15,8 +15,24 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HD Soluções Industriais",
-  description: "Engenharia aplicada a resultados industriais.",
+  title: "HD Soluções Industriais | HVAC, Filtração e Consultoria",
+  description:
+    "Projetos HVAC industriais, salas limpas, filtração HEPA e consultoria técnica para ambientes críticos.",
+  openGraph: {
+    title: "HD Soluções Industriais | HVAC, Filtração e Consultoria",
+    description:
+      "Projetos HVAC industriais, salas limpas, filtração HEPA e consultoria técnica para ambientes críticos.",
+    url: "https://hdindustrial.ind.br",
+    siteName: "HD Soluções Industriais",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "HD Soluções Industriais | HVAC, Filtração e Consultoria",
+    description:
+      "Projetos HVAC industriais, salas limpas, filtração HEPA e consultoria técnica para ambientes críticos.",
+  },
   verification: {
     google: "EuSlUZlkJB-08lFProfuBAugV9TVMn4s_cWapuqgl7o",
   },
