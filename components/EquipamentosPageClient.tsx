@@ -256,38 +256,38 @@ export function EquipamentosPageClient() {
                 whileHover={{ scale: 1.02, y: -4 }}
                 transition={{ type: "spring", stiffness: 260, damping: 18 }}
               >
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  {/* Imagem da família */}
-                  <div className="relative flex h-40 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-44 md:h-52 lg:h-56 sm:w-full">
-                    {imgSrc ? (
-                      <Image
-                        src={imgSrc}
-                        alt={familia.nome}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        loading="lazy"
-                        className="object-contain p-4 sm:p-6"
-                      />
-                    ) : (
-                      <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">
-                        {familia.nome}
-                      </span>
-                    )}
-                  </div>
-
-                  <div className="flex-1 space-y-2">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
-                      Família HD
-                    </p>
-                    <h2 className="text-sm font-semibold text-slate-50 sm:text-base">
+                {/* Imagem da família em destaque no topo */}
+                <div className="relative flex h-48 w-full items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-52 md:h-56 lg:h-60">
+                  {imgSrc ? (
+                    <Image
+                      src={imgSrc}
+                      alt={familia.nome}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      loading="lazy"
+                      className="object-contain p-4 sm:p-6"
+                    />
+                  ) : (
+                    <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">
                       {familia.nome}
-                    </h2>
-                    <p className="text-xs leading-relaxed text-slate-400">
-                      {familia.descricao}
-                    </p>
-                  </div>
+                    </span>
+                  )}
                 </div>
 
+                {/* Texto da família abaixo da imagem */}
+                <div className="mt-4 flex-1 space-y-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
+                    Família HD
+                  </p>
+                  <h2 className="text-sm font-semibold text-slate-50 sm:text-base">
+                    {familia.nome}
+                  </h2>
+                  <p className="text-xs leading-relaxed text-slate-400">
+                    {familia.descricao}
+                  </p>
+                </div>
+
+                {/* Rodapé com link e contador */}
                 <div className="mt-3 flex items-center justify-between text-[11px] text-slate-300">
                   <span className="font-medium text-cyan-300">
                     Ver modelos da família
