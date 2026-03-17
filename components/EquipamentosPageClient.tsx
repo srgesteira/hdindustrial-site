@@ -258,15 +258,15 @@ export function EquipamentosPageClient() {
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   {/* Imagem da família */}
-                  <div className="relative flex h-24 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-28 sm:w-36">
+                  <div className="relative flex h-40 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-48 md:h-56 lg:h-64 sm:w-full">
                     {imgSrc ? (
                       <Image
                         src={imgSrc}
                         alt={familia.nome}
                         fill
-                        sizes="(max-width: 640px) 100px, 144px"
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         loading="lazy"
-                        className="object-contain p-1"
+                        className="object-contain p-4 sm:p-6"
                       />
                     ) : (
                       <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">
