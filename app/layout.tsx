@@ -15,13 +15,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "HD Soluções Industriais | HVAC, Filtração e Consultoria",
+  title:
+    "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
   description:
-    "Projetos HVAC industriais, salas limpas, filtração HEPA e consultoria técnica para ambientes críticos.",
+    "Equipamentos HVAC industriais, filtração HEPA, salas limpas e consultoria técnica especializada para ambientes críticos, indústrias e processos controlados.",
   openGraph: {
-    title: "HD Soluções Industriais | HVAC, Filtração e Consultoria",
+    title:
+      "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
     description:
-      "Projetos HVAC industriais, salas limpas, filtração HEPA e consultoria técnica para ambientes críticos.",
+      "Equipamentos HVAC industriais, filtração HEPA, salas limpas e consultoria técnica especializada para ambientes críticos, indústrias e processos controlados.",
     url: "https://hdindustrial.ind.br",
     siteName: "HD Soluções Industriais",
     locale: "pt_BR",
@@ -29,9 +31,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "HD Soluções Industriais | HVAC, Filtração e Consultoria",
+    title:
+      "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
     description:
-      "Projetos HVAC industriais, salas limpas, filtração HEPA e consultoria técnica para ambientes críticos.",
+      "Equipamentos HVAC industriais, filtração HEPA, salas limpas e consultoria técnica especializada para ambientes críticos, indústrias e processos controlados.",
   },
   verification: {
     google: "EuSlUZlkJB-08lFProfuBAugV9TVMn4s_cWapuqgl7o",
