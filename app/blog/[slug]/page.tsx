@@ -9,11 +9,6 @@ type BlogPostPageProps = {
   };
 };
 
-export function generateStaticParams() {
-  const posts = getAllPosts();
-  return posts.map((post) => ({ slug: post.slug }));
-}
-
 export function generateMetadata(
   { params }: BlogPostPageProps,
 ): Metadata {
