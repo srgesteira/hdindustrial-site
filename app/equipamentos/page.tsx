@@ -250,8 +250,8 @@ export default function EquipamentosPage() {
           </p>
         </header>
 
-        {/* Cards das famílias de equipamentos */}
-        <section className="grid grid-cols-1 gap-5 md:grid-cols-2">
+        {/* Botões das famílias de equipamentos */}
+        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {familias.map((familia) => {
             const imgSrc = familiaImagens[familia.slug];
 
@@ -259,19 +259,19 @@ export default function EquipamentosPage() {
               <motion.a
                 key={familia.slug}
                 href={`/equipamentos/${familia.slug}`}
-                className="group block focus:outline-none"
+                className="group flex min-h-[120px] flex-col overflow-hidden rounded-xl border border-slate-800/80 bg-slate-950/70 px-4 py-4 text-left transition-all active:border-cyan-400/60 active:bg-slate-900/80 sm:rounded-2xl sm:px-5 sm:py-5 sm:min-h-0 sm:hover:border-cyan-400/60 sm:hover:bg-slate-900/80"
                 whileHover={{ scale: 1.02, y: -4 }}
                 transition={{ type: "spring", stiffness: 260, damping: 18 }}
               >
-                <article className="card-elevated flex h-full flex-col gap-3 transition-transform group-hover:-translate-y-1 group-hover:border-cyan-400/80 sm:gap-4">
-                  {/* Imagem da família em destaque */}
-                  <div className="relative flex h-40 w-full items-center justify-center overflow-hidden rounded-2xl bg-slate-900/90 ring-1 ring-slate-700/80 sm:h-48 md:h-56 lg:h-60">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  {/* Imagem da família */}
+                  <div className="relative flex h-24 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-28 sm:w-36">
                     {imgSrc ? (
                       <Image
                         src={imgSrc}
                         alt={familia.nome}
                         fill
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 40vw"
+                        sizes="(max-width: 640px) 100px, 144px"
                         loading="lazy"
                         className="object-contain p-1"
                       />
@@ -282,30 +282,27 @@ export default function EquipamentosPage() {
                     )}
                   </div>
 
-                  {/* Texto e contador */}
-                  <div className="flex flex-1 flex-col justify-between gap-3">
-                    <div className="space-y-1.5">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
-                        Família HD
-                      </p>
-                      <h2 className="text-sm font-semibold text-slate-50 sm:text-base">
-                        {familia.nome}
-                      </h2>
-                      <p className="text-xs leading-relaxed text-slate-400">
-                        {familia.descricao}
-                      </p>
-                    </div>
-
-                    <div className="mt-2 flex items-center justify-between text-[11px] text-slate-300">
-                      <span className="font-medium text-cyan-300">
-                        Ver modelos da família
-                      </span>
-                      <span className="rounded-full border border-slate-600 bg-slate-900/80 px-2 py-1 text-[10px] uppercase tracking-[0.18em] text-slate-400">
-                        {familia.modelos.length} modelos
-                      </span>
-                    </div>
+                  <div className="flex-1 space-y-2">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
+                      Família HD
+                    </p>
+                    <h2 className="text-sm font-semibold text-slate-50 sm:text-base">
+                      {familia.nome}
+                    </h2>
+                    <p className="text-xs leading-relaxed text-slate-400">
+                      {familia.descricao}
+                    </p>
                   </div>
-                </article>
+                </div>
+
+                <div className="mt-3 flex items-center justify-between text-[11px] text-slate-300">
+                  <span className="font-medium text-cyan-300">
+                    Ver modelos da família
+                  </span>
+                  <span className="rounded-full border border-slate-600 bg-slate-900/80 px-2 py-1 text-[10px] uppercase tracking-[0.18em] text-slate-400">
+                    {familia.modelos.length} modelos
+                  </span>
+                </div>
               </motion.a>
             );
           })}
