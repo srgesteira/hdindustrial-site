@@ -1,5 +1,3 @@
-"use client";
-
 export const metadata = {
   title: "Contato | HD Soluções Industriais",
   description:
