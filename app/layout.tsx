@@ -22,6 +22,45 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "HD Soluções Industriais",
+    description:
+      "Engenharia HVAC para ambientes críticos e infraestrutura industrial. Equipamentos HVAC, projetos de salas limpas, filtração industrial e consultoria operacional.",
+    url: "https://hdindustrial.ind.br",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "São Paulo",
+      addressRegion: "SP",
+      addressCountry: "BR",
+    },
+    image: "https://hdindustrial.ind.br/logo-hd.webp",
+    sameAs: ["https://www.instagram.com/hd_solucoes_industriais/"],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "HD Soluções Industriais",
+    url: "https://hdindustrial.ind.br",
+    logo: "https://hdindustrial.ind.br/logo-hd.webp",
+    foundingDate: "2003",
+    knowsAbout: [
+      "HVAC Industrial",
+      "Filtração Industrial",
+      "Salas Limpas",
+      "Consultoria Industrial",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "HD Soluções Industriais",
+    url: "https://hdindustrial.ind.br",
+  },
+];
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -29,6 +68,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-slate-950 text-slate-100`}
       >
