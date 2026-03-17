@@ -4,15 +4,16 @@ import Link from "next/link";
 import { getAllPosts } from "../posts";
 
 type BlogPostPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-export function generateMetadata(
+export async function generateMetadata(
   { params }: BlogPostPageProps,
-): Metadata {
-  const slug = params.slug;
+): Promise<Metadata> {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
   const posts = getAllPosts();
   const post = posts.find((p) => p.slug === slug);
 
@@ -28,8 +29,9 @@ export function generateMetadata(
   };
 }
 
-export default function BlogPostPage({ params }: BlogPostPageProps) {
-  const slug = params.slug;
+export default async function BlogPostPage({ params }: BlogPostPageProps) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
   const posts = getAllPosts();
   const post = posts.find((p) => p.slug === slug);
 
