@@ -244,7 +244,7 @@ export function EquipamentosPageClient() {
         </header>
 
         {/* Botões das famílias de equipamentos */}
-        <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <section className="grid grid-cols-1 gap-5 md:grid-cols-2">
           {familias.map((familia) => {
             const imgSrc = familiaImagens[familia.slug];
 
@@ -258,7 +258,7 @@ export function EquipamentosPageClient() {
               >
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
                   {/* Imagem da família */}
-                  <div className="relative flex h-40 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-48 md:h-56 lg:h-64 sm:w-full">
+                  <div className="relative flex h-40 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 sm:h-44 md:h-52 lg:h-56 sm:w-full">
                     {imgSrc ? (
                       <Image
                         src={imgSrc}
