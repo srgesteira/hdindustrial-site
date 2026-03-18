@@ -8,9 +8,8 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/equipamentos", label: "Equipamentos" },
-  { href: "/projetos", label: "Projetos" },
   { href: "/consultoria", label: "Consultoria" },
-  { href: "/empresa", label: "Sobre" },
+  { href: "/blog", label: "Blog" },
   { href: "/contato", label: "Contato" },
 ];
 
@@ -91,14 +90,23 @@ export function Navbar() {
                     item.href === "/"
                       ? pathname === "/"
                       : pathname.startsWith(item.href);
+                  const isPrimary =
+                    item.href === "/equipamentos" ||
+                    item.href === "/consultoria" ||
+                    item.href === "/blog";
+
                   return (
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`relative rounded-full px-3 py-1 font-medium transition-colors ${
+                      className={`relative rounded-full px-3 py-1 transition-colors ${
                         active
-                          ? "bg-slate-100 text-slate-950"
-                          : "text-slate-300 hover:text-cyan-300"
+                          ? "bg-slate-100 text-slate-950 font-semibold"
+                          : `${
+                              isPrimary
+                                ? "font-semibold text-slate-100"
+                                : "font-medium text-slate-300"
+                            } hover:text-cyan-300`
                       }`}
                     >
                       {item.label}

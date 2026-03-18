@@ -97,7 +97,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           })}
         </article>
 
-        <div className="pt-4">
+        <div className="pt-4 space-y-3">
+          <p className="text-sm text-slate-300">
+            Se sua empresa precisa de um sistema HVAC eficiente,{" "}
+            <Link
+              href="/contato"
+              className="font-semibold text-cyan-300 hover:text-cyan-200"
+            >
+              entre em contato
+            </Link>{" "}
+            com nossa equipe e receba uma análise técnica especializada.
+          </p>
           <Link
             href="/blog"
             className="text-[12px] font-semibold text-cyan-300 transition hover:text-cyan-200"
