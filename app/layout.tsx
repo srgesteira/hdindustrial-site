@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { TechBackground } from "@/components/TechBackground";
 import { AppShell } from "@/components/AppShell";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -98,6 +99,7 @@ export default function RootLayout({
       >
         <TechBackground />
         <AppShell>{children}</AppShell>
+        <WhatsAppButton />
       </body>
     </html>
   );
