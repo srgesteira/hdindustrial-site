@@ -103,7 +103,7 @@ export function HomePageClient() {
             />
           </div>
 
-          <div className="mt-8 flex justify-center">
+          <div className="mt-4 flex justify-center">
             <Link
               href="/blog"
               className="btn-primary inline-flex min-h-[44px] px-8 py-2.5 text-sm"
