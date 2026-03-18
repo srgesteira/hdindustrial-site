@@ -369,6 +369,281 @@ Manutenção HVAC industrial não é um custo a ser reduzido ao mínimo, mas um 
 
 Solicite uma análise técnica do seu sistema HVAC e descubra oportunidades de melhoria e redução de custo.`,
   },
+  {
+    slug: "diferenca-hepa-ulpa",
+    title: "Diferença entre filtro HEPA e ULPA: qual escolher?",
+    description:
+      "Entenda as diferenças entre filtros HEPA e ULPA, eficiência, aplicações industriais e qual escolher para ambientes críticos.",
+    publishedAt: "2026-03-18",
+    content: `
+Filtros HEPA e ULPA são amplamente utilizados em aplicações críticas de HVAC industrial e salas limpas, mas não são equivalentes. Escolher entre um e outro exige entender os níveis de eficiência, as normas aplicáveis e o impacto no custo e na operação.
+
+## O que é filtro HEPA
+
+Um filtro HEPA (High Efficiency Particulate Air) é projetado para reter pelo menos 99,97% das partículas de 0,3 micrômetros em condições de ensaio padrão. Em muitas aplicações industriais, ele é o estágio final de filtragem para garantir qualidade do ar adequada ao processo.
+
+HEPA é amplamente usado em:
+
+- salas limpas farmacêuticas
+- laboratórios de P&D
+- indústrias de dispositivos médicos
+- ambientes hospitalares
+
+## O que é filtro ULPA
+
+Filtros ULPA (Ultra Low Penetration Air) possuem eficiência ainda maior, tipicamente acima de 99,999% para partículas menores, dependendo da classe. Eles são utilizados em ambientes extremamente sensíveis, onde pequenas variações na contagem de partículas podem comprometer o produto.
+
+Aplicações típicas incluem:
+
+- microeletrônica e semicondutores
+- algumas áreas de pesquisa de alta criticidade
+- processos com requisitos extremos de limpeza
+
+## Eficiência de filtragem e 0,3 micrômetros
+
+O valor de 0,3 micrômetros é frequentemente citado porque representa o diâmetro de partícula mais penetrante (MPPS) em muitos filtros fibrosos. É uma referência para testes de desempenho, mas filtros HEPA e ULPA têm curvas de eficiência que variam com o tamanho da partícula.
+
+## Aplicações industriais
+
+Na indústria, a decisão entre HEPA e ULPA envolve:
+
+- nível de risco do processo
+- exigências normativas e contratuais
+- sensibilidade do produto a partículas ultrafinas
+- custo de implantação e manutenção
+
+## Quando usar cada um
+
+De forma geral:
+
+- **HEPA** é suficiente para a maioria das salas limpas ISO 5 a ISO 8, ambientes hospitalares e aplicações farmacêuticas.
+- **ULPA** é reservado para processos de altíssima precisão, onde mesmo pequenas quantidades adicionais de partículas não são aceitáveis.
+
+## Impacto no custo
+
+Filtros ULPA:
+
+- são mais caros que filtros HEPA
+- geram maior perda de carga
+- exigem maior capacidade de ventilação
+
+Isso se traduz em sistemas HVAC industriais mais robustos e consumo energético potencialmente maior.
+
+## Erros comuns de especificação
+
+Entre os erros frequentes estão:
+
+- especificar ULPA onde HEPA seria suficiente, encarecendo o sistema sem ganho real.
+- escolher HEPA sem avaliar normas ou exigências contratuais específicas.
+- não considerar o impacto da perda de carga adicional na seleção de ventiladores.
+
+## Conclusão
+
+A decisão entre HEPA e ULPA deve ser baseada em análise de risco, normas aplicáveis e viabilidade operacional.
+
+Precisa especificar o filtro correto para seu projeto? Fale com um especialista.`,
+  },
+  {
+    slug: "sala-limpa-iso7-preco",
+    title: "Sala limpa ISO 7: quanto custa e o que influencia no preço",
+    description:
+      "Veja quanto custa uma sala limpa ISO 7 e quais fatores impactam diretamente no investimento em HVAC, filtração e infraestrutura.",
+    publishedAt: "2026-03-18",
+    content: `
+A classe ISO 7 é uma das mais utilizadas em ambientes industriais que exigem controle de partículas, como salas limpas para envase, manipulação de produtos e áreas de apoio críticas. Entender quanto custa uma sala limpa ISO 7 exige olhar para todo o sistema, e não apenas para a envoltória.
+
+## O que é uma sala limpa ISO 7
+
+Uma sala limpa ISO 7, conforme a ISO 14644, estabelece limites máximos de concentração de partículas em suspensão no ar. Ela é mais exigente do que ambientes ISO 8 e menos rigorosa que áreas ISO 5 ou ISO 6.
+
+## Estrutura necessária
+
+Uma sala limpa ISO 7 típica envolve:
+
+- painéis e forros adequados à limpeza e sanitização.
+- portas e visores específicos.
+- luminárias embutidas.
+- pass-throughs e sas, quando aplicáveis.
+
+## Sistema HVAC envolvido
+
+O HVAC é frequentemente o maior componente de custo em uma sala limpa ISO 7. Entre os itens principais estão:
+
+- UTAs dedicadas ou semidedicadas.
+- rede de dutos dimensionada para a vazão exigida.
+- filtragem em estágios (pré-filtros, finos e HEPA, conforme o projeto).
+- automação para controle de temperatura, umidade e pressão.
+
+## Filtragem e pressurização
+
+Para manter a classe ISO 7, é comum empregar:
+
+- filtros finos em UTAs.
+- filtros HEPA em caixas terminais ou fan filter units.
+- diferenciais de pressão entre áreas limpas e de apoio.
+
+## Variáveis críticas de custo
+
+Entre as principais variáveis que impactam o investimento estão:
+
+- área total e altura do pé-direito.
+- taxa de trocas de ar por hora (ACH).
+- complexidade do layout (corredores, sas, subdivisões).
+- nível de automação e monitoramento.
+
+## Erros que encarecem o projeto
+
+Alguns erros comuns elevam o custo de forma desnecessária:
+
+- não definir claramente o escopo de processos e riscos antes de projetar.
+- subdimensionar o HVAC e precisar corrigir depois.
+- complicar demais o layout sem ganho de operação.
+- deixar a definição de filtragem e pressurização para a fase de obra.
+
+## Conclusão
+
+O custo de uma sala limpa ISO 7 está diretamente ligado ao sistema HVAC, à filtração e à integração com o processo produtivo.
+
+Quer estimar o custo da sua sala limpa? Solicite uma análise técnica.`,
+  },
+  {
+    slug: "teste-integridade-hepa-valor",
+    title: "Teste de integridade HEPA: como funciona e qual o valor",
+    description:
+      "Entenda como funciona o teste de integridade de filtros HEPA (DOP/PAO), sua importância e quanto custa realizar esse serviço.",
+    publishedAt: "2026-03-18",
+    content: `
+Filtros HEPA são essenciais em sistemas HVAC industriais e salas limpas, mas sua eficiência precisa ser comprovada periodicamente. O teste de integridade é o método padrão para verificar se o filtro e sua vedação estão desempenhando corretamente.
+
+## O que é teste de integridade de filtro HEPA
+
+O teste de integridade é um ensaio que verifica a presença de vazamentos no meio filtrante e na vedação entre filtro e carcaça.
+
+## Normas envolvidas
+
+Diversas normas e guias fazem referência ao teste de integridade de filtros HEPA, incluindo documentos de salas limpas e guias de boas práticas de fabricação (GMP).
+
+## Como o teste é feito
+
+O procedimento típico envolve:
+
+1. geração de um aerossol de teste (DOP, PAO ou equivalente).
+2. introdução desse aerossol a montante do filtro.
+3. ajuste da concentração de aerossol dentro da faixa recomendada.
+4. varredura da face do filtro e regiões de vedação com uma sonda.
+
+## Equipamentos utilizados
+
+Os principais equipamentos são:
+
+- gerador de aerossol.
+- photometer ou contador de partículas adequado.
+
+## Frequência recomendada
+
+Em ambientes críticos, o teste de integridade costuma ser realizado:
+
+- na qualificação inicial do sistema.
+- anualmente ou conforme definição de risco.
+- após intervenções significativas em filtros ou dutos.
+
+## Faixa de preço e riscos de não realizar
+
+O valor do teste depende da quantidade de filtros, da complexidade de acesso e da necessidade de relatórios. Não realizar testes de integridade pode levar a perda de controle de partículas, não conformidades em auditorias e risco de contaminação de produtos.
+
+## Conclusão
+
+O teste de integridade HEPA é um investimento em segurança de processo e conformidade regulatória.
+
+Precisa validar seus filtros HEPA? Entre em contato com nossa equipe técnica.`,
+  },
+  {
+    slug: "dimensionamento-hvac-industrial",
+    title: "Como dimensionar um sistema HVAC industrial corretamente",
+    description:
+      "Saiba como dimensionar corretamente um sistema HVAC industrial e evitar erros de projeto que afetam desempenho e custo.",
+    publishedAt: "2026-03-18",
+    content: `
+Um bom dimensionamento de HVAC industrial começa com uma compreensão clara do processo e dos requisitos ambientais. Projetos baseados apenas em regras genéricas tendem a gerar sistemas superdimensionados (caros) ou subdimensionados (problemáticos).
+
+## Conceito de carga térmica
+
+A carga térmica leva em conta:
+
+- ganhos e perdas de calor pela envoltória.
+- cargas internas de pessoas e equipamentos.
+- calor gerado por processos específicos.
+
+## Vazão de ar e renovação
+
+A vazão de ar é definida a partir da necessidade de renovação de ar externo, taxa de trocas de ar por hora (ACH) e distribuição adequada do fluxo nos ambientes.
+
+## Controle de temperatura e umidade
+
+Sistemas HVAC industriais muitas vezes precisam manter temperatura e umidade relativa em faixas estreitas. Isso impacta seleção de serpentinas, capacidade de resfriamento e aquecimento, e estratégias de desumidificação ou umidificação.
+
+## Pressão diferencial
+
+Manter pressões diferenciais adequadas entre ambientes reduz risco de contaminação cruzada e garante fluxos de ar dirigidos de áreas mais limpas para menos limpas.
+
+## Erros comuns
+
+Entre os erros de dimensionamento mais frequentes estão:
+
+- considerar apenas área em m², sem avaliar processo e cargas internas.
+- ignorar requisitos futuros de ampliação.
+- não prever pontos de medição e balanceamento.
+- superdimensionar equipamentos por excesso de margem sem critério.
+
+## Impacto no consumo energético
+
+Um sistema mal dimensionado consome mais energia que o necessário, opera fora da faixa ideal de eficiência e demanda mais manutenção.
+
+## Conclusão
+
+Dimensionar um sistema HVAC industrial corretamente é uma tarefa de engenharia que conecta processo, ambiente e desempenho esperado.
+
+Precisa de um projeto HVAC bem dimensionado? Fale com nossa engenharia.`,
+  },
+  {
+    slug: "quando-trocar-filtro-hepa",
+    title: "Quando trocar filtro HEPA industrial: sinais e prazos",
+    description:
+      "Descubra quando trocar filtros HEPA industriais e quais sinais indicam perda de eficiência e risco para a operação.",
+    publishedAt: "2026-03-18",
+    content: `
+Filtros HEPA não são componentes “instalar e esquecer”. Mesmo com alta eficiência, eles têm vida útil finita e precisam ser substituídos em intervalos planejados.
+
+## Vida útil do filtro HEPA
+
+A vida útil depende de:
+
+- concentração de partículas no ar de entrada.
+- horas de operação do sistema.
+- presença de pré-filtros adequados.
+
+## Queda de pressão
+
+Um dos principais indicadores de saturação é o aumento da perda de carga (queda de pressão) no filtro. Monitorar essa variável ajuda a identificar o momento certo de troca.
+
+## Teste de integridade
+
+Além da perda de carga, testes de integridade periódicos verificam vazamentos no meio filtrante e falhas de vedação.
+
+## Impacto na operação
+
+Manter filtros HEPA além do tempo adequado pode aumentar risco de contaminação, comprometer classificações de salas limpas e gerar não conformidades em auditorias.
+
+## Cronograma recomendado
+
+Cada planta deve definir seu cronograma com base em histórico de operação, monitoramento de perda de carga e resultados de testes de integridade.
+
+## Conclusão
+
+Trocar filtros HEPA no momento certo é essencial para manter a eficiência do sistema HVAC industrial e a segurança do processo.
+
+Quer montar um plano de manutenção eficiente? Fale com nossa equipe.`,
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {
