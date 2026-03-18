@@ -18,17 +18,27 @@ export default function Home() {
 
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 pb-16 pt-10 sm:gap-8 sm:px-6 lg:px-8">
         <section className="space-y-4">
-          <div className="space-y-2">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
-              Conteúdo técnico recente
-            </p>
-            <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
-              Conteúdo técnico recente
-            </h2>
-            <p className="max-w-2xl text-sm text-slate-400">
-              Artigos selecionados sobre HVAC industrial, salas limpas e
-              filtração para apoiar decisões técnicas da sua operação.
-            </p>
+          <div className="space-y-3 sm:flex sm:items-end sm:justify-between sm:gap-4">
+            <div className="space-y-2">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
+                Conteúdo técnico recente
+              </p>
+              <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
+                Conteúdo técnico recente
+              </h2>
+              <p className="max-w-2xl text-sm text-slate-400">
+                Artigos selecionados sobre HVAC industrial, salas limpas e
+                filtração para apoiar decisões técnicas da sua operação.
+              </p>
+            </div>
+            <div className="pt-1 flex justify-start sm:justify-end">
+              <Link
+                href="/blog"
+                className="btn-primary inline-flex min-h-[44px] px-6 py-2.5 text-sm"
+              >
+                Explorar conteúdo técnico
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
