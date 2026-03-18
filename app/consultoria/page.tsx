@@ -5,6 +5,8 @@ export const metadata = {
     "Consultoria em engenharia industrial com foco em otimização de processos, KPIs, eficiência operacional e reestruturação para multinacionais.",
 };
 
+import { LeadCapture } from "@/components/LeadCapture";
+
 export default function ConsultoriaPage() {
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-slate-950">
@@ -425,6 +427,9 @@ export default function ConsultoriaPage() {
             </p>
           </div>
         </section>
+
+        {/* Lead capture */}
+        <LeadCapture />
 
         {/* CTA final */}
         <section className="space-y-3 rounded-2xl border border-emerald-600/60 bg-gradient-to-r from-emerald-600 via-emerald-500 to-cyan-500 p-4 text-slate-950 shadow-[0_20px_70px_rgba(16,185,129,0.55)] sm:space-y-4 sm:rounded-3xl sm:p-6 md:p-8">

@@ -23,6 +23,14 @@ export default function ProjetosPage() {
           Desenvolvimento de soluções HVAC, salas limpas e infraestrutura
           crítica, da fase conceitual à entrega em operação assistida.
         </p>
+        <div className="flex flex-wrap items-center gap-3 pt-1">
+          <Link
+            href="/contato"
+            className="btn-primary inline-flex min-h-[44px] px-6 py-2.5 text-sm"
+          >
+            Fale com um especialista
+          </Link>
+        </div>
         <Link
           href="/projetos-hvac"
           className="inline-flex items-center gap-2 text-[12px] font-semibold text-cyan-300 transition hover:text-cyan-200"
