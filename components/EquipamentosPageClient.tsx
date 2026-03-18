@@ -249,6 +249,18 @@ export function EquipamentosPageClient() {
               Solicitar orçamento técnico
             </a>
           </div>
+          <div className="mt-6 space-y-2">
+            <p className="max-w-2xl text-xs text-slate-400">
+              Quer entender melhor sobre HVAC, filtração e salas limpas? Acesse
+              nosso conteúdo técnico.
+            </p>
+            <a
+              href="/blog"
+              className="inline-flex min-h-[40px] items-center rounded-full border border-slate-700/80 bg-slate-900/70 px-4 py-2 text-[12px] font-semibold text-slate-100 transition hover:border-cyan-400/70 hover:text-cyan-200"
+            >
+              Ver artigos técnicos
+            </a>
+          </div>
         </header>
 
         {/* Botões das famílias de equipamentos */}

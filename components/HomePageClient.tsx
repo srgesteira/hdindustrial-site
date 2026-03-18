@@ -103,6 +103,15 @@ export function HomePageClient() {
             />
           </div>
 
+          <div className="mt-8 flex justify-center">
+            <Link
+              href="/blog"
+              className="btn-primary inline-flex min-h-[44px] px-8 py-2.5 text-sm"
+            >
+              Explorar conteúdo técnico
+            </Link>
+          </div>
+
           {/* Botão central Nossa história */}
           <motion.div
             className="mt-1 inline-flex sm:mt-4"
