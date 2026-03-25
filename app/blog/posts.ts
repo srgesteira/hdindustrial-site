@@ -643,7 +643,49 @@ Cada planta deve definir seu cronograma com base em histórico de operação, mo
 Trocar filtros HEPA no momento certo é essencial para manter a eficiência do sistema HVAC industrial e a segurança do processo.
 
 Quer montar um plano de manutenção eficiente? Fale com nossa equipe.`,
-  },
+  },,
+  {
+    slug: "caixas-terminais-hvac-o-que-sao-como-funcionam-e-onde-aplicar-na-industria",
+    title: "Caixas Terminais HVAC: O que são, como funcionam e onde aplicar na indústria",
+    description: "Mantenha sua Fábrica Limpa e Segura: O Poder do Sistema de Filtragem em HVAC  No mundo industrial, a manutenção regular é fundamental para g",
+    content: `Mantenha sua Fábrica Limpa e Segura: O Poder do Sistema de Filtragem em HVAC
+
+No mundo industrial, a manutenção regular é fundamental para garantir a segurança e a produtividade das operações. Uma das áreas mais críticas que requerem atenção especial é a climatização, responsável por controlar as condições de temperatura e umidade nas instalações. Neste artigo, vamos explorar o papel do sistema de HVAC (Heating, Ventilation e Air Conditioning) e como a filtragem pode ajudar a manter suas salas limpas e seguras.
+
+O que é HVAC?
+
+O sistema de HVAC é uma combinação de sistemas de aquecimento, ventilação e ar condicionado, projetados para controlar as condições de temperatura e umidade em espaços fechados. O objetivo principal é criar um ambiente confortável e saudável para os funcionários, reduzindo o estresse e a fatiga muscular.
+
+O sistema HVAC geralmente consiste em três componentes principais: 
+
+   Aquecimento: responsável por aquecer o ar quando necessário.
+   Ventilação: que permite a circulação de ar fresco e limpo pelo espaço, ajudando a remover gases tóxicos e partículas suspensas.
+   Ar Condicionado: que reduz a temperatura e a umidade para criar um ambiente mais confortável.
+
+A Importância da Filtragem no HVAC
+
+Uma das funções mais importantes do sistema de HVAC é a filtragem. A limpeza do ar é fundamental para garantir a saúde e a segurança dos funcionários, além de evitar danos ao equipamento. As partículas suspensas no ar podem causar problemas respiratórios, irritação nos olhos e pele, além de danificar componentes mecânicos.
+
+Existem diferentes tipos de filtros disponíveis para o sistema de HVAC:
+
+   Filtro de poeira: projetado para remover poeira e partículas suspensas do ar.
+   Filtro HEPA (High Efficiency Particulate Air): um filtro de alta eficiência que remove até 99,97% de partículas com diâmetro menor que 0,3 micrômetros.
+   Filtro de óleo: projetado para remover óleo e substâncias orgânicas do ar.
+
+Consequências Negativas da Falta de Filtragem
+
+A falta de filtragem no sistema de HVAC pode ter consequências graves:
+
+   Dano ao equipamento: a acumulação de partículas suspensas pode danificar componentes mecânicos, reduzindo a eficiência do sistema e aumentando o risco de falhas.
+   Problemas respiratórios: a exposição prolongada a ar poluído pode causar problemas respiratórios, como asma e bronquite.
+
+Conclusão
+
+Manter uma fábrica limpa e segura é fundamental para garantir a saúde e a produtividade das operações. O sistema de HVAC é uma ferramenta essencial para controlar as condições de temperatura e umidade, mas é importante lembrar da importância da filtragem. Ao escolher um filtro adequado para o seu sistema de HVAC, você pode ajudar a manter suas salas limpas e seguras, reduzindo o risco de problemas respiratórios e danos ao equipamento.
+
+Se você está procurando por uma solução eficaz para melhorar a qualidade do ar em sua fábrica, entre em contato conosco! Nossa equipe de especialistas em HVAC está aqui para ajudá-lo a criar um ambiente mais saudável e produtivo.`,
+    publishedAt: "2026-03-25"
+  }
 ];
 
 export function getAllPosts(): BlogPost[] {
