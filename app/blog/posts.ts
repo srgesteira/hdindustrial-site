@@ -643,7 +643,7 @@ Cada planta deve definir seu cronograma com base em histórico de operação, mo
 Trocar filtros HEPA no momento certo é essencial para manter a eficiência do sistema HVAC industrial e a segurança do processo.
 
 Quer montar um plano de manutenção eficiente? Fale com nossa equipe.`,
-  },,
+  },
   {
     slug: "caixas-terminais-hvac-o-que-sao-como-funcionam-e-onde-aplicar-na-industria",
     title: "Caixas Terminais HVAC: O que são, como funcionam e onde aplicar na indústria",
@@ -684,6 +684,50 @@ Conclusão
 Manter uma fábrica limpa e segura é fundamental para garantir a saúde e a produtividade das operações. O sistema de HVAC é uma ferramenta essencial para controlar as condições de temperatura e umidade, mas é importante lembrar da importância da filtragem. Ao escolher um filtro adequado para o seu sistema de HVAC, você pode ajudar a manter suas salas limpas e seguras, reduzindo o risco de problemas respiratórios e danos ao equipamento.
 
 Se você está procurando por uma solução eficaz para melhorar a qualidade do ar em sua fábrica, entre em contato conosco! Nossa equipe de especialistas em HVAC está aqui para ajudá-lo a criar um ambiente mais saudável e produtivo.`,
+    publishedAt: "2026-03-25"
+  },
+  {
+    slug: "caixas-terminais-hvac-o-que-sao-como-funcionam-e-onde-aplicar-na-industria",
+    title: "Caixas Terminais HVAC: O que são, como funcionam e onde aplicar na indústria",
+    description: "Mantenha Seu Ambiente de Trabalho Saudável e Produtivo: O Importância da Engenharia de Ventilação  A engenharia de ventilação, também conhec",
+    content: `Mantenha Seu Ambiente de Trabalho Saudável e Produtivo: O Importância da Engenharia de Ventilação
+
+A engenharia de ventilação, também conhecida como HVAC (Heating, Ventilation e Air Conditioning), é um componente fundamental para manter o ambiente de trabalho saudável e produtivo. Com mais de 23 anos de experiência na área, a HD Soluções Industriais entende a importância de uma boa ventilação para evitar problemas de saúde, aumentar a eficiência e melhorar a produtividade.
+
+A Importância da Filtração no Ambiente de Trabalho
+
+A filtração é um passo crucial na engenharia de ventilação. Ela ajuda a remover particulas, poeira e outros detritos que podem causar problemas respiratórios e diminuir a qualidade do ar. Além disso, a filtragem também ajuda a evitar a propagação de doenças infecciosas e alérgias.
+
+Existem diferentes tipos de filtros disponíveis no mercado, cada um com suas características e vantagens. Alguns exemplos incluem:
+
+   Filtros HEPA (High Efficiency Particulate Air): esses filtros são projetados para remover 99,97% das partículas com diâmetro igual ou menor a 0,3 micrômetros.
+   Filtros Activada de Carbono: esses filtros são feitos de materiais activados que ajudam a remover gases e vapores nocivos do ar.
+   Filtros Filtrantes a Basalto: esses filtros são feitos de basalto e são conhecidos por sua eficiência na remoção de partículas e vapores.
+
+Sala Limpas: O Que é e Por que é Importante?
+
+Uma sala limpas é um ambiente onde o ar é constantemente renovado e a qualidade do ar é garantida. Isso é especialmente importante em ambientes de trabalho, como oficinas, fábricas e hospitais.
+
+Existem diferentes tipos de sistemas de sala limpas disponíveis no mercado, incluindo:
+
+   Sistema de Ventilação por Circulação: esse sistema utiliza ventiladores para circular o ar na sala.
+   Sistema de Ventilação por Filtragem: esse sistema utiliza filtros para remover impurezas do ar.
+   Sistema de Ventilação por Compressão: esse sistema utiliza compressores para comprimir e distribuir o ar.
+
+Dicas para Escolher a Engenharia de Ventilação Certo
+
+Escolher a engenharia de ventilação certa pode ser um desafio. Aqui estão algumas dicas para ajudá-lo:
+
+   Verifique a quantidade de pessoas que trabalharão no ambiente.
+   Considere o tipo de atividade que será realizada.
+   Ajuste as taxas de circulação e filtragem de acordo com a necessidade do ambiente.
+   Consulte um profissional para avaliar seu espaço e recomendar o sistema de ventilação mais adequado.
+
+Conclusão
+
+A engenharia de ventilação é fundamental para manter o ambiente de trabalho saudável e produtivo. A filtragem, a sala limpas e a escolha do sistema de ventilação certo são passos essenciais para garantir que seu espaço seja confortável e seguro.
+
+Se você está procurando por uma solução para melhorar a qualidade do ar em seu ambiente de trabalho, entre em contato conosco. Nossa equipe especializada em engenharia de ventilação estará feliz em ajudá-lo a encontrar a solução certa para suas necessidades.`,
     publishedAt: "2026-03-25"
   }
 ];
