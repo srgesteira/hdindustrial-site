@@ -729,7 +729,7 @@ A engenharia de ventilação é fundamental para manter o ambiente de trabalho s
 
 Se você está procurando por uma solução para melhorar a qualidade do ar em seu ambiente de trabalho, entre em contato conosco. Nossa equipe especializada em engenharia de ventilação estará feliz em ajudá-lo a encontrar a solução certa para suas necessidades.`,
     publishedAt: "2026-03-25"
-  }
+  },
   {
     slug: "fluxo-laminar",
     title: "Erros Comuns em Projeto de Fluxo Laminar para Salas Limpas",
