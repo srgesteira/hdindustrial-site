@@ -25,6 +25,98 @@ type Familia = {
 
 const familias: Familia[] = [
   {
+    nome: "Flanges de Sucção DAIKIN",
+    slug: "fxsq",
+    descricao:
+      "Interface de sucção para equipamentos DAIKIN (FXSQ/FXMQ), com dimensões padronizadas, vedação eficiente e integração direta com filtragem.",
+    modelos: [
+      {
+        codigo: "FXSQ",
+        slug: "fxsq",
+        nome: "Flange de Sucção · DAIKIN FXSQ",
+        imagem: "/equipamentos/fxsq/fxsq.jpeg",
+        descricao:
+          "Flange de sucção compatível com a linha DAIKIN FXSQ, com dimensões padronizadas para instalação direta e interface preparada para filtragem.",
+        caracteristicas: [
+          "Estrutura metálica reforçada",
+          "Acabamento industrial de alta durabilidade",
+          "Geometria projetada para encaixe preciso",
+          "Preparado para fixação segura e vedação eficiente",
+        ],
+        aplicacoes: [
+          "Interface de sucção em equipamentos DAIKIN (linha FXSQ)",
+          "Instalação de filtros compatíveis conforme padronização dimensional",
+        ],
+        beneficios: [
+          "Distribuição uniforme do fluxo de ar",
+          "Redução de vazamentos no sistema",
+          "Melhor desempenho da filtragem",
+          "Facilidade de manutenção e troca de filtro",
+        ],
+      },
+      {
+        codigo: "FXMQ",
+        slug: "fxmq",
+        nome: "Flange de Sucção · DAIKIN FXMQ",
+        imagem: "/equipamentos/fxsq/fxmq.jpeg",
+        descricao:
+          "Flange de sucção compatível com a linha DAIKIN FXMQ, com dimensões padronizadas para instalação direta e manutenção facilitada.",
+        caracteristicas: [
+          "Estrutura metálica reforçada",
+          "Acabamento industrial de alta durabilidade",
+          "Geometria projetada para encaixe preciso",
+          "Preparado para fixação segura e vedação eficiente",
+        ],
+        aplicacoes: [
+          "Interface de sucção em equipamentos DAIKIN (linha FXMQ)",
+          "Integração com sistemas de filtragem especiais (sob demanda)",
+        ],
+        beneficios: [
+          "Instalação mais rápida e padronizada",
+          "Menos vazamento de ar",
+          "Manutenção simplificada",
+          "Redução de retrabalho em obra",
+        ],
+      },
+    ],
+  },
+  {
+    nome: "Fluxo Laminar Unidirecional",
+    slug: "fluxo-laminar",
+    descricao:
+      "Sistema de fluxo de ar unidirecional com filtragem absoluta (HEPA/ULPA) para controle de contaminação em processos críticos, com performance estável e validável.",
+    modelos: [
+      {
+        codigo: "UFL",
+        slug: "ufl",
+        nome: "UFL · Fluxo Laminar Unidirecional",
+        imagem: "/equipamentos/fluxo%20laminar/fluxo%20laminar.jpeg",
+        descricao:
+          "Fluxo laminar vertical contínuo com insuflação de ar filtrado (HEPA/ULPA) para proteção do processo, do operador e do produto.",
+        caracteristicas: [
+          "Estrutura robusta em aço carbono ou inox",
+          "Painéis com acabamento sanitário",
+          "Plenum superior com distribuição homogênea de ar",
+          "Grelha difusora para uniformização do fluxo",
+          "Preparado para filtros HEPA com vedação absoluta",
+        ],
+        aplicacoes: [
+          "Indústria farmacêutica",
+          "Laboratórios e áreas classificadas",
+          "Manipulação de produtos sensíveis",
+          "Linhas de envase e processos críticos",
+          "Áreas de inspeção e montagem limpa",
+        ],
+        beneficios: [
+          "Fluxo uniforme e unidirecional",
+          "Redução de turbulência e recirculação contaminada",
+          "Facilidade de validação (DOP/Photometer)",
+          "Redução de contaminação cruzada",
+        ],
+      },
+    ],
+  },
+  {
     nome: "Caixas Terminais",
     slug: "caixas-terminais",
     descricao:

@@ -27,6 +27,102 @@ type Familia = {
 
 const familias: Familia[] = [
   {
+    nome: "Flanges de Sucção DAIKIN",
+    slug: "fxsq",
+    subtitulo:
+      "Interface de sucção padronizada para equipamentos DAIKIN (FXSQ/FXMQ).",
+    descricao:
+      "Os flanges de sucção HD foram desenvolvidos para garantir integração precisa, vedação eficiente e confiabilidade operacional em sistemas de climatização, especialmente em equipamentos da linha DAIKIN.\n\nAplicados na interface de sucção, permitem a instalação de filtros e contribuem para distribuição uniforme do fluxo de ar, redução de vazamentos e melhor desempenho do conjunto.\n\nConforme apresentado em catálogo, cada modelo segue dimensões específicas já padronizadas para aplicação direta nas linhas FXSQ e FXMQ, evitando adaptações em campo e simplificando a manutenção.",
+    modelos: [
+      {
+        codigo: "FXSQ",
+        slug: "fxsq",
+        nome: "Flange de Sucção · DAIKIN FXSQ",
+        imagem: "/equipamentos/fxsq/fxsq.jpeg",
+        descricao:
+          "Flange de sucção compatível com a linha DAIKIN FXSQ, com dimensões padronizadas para instalação direta e interface preparada para filtragem.",
+        caracteristicas: [
+          "Estrutura metálica reforçada",
+          "Acabamento industrial de alta durabilidade",
+          "Geometria projetada para encaixe preciso",
+          "Preparado para fixação segura e vedação eficiente",
+        ],
+        aplicacoes: [
+          "Interface de sucção em equipamentos DAIKIN (linha FXSQ)",
+          "Instalação de filtros compatíveis conforme padronização dimensional",
+        ],
+        beneficios: [
+          "Distribuição uniforme do fluxo de ar",
+          "Redução de vazamentos no sistema",
+          "Melhor desempenho da filtragem",
+          "Facilidade de manutenção e troca de filtro",
+        ],
+      },
+      {
+        codigo: "FXMQ",
+        slug: "fxmq",
+        nome: "Flange de Sucção · DAIKIN FXMQ",
+        imagem: "/equipamentos/fxsq/fxmq.jpeg",
+        descricao:
+          "Flange de sucção compatível com a linha DAIKIN FXMQ, com dimensões padronizadas para instalação direta e rotina de manutenção facilitada.",
+        caracteristicas: [
+          "Estrutura metálica reforçada",
+          "Acabamento industrial de alta durabilidade",
+          "Geometria projetada para encaixe preciso",
+          "Preparado para fixação segura e vedação eficiente",
+        ],
+        aplicacoes: [
+          "Interface de sucção em equipamentos DAIKIN (linha FXMQ)",
+          "Integração com sistemas de filtragem especiais (sob demanda)",
+        ],
+        beneficios: [
+          "Instalação mais rápida e padronizada",
+          "Menos vazamento de ar",
+          "Manutenção simplificada",
+          "Redução de retrabalho em obra",
+        ],
+      },
+    ],
+  },
+  {
+    nome: "Fluxo Laminar Unidirecional",
+    slug: "fluxo-laminar",
+    subtitulo:
+      "Fluxo de ar vertical, uniforme e com filtragem absoluta para processos críticos.",
+    descricao:
+      "O Sistema de Fluxo Laminar HD foi desenvolvido para garantir ambientes com alto nível de controle de contaminação, proporcionando fluxo de ar unidirecional, uniforme e com filtragem absoluta, atendendo às exigências de processos críticos industriais e laboratoriais.\n\nO sistema opera através da insuflação de ar filtrado por filtros absolutos (HEPA/ULPA), criando um fluxo laminar vertical contínuo. O ar desce como uma “cortina” de proteção, reduzindo turbulência, evitando recirculação contaminada e mantendo padrão de limpeza estável na zona crítica.\n\nA construção prioriza estanqueidade e validação em campo: estrutura robusta (aço carbono ou inox), painéis com acabamento sanitário, plenum superior para distribuição homogênea, grelha difusora para uniformização do fluxo e preparo para filtros HEPA com vedação absoluta.\n\nO equipamento é indicado para indústria farmacêutica, laboratórios e áreas classificadas, manipulação de produtos sensíveis, linhas de envase e áreas de inspeção/montagem limpa. Projetado para performance real, com dimensionamento conforme aplicação e preparado para validação (DOP/Photometer).",
+    modelos: [
+      {
+        codigo: "UFL",
+        slug: "ufl",
+        nome: "UFL · Fluxo Laminar Unidirecional",
+        imagem: "/equipamentos/fluxo%20laminar/fluxo%20laminar.jpeg",
+        descricao:
+          "Sistema de fluxo laminar vertical com filtragem absoluta (HEPA/ULPA) para controle de contaminação em áreas críticas, com performance uniforme e validável.",
+        caracteristicas: [
+          "Estrutura robusta em aço carbono ou inox",
+          "Painéis com acabamento sanitário",
+          "Plenum superior com distribuição homogênea de ar",
+          "Grelha difusora para uniformização do fluxo",
+          "Preparado para filtros HEPA com vedação absoluta",
+        ],
+        aplicacoes: [
+          "Indústria farmacêutica",
+          "Laboratórios e áreas classificadas",
+          "Manipulação de produtos sensíveis",
+          "Linhas de envase e processos críticos",
+          "Áreas de inspeção e montagem limpa",
+        ],
+        beneficios: [
+          "Fluxo de ar uniforme e unidirecional",
+          "Redução significativa de contaminação cruzada",
+          "Facilidade de validação em campo (DOP/Photometer)",
+          "Estabilidade de processo e redução de rejeitos",
+        ],
+      },
+    ],
+  },
+  {
     nome: "Caixas Terminais",
     slug: "caixas-terminais",
     descricao:

@@ -12,6 +12,16 @@ const config: Config = {
         foreground: "#e5e7eb",
         accent: "#22d3ee",
       },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 40s linear infinite",
+        "marquee-fast": "marquee 25s linear infinite",
+      },
     },
   },
   plugins: [],

@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { RotatingGlobe } from "@/components/RotatingGlobe";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -14,7 +13,7 @@ export function HomePageClient() {
   return (
     <div className="mx-auto flex max-w-6xl flex-col">
       {/* PRIMEIRA TELA ÚNICA – HERO TECNOLÓGICO COM GLOBOS TERRESTRES */}
-      <section className="hero-bg relative flex min-h-[100dvh] min-h-[85vh] flex-col justify-between overflow-hidden px-5 pt-6 pb-28 sm:min-h-screen sm:px-6 sm:pt-8 sm:pb-12 lg:px-10">
+      <section className="hero-bg relative flex min-h-[100dvh] min-h-[85vh] flex-col justify-between overflow-hidden px-5 pt-6 pb-20 sm:min-h-screen sm:px-6 sm:pt-8 sm:pb-12 lg:px-10">
         {/* Vídeo de fundo com movimento de ar (mantido) */}
         <div className="hero-video-wrapper" aria-hidden>
           <video
@@ -80,27 +79,6 @@ export function HomePageClient() {
               industrial, conectando tecnologia, confiabilidade e performance
               operacional.
             </p>
-          </div>
-
-          <div className="grid w-full max-w-sm grid-cols-3 gap-2 px-2 sm:max-w-none sm:gap-6 sm:px-0">
-            <RotatingGlobe
-              label="Equipamentos HVAC"
-              href="/equipamentos"
-              imageSrc="/hero/equipamentos-hvac.png"
-              delay={0.1}
-            />
-            <RotatingGlobe
-              label="Projetos HVAC"
-              href="/projetos"
-              imageSrc="/hero/projetos-hvac.png"
-              delay={0.2}
-            />
-            <RotatingGlobe
-              label="Consultoria Industrial"
-              href="/consultoria"
-              imageSrc="/hero/consultoria-industrial.png"
-              delay={0.3}
-            />
           </div>
 
           {/* Botão central Nossa história */}

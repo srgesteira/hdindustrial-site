@@ -21,6 +21,91 @@ type Familia = {
 
 const familias: Familia[] = [
   {
+    nome: "Flanges de Sucção DAIKIN",
+    slug: "fxsq",
+    descricao:
+      "Componentes de interface de sucção para equipamentos DAIKIN (FXSQ/FXMQ), com encaixe padronizado, vedação eficiente e integração direta com filtragem, reduzindo retrabalho em campo.",
+    modelos: [
+      {
+        codigo: "FXSQ",
+        nome: "Flange de Sucção · DAIKIN FXSQ",
+        descricao:
+          "Interface de sucção com dimensões padronizadas para instalação direta em equipamentos DAIKIN FXSQ.",
+        caracteristicas: [
+          "Estrutura metálica reforçada",
+          "Acabamento industrial de alta durabilidade",
+          "Geometria projetada para encaixe preciso",
+          "Preparado para fixação segura e vedação eficiente",
+        ],
+        aplicacoes: [
+          "Interface de sucção em equipamentos DAIKIN (linha FXSQ)",
+          "Instalação de filtros com padronização dimensional",
+        ],
+        beneficios: [
+          "Distribuição uniforme do fluxo de ar",
+          "Redução de vazamentos no sistema",
+          "Melhor desempenho da filtragem",
+          "Facilidade de manutenção e troca de filtro",
+        ],
+      },
+      {
+        codigo: "FXMQ",
+        nome: "Flange de Sucção · DAIKIN FXMQ",
+        descricao:
+          "Interface de sucção com dimensões padronizadas para aplicação direta em equipamentos DAIKIN FXMQ.",
+        caracteristicas: [
+          "Estrutura metálica reforçada",
+          "Acabamento industrial de alta durabilidade",
+          "Geometria projetada para encaixe preciso",
+          "Preparado para fixação segura e vedação eficiente",
+        ],
+        aplicacoes: [
+          "Interface de sucção em equipamentos DAIKIN (linha FXMQ)",
+          "Instalação de filtros com padronização dimensional",
+        ],
+        beneficios: [
+          "Instalação mais rápida",
+          "Menos vazamento de ar",
+          "Manutenção simplificada",
+          "Redução de retrabalho em obra",
+        ],
+      },
+    ],
+  },
+  {
+    nome: "Fluxo Laminar Unidirecional",
+    slug: "fluxo-laminar",
+    descricao:
+      "Sistema de fluxo de ar unidirecional com filtragem absoluta (HEPA/ULPA) para controle de contaminação em processos críticos, com performance estável e validável.",
+    modelos: [
+      {
+        codigo: "UFL",
+        nome: "UFL · Fluxo Laminar Unidirecional",
+        descricao:
+          "Insuflação vertical de ar filtrado (HEPA/ULPA) formando fluxo laminar uniforme para proteção do processo, do operador e do produto.",
+        caracteristicas: [
+          "Estrutura robusta em aço carbono ou inox",
+          "Plenum superior com distribuição homogênea de ar",
+          "Grelha difusora para uniformização do fluxo",
+          "Preparado para filtros HEPA com vedação absoluta",
+          "Acabamento sanitário e foco em estanqueidade",
+        ],
+        aplicacoes: [
+          "Indústria farmacêutica e áreas classificadas",
+          "Laboratórios e manipulação de produtos sensíveis",
+          "Linhas de envase e processos críticos",
+          "Áreas de inspeção e montagem limpa",
+        ],
+        beneficios: [
+          "Fluxo uniforme e unidirecional",
+          "Redução de turbulência e recirculação contaminada",
+          "Facilidade de validação em campo (DOP/Photometer)",
+          "Redução de contaminação cruzada e rejeitos",
+        ],
+      },
+    ],
+  },
+  {
     nome: "Caixas Terminais",
     slug: "caixas-terminais",
     descricao:
@@ -218,6 +303,8 @@ const familias: Familia[] = [
 ];
 
 const familiaImagens: Record<string, string> = {
+  fxsq: "/equipamentos/fxsq/fxsq.jpeg",
+  "fluxo-laminar": "/equipamentos/fluxo%20laminar/fluxo%20laminar.jpeg",
   "caixas-terminais": "/equipamentos/caixas-terminais/familia.webp",
   "fan-filter-unit": "/equipamentos/fan-filter-unit/familia.webp",
   "caixas-filtragem": "/equipamentos/caixas-filtragem/familia.webp",
