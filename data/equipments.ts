@@ -43,8 +43,15 @@ export const equipments: Equipment[] = [
     href: "/equipamentos/caixas-filtragem",
   },
   {
+    id: "fxsq",
+    name: "Flanges de Sucção DAIKIN",
+    description: "Interface de sucção padronizada para FXSQ/FXMQ.",
+    image: "/hero/fxsq.jpeg",
+    href: "/equipamentos/fxsq",
+  },
+  {
     id: "fluxo-laminar",
-    name: "Fluxo Laminar",
+    name: "Fluxo Laminar Unidirecional",
     description: "Fluxo unidirecional com HEPA/ULPA para áreas críticas.",
     image: "/hero/Fluxo%20laminar%20.jpeg",
     href: "/equipamentos/fluxo-laminar",

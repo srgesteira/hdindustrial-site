@@ -22,6 +22,12 @@ export default function EquipmentMarquee() {
                 className="group flex w-[260px] flex-shrink-0 flex-col overflow-hidden rounded-2xl border border-slate-800/70 bg-slate-950/45 backdrop-blur-sm shadow-[0_18px_60px_rgba(15,23,42,0.65)] transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/50 hover:bg-slate-950/55 hover:shadow-[0_24px_80px_rgba(34,211,238,0.10)] sm:w-[320px]"
               >
                 <div className="relative h-44 w-full overflow-hidden bg-slate-900/80 ring-1 ring-slate-800/70 sm:h-52">
+                  <div className="pointer-events-none absolute inset-x-0 top-0 z-10 h-14 bg-gradient-to-b from-slate-950/85 to-transparent" />
+                  <div className="absolute left-3 top-3 z-20">
+                    <span className="inline-flex items-center rounded-full border border-slate-700/80 bg-slate-950/70 px-3 py-1 text-[11px] font-semibold tracking-tight text-slate-50 backdrop-blur-sm">
+                      {eq.name}
+                    </span>
+                  </div>
                   <Image
                     src={eq.image}
                     alt={eq.name}
@@ -31,9 +37,6 @@ export default function EquipmentMarquee() {
                   />
                 </div>
                 <div className="space-y-2 p-5">
-                  <h3 className="text-base font-semibold text-slate-50 transition-colors group-hover:text-cyan-300">
-                    {eq.name}
-                  </h3>
                   <p className="text-sm leading-relaxed text-slate-400">
                     {eq.description}
                   </p>
