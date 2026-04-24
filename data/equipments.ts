@@ -8,6 +8,20 @@ export type Equipment = {
 
 export const equipments: Equipment[] = [
   {
+    id: "fxsq",
+    name: "Flanges de Sucção DAIKIN",
+    description: "Interface de sucção padronizada para FXSQ/FXMQ.",
+    image: "/hero/fxsq.jpeg",
+    href: "/equipamentos/fxsq",
+  },
+  {
+    id: "fluxo-laminar",
+    name: "Fluxo Laminar Unidirecional",
+    description: "Fluxo unidirecional com HEPA/ULPA para áreas críticas.",
+    image: "/hero/Fluxo%20laminar%20.jpeg",
+    href: "/equipamentos/fluxo-laminar",
+  },
+  {
     id: "bibo",
     name: "BIBO",
     description: "Bag-In/Bag-Out para troca segura em áreas contaminadas.",
@@ -41,20 +55,6 @@ export const equipments: Equipment[] = [
     description: "Filtragem intermediária integrada em redes de dutos HVAC.",
     image: "/hero/caixa%20entre%20dutos.jpeg",
     href: "/equipamentos/caixas-filtragem",
-  },
-  {
-    id: "fxsq",
-    name: "Flanges de Sucção DAIKIN",
-    description: "Interface de sucção padronizada para FXSQ/FXMQ.",
-    image: "/hero/fxsq.jpeg",
-    href: "/equipamentos/fxsq",
-  },
-  {
-    id: "fluxo-laminar",
-    name: "Fluxo Laminar Unidirecional",
-    description: "Fluxo unidirecional com HEPA/ULPA para áreas críticas.",
-    image: "/hero/Fluxo%20laminar%20.jpeg",
-    href: "/equipamentos/fluxo-laminar",
   },
 ];
 

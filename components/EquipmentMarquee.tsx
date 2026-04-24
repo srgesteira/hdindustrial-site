@@ -32,7 +32,7 @@ export default function EquipmentMarquee() {
                     src={eq.image}
                     alt={eq.name}
                     fill
-                    className="object-contain p-5 transition-transform duration-500 group-hover:scale-105"
+                    className="z-0 object-contain p-5 transition-transform duration-500 group-hover:scale-105"
                     sizes="(max-width: 640px) 260px, 320px"
                   />
                 </div>
