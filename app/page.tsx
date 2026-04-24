@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { HomePageClient } from "@/components/HomePageClient";
-import EquipmentMarquee from "@/components/EquipmentMarquee";
 import { getAllPosts } from "./blog/posts";
 
 export const metadata = {
@@ -16,7 +15,6 @@ export default function Home() {
   return (
     <>
       <HomePageClient />
-      <EquipmentMarquee />
 
       <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-5 pb-16 pt-10 sm:gap-8 sm:px-6 lg:px-8">
         <section className="space-y-4">

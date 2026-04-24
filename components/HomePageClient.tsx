@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import EquipmentMarquee from "@/components/EquipmentMarquee";
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 24 },
@@ -151,6 +152,11 @@ export function HomePageClient() {
               comercial
             </span>
           </Link>
+        </div>
+
+        {/* Marquee de equipamentos sobre o fundo do hero */}
+        <div className="relative z-10 -mx-5 mt-8 sm:-mx-6 lg:-mx-10">
+          <EquipmentMarquee />
         </div>
       </section>
     </div>
