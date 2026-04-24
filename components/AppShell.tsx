@@ -8,12 +8,11 @@ type AppShellProps = {
 };
 
 export function AppShell({ children }: AppShellProps) {
-  const pathname = usePathname();
-  const showNavbar = pathname !== "/";
+  usePathname();
 
   return (
     <div className="site-shell relative flex min-h-screen flex-col">
-      {showNavbar && <Navbar />}
+      <Navbar />
       <main className="flex-1">{children}</main>
     </div>
   );

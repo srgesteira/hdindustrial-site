@@ -13,7 +13,7 @@ export function HomePageClient() {
   return (
     <div className="mx-auto flex max-w-6xl flex-col">
       {/* PRIMEIRA TELA ÚNICA – HERO TECNOLÓGICO COM GLOBOS TERRESTRES */}
-      <section className="hero-bg relative flex min-h-[100dvh] min-h-[85vh] flex-col justify-between overflow-hidden px-5 pt-6 pb-20 sm:min-h-screen sm:px-6 sm:pt-8 sm:pb-12 lg:px-10">
+      <section className="hero-bg relative flex min-h-[100dvh] min-h-[85vh] flex-col justify-between overflow-hidden px-5 pt-20 pb-20 sm:min-h-screen sm:px-6 sm:pt-24 sm:pb-12 lg:px-10">
         {/* Vídeo de fundo com movimento de ar (mantido) */}
         <div className="hero-video-wrapper" aria-hidden>
           <video
