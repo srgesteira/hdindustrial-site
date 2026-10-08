@@ -294,6 +294,28 @@ const familias: Familia[] = [
     ],
   },
   {
+    nome: "Ventilação e Exaustão Compacta",
+    slug: "ventilacao-exaustao-compacta",
+    descricao: "Renovação de ar e filtragem em soluções compactas e customizáveis.",
+    modelos: [
+      {
+        codigo: "CVE1E",
+        slug: "cve1e",
+        imagem: "/equipamentos/ventilacao-exaustao-compacta/cve1e-1.webp",
+        nome: "CVE1E · Caixa de Ventilação e Filtragem",
+        descricao:
+          "Caixa de ventilação e filtragem compacta para renovação de ar, disponível em diferentes vazões e customizável conforme o projeto.",
+        caracteristicas: [
+          "Ventilação e filtragem em um único equipamento",
+          "Diferentes faixas de vazão",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas de renovação de ar", "Ambientes industriais e laboratórios"],
+        beneficios: ["Instalação compacta", "Solução adaptada ao projeto"],
+      },
+    ],
+  },
+  {
     nome: "Bag In Bag Out",
     slug: "bibo",
     descricao:
@@ -403,6 +425,115 @@ const conteudoModelosCaixasTerminais = {
       { label: "Difusão", value: "4 vias" },
       { label: "Construção", value: "galvanizado, inox ou alumínio" },
     ],
+  },
+} as const;
+
+const conteudoModelosVentilacaoCompacta = {
+  CVE1E: {
+    "titulo": "CVE1E · Caixa de Ventilação e Filtragem",
+    "subtitulo": "Renovação de ar e filtragem em uma solução compacta e customizável.",
+    "resumo": [
+      "A CVE1E da HD Industrial é uma caixa de ventilação e filtragem desenvolvida para sistemas de renovação e tratamento do ar, integrando ventilação e filtragem em um único equipamento.",
+      "Projetada para atender diferentes aplicações em HVAC, a CVE1E pode ser configurada conforme as necessidades de cada projeto, considerando vazão, pressão disponível, sistema de filtragem, dimensões, conexões e espaço disponível para instalação."
+    ],
+    "highlights": [
+      {
+        "label": "Vazão",
+        "value": "diferentes faixas, sob projeto"
+      },
+      {
+        "label": "Ventilação",
+        "value": "ventilador com controle de velocidade"
+      },
+      {
+        "label": "Filtragem",
+        "value": "estágios configuráveis"
+      },
+      {
+        "label": "Acústica",
+        "value": "revestimento acústico interno"
+      },
+      {
+        "label": "Monitoramento",
+        "value": "tomadas de pressão diferencial"
+      },
+      {
+        "label": "Configuração",
+        "value": "sob medida"
+      }
+    ],
+    "secoesLivres": [
+      {
+        "titulo": "Diferentes vazões. Uma solução desenvolvida para o seu projeto.",
+        "paragrafos": [
+          "A CVE1E está disponível em diferentes configurações e faixas de vazão, permitindo adequar o equipamento às características de cada sistema.",
+          "Nosso diferencial está na possibilidade de customização do equipamento, permitindo desenvolver a solução de acordo com a necessidade da instalação, em vez de limitar o projeto a uma configuração padronizada.",
+          "Podemos adaptar:"
+        ],
+        "itens": [
+          "Vazão de ar",
+          "Pressão disponível",
+          "Dimensões do equipamento",
+          "Posição e configuração das conexões",
+          "Configuração dos filtros",
+          "Sentido do fluxo de ar",
+          "Acessos para inspeção e manutenção",
+          "Componentes de ventilação e controle",
+          "Configurações específicas conforme a aplicação"
+        ]
+      },
+      {
+        "titulo": "Engenharia aplicada à ventilação e filtragem",
+        "paragrafos": [
+          "Cada instalação possui suas próprias limitações e necessidades. Por isso, a HD Industrial não trabalha apenas com uma caixa de dimensões fixas.",
+          "A CVE1E é desenvolvida considerando as características reais do sistema, buscando uma solução adequada ao espaço disponível, à vazão necessária, à perda de carga dos filtros e às condições de operação."
+        ]
+      },
+      {
+        "titulo": "Construção",
+        "paragrafos": [
+          "Gabinete em chapa de aço galvanizado com tampa superior removível, que dá acesso ao interior para inspeção e manutenção.",
+          "Conexões circulares para duto na entrada e na saída, revestimento acústico interno, tomadas de pressão diferencial e caixa de comando com ajuste de velocidade do ventilador."
+        ]
+      },
+      {
+        "titulo": "Aplicações",
+        "paragrafos": [
+          "A CVE1E pode ser utilizada em:"
+        ],
+        "itens": [
+          "Sistemas de renovação de ar",
+          "Ambientes industriais",
+          "Laboratórios",
+          "Áreas técnicas",
+          "Ambientes condicionados",
+          "Sistemas HVAC",
+          "Processos que necessitam de renovação de ar com filtragem",
+          "Aplicações especiais desenvolvidas conforme projeto"
+        ]
+      }
+    ],
+    "caracteristicas": [
+      "Ventilação e filtragem em um único equipamento",
+      "Diferentes faixas de vazão",
+      "Ventilador com controle de velocidade",
+      "Filtragem configurável conforme a aplicação",
+      "Revestimento acústico interno",
+      "Tomadas de pressão diferencial",
+      "Tampa superior removível para manutenção",
+      "Conexões circulares para duto",
+      "Configuração sob medida"
+    ],
+    "destaqueCustomizacao": {
+      "kicker": "Customização é o nosso diferencial",
+      "titulo": "Não encontrou uma configuração que atende ao seu projeto?",
+      "paragrafos": [
+        "Envie a especificação, desenho ou orçamento da solução que você está avaliando.",
+        "A engenharia da HD Industrial analisa a aplicação e desenvolve uma configuração adequada à sua necessidade."
+      ],
+      "selo": "Cobrimos qualquer orçamento",
+      "fecho": "Não é apenas comparar uma caixa com outra. É comparar a solução para o seu projeto."
+    }
   },
 } as const;
 
@@ -899,6 +1030,9 @@ export default function EquipamentoModeloPage() {
       extraImages = ["/equipamentos/bibo/bibo-v-2.webp"];
     }
   }
+  if (familia.slug === "ventilacao-exaustao-compacta" && modelo.codigo === "CVE1E") {
+    extraImages = ["/equipamentos/ventilacao-exaustao-compacta/cve1e-2.webp"];
+  }
   if (familia.slug === "cabine-pintura" && modelo.codigo === "PEM") {
     extraImages = ["/equipamentos/cabine-pintura/pem-2.webp"];
   }
@@ -932,7 +1066,11 @@ export default function EquipamentoModeloPage() {
                   ? conteudoModelosUta[
                       codigoModelo as keyof typeof conteudoModelosUta
                     ]
-                  : undefined;
+                  : familia.slug === "ventilacao-exaustao-compacta"
+                    ? conteudoModelosVentilacaoCompacta[
+                        codigoModelo as keyof typeof conteudoModelosVentilacaoCompacta
+                      ]
+                    : undefined;
 
   return (
     <div className="h-screen overflow-y-auto">
@@ -994,15 +1132,17 @@ export default function EquipamentoModeloPage() {
                   {extraImages.map((src) => (
                     <div
                       key={src}
-                      className="relative flex h-16 flex-1 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70"
+                      className={`relative flex flex-1 items-center justify-center overflow-hidden rounded-xl bg-slate-900/80 ring-1 ring-slate-700/70 ${
+                        familia.slug === "ventilacao-exaustao-compacta" ? "h-44 sm:h-56" : "h-16"
+                      }`}
                     >
                       <Image
                         src={src}
                         alt={modelo.nome}
                         fill
-                        sizes="80px"
+                        sizes={familia.slug === "ventilacao-exaustao-compacta" ? "(max-width: 768px) 100vw, 50vw" : "80px"}
                         loading="lazy"
-                        className="object-cover"
+                        className={familia.slug === "ventilacao-exaustao-compacta" ? "object-contain p-2" : "object-cover"}
                         onError={(e) => {
                           e.currentTarget.parentElement?.parentElement?.classList.add(
                             "hidden",
@@ -1329,6 +1469,16 @@ export default function EquipamentoModeloPage() {
                     {secao.paragrafos.map((p) => (
                       <p key={p}>{p}</p>
                     ))}
+                    {"itens" in secao && (
+                      <div className="grid gap-2 text-slate-300 sm:grid-cols-2">
+                        {secao.itens.map((item) => (
+                          <div key={item} className="flex gap-2">
+                            <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                            <span>{item}</span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </section>
                 ))}
                 <section className="space-y-3 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-5 text-[13px] text-slate-200 sm:p-6">
@@ -1344,6 +1494,38 @@ export default function EquipamentoModeloPage() {
                     ))}
                   </div>
                 </section>
+                {"destaqueCustomizacao" in conteudoModelo && (
+                  <section className="space-y-4 rounded-3xl border border-orange-500/50 bg-gradient-to-br from-slate-950 via-slate-950 to-orange-950/40 p-6 text-slate-200 sm:p-8">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-orange-400">
+                      {conteudoModelo.destaqueCustomizacao.kicker}
+                    </p>
+                    <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
+                      {conteudoModelo.destaqueCustomizacao.titulo}
+                    </h2>
+                    {conteudoModelo.destaqueCustomizacao.paragrafos.map((p) => (
+                      <p key={p} className="max-w-2xl text-[13px] text-slate-300 sm:text-sm">
+                        {p}
+                      </p>
+                    ))}
+                    <div className="flex flex-col gap-4 pt-2 sm:flex-row sm:items-center sm:justify-between">
+                      <div className="space-y-1">
+                        <p className="inline-flex items-center gap-2 text-base font-bold uppercase tracking-wide text-orange-400 sm:text-lg">
+                          <span className="h-2.5 w-2.5 rounded-full bg-orange-500" />
+                          {conteudoModelo.destaqueCustomizacao.selo}
+                        </p>
+                        <p className="max-w-xl text-[13px] text-slate-300">
+                          {conteudoModelo.destaqueCustomizacao.fecho}
+                        </p>
+                      </div>
+                      <Link
+                        href="/contato"
+                        className="btn-primary whitespace-nowrap px-6 py-2.5 text-[12px]"
+                      >
+                        Enviar especificação
+                      </Link>
+                    </div>
+                  </section>
+                )}
               </div>
             ) : (
               <>

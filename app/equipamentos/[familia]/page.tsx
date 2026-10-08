@@ -321,6 +321,43 @@ const familias: Familia[] = [
     ],
   },
   {
+    nome: "Ventilação e Exaustão Compacta",
+    slug: "ventilacao-exaustao-compacta",
+    subtitulo: "Renovação de ar e filtragem em soluções compactas e customizáveis.",
+    descricao:
+      "A linha Ventilação e Exaustão Compacta HD reúne caixas de ventilação e filtragem para sistemas de renovação e tratamento do ar, integrando ventilação e filtragem em um único equipamento de instalação direta na rede de dutos.\n\nOs equipamentos estão disponíveis em diferentes configurações e faixas de vazão, e podem ser adaptados a cada projeto: vazão, pressão disponível, sistema de filtragem, dimensões, conexões e espaço disponível para instalação.",
+    destaques: [
+      {
+        titulo: "Diferentes vazões. Uma solução para o seu projeto.",
+        texto:
+          "Os equipamentos estão disponíveis em diferentes configurações e faixas de vazão. E, se a sua necessidade for diferente, a engenharia HD desenvolve a configuração adequada à sua instalação.",
+      },
+      {
+        titulo: "Customização é o nosso diferencial",
+        texto:
+          "Vazão, pressão disponível, dimensões, posição das conexões, filtros, sentido do fluxo, acessos e componentes de ventilação e controle podem ser adaptados. Você não precisa limitar o projeto a uma caixa de dimensões fixas.",
+      },
+    ],
+    cta: "Não encontrou a configuração do seu projeto? Envie a especificação, o desenho ou o orçamento que está avaliando.",
+    modelos: [
+      {
+        codigo: "CVE1E",
+        slug: "cve1e",
+        imagem: "/equipamentos/ventilacao-exaustao-compacta/cve1e-1.webp",
+        nome: "CVE1E · Caixa de Ventilação e Filtragem",
+        descricao:
+          "Caixa de ventilação e filtragem compacta para renovação de ar, disponível em diferentes vazões e customizável conforme o projeto.",
+        caracteristicas: [
+          "Ventilação e filtragem em um único equipamento",
+          "Diferentes faixas de vazão",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas de renovação de ar", "Ambientes industriais e laboratórios"],
+        beneficios: ["Instalação compacta", "Solução adaptada ao projeto"],
+      },
+    ],
+  },
+  {
     nome: "Bag In Bag Out",
     slug: "bibo",
     subtitulo:

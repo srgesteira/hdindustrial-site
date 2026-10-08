@@ -282,6 +282,27 @@ const familias: Familia[] = [
     ],
   },
   {
+    nome: "Ventilação e Exaustão Compacta",
+    slug: "ventilacao-exaustao-compacta",
+    descricao:
+      "Caixas de ventilação e filtragem compactas para renovação de ar, disponíveis em diferentes faixas de vazão. Customização é o nosso diferencial: cada equipamento é adaptado à vazão, à filtragem e ao espaço do seu projeto.",
+    modelos: [
+      {
+        codigo: "CVE1E",
+        nome: "CVE1E · Caixa de Ventilação e Filtragem",
+        descricao:
+          "Caixa de ventilação e filtragem compacta para renovação de ar, disponível em diferentes vazões e customizável conforme o projeto.",
+        caracteristicas: [
+          "Ventilação e filtragem em um único equipamento",
+          "Diferentes faixas de vazão",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas de renovação de ar", "Ambientes industriais e laboratórios"],
+        beneficios: ["Instalação compacta", "Solução adaptada ao projeto"],
+      },
+    ],
+  },
+  {
     nome: "Bag In Bag Out",
     slug: "bibo",
     descricao:
@@ -338,6 +359,7 @@ const familias: Familia[] = [
 
 const familiaImagens: Record<string, string> = {
   uta: "/equipamentos/uta/familia.webp",
+  "ventilacao-exaustao-compacta": "/equipamentos/ventilacao-exaustao-compacta/familia.webp",
   fxsq: "/equipamentos/fxsq/fxsq.jpeg",
   "fluxo-laminar": "/equipamentos/fluxo%20laminar/fluxo%20laminar.jpeg",
   "caixas-terminais": "/equipamentos/caixas-terminais/familia.webp",

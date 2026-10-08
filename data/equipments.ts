@@ -15,6 +15,13 @@ export const equipments: Equipment[] = [
     href: "/equipamentos/uta",
   },
   {
+    id: "cve1e",
+    name: "CVE1E",
+    description: "Ventilação e filtragem compacta, em diferentes vazões e sob medida.",
+    image: "/hero/cve1e.webp",
+    href: "/equipamentos/ventilacao-exaustao-compacta",
+  },
+  {
     id: "fxsq",
     name: "Flanges de Sucção DAIKIN",
     description: "Interface de sucção padronizada para FXSQ/FXMQ.",
