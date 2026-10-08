@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: "/equipamentos" },
   title:
     "Equipamentos HVAC Industriais | Terminais, Fan Filter Units, Filtração HEPA",
   description:

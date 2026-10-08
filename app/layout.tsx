@@ -4,6 +4,7 @@ import "./globals.css";
 import { TechBackground } from "@/components/TechBackground";
 import { AppShell } from "@/components/AppShell";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { LEAD_EMAIL, SITE_URL, SOCIAL_LINKS, WHATSAPP_NUMBER } from "@/lib/site";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title:
     "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
   description:
@@ -25,7 +27,6 @@ export const metadata: Metadata = {
       "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
     description:
       "Equipamentos HVAC industriais, filtração HEPA, salas limpas e consultoria técnica especializada para ambientes críticos, indústrias e processos controlados.",
-    url: "https://hdindustrial.ind.br",
     siteName: "HD Soluções Industriais",
     locale: "pt_BR",
     type: "website",
@@ -49,22 +50,36 @@ const jsonLd = [
     name: "HD Soluções Industriais",
     description:
       "Engenharia HVAC para ambientes críticos e infraestrutura industrial. Equipamentos HVAC, projetos de salas limpas, filtração industrial e consultoria operacional.",
-    url: "https://hdindustrial.ind.br",
+    url: SITE_URL,
+    telephone: `+${WHATSAPP_NUMBER}`,
+    email: LEAD_EMAIL,
+    areaServed: "BR",
     address: {
       "@type": "PostalAddress",
       addressLocality: "São Paulo",
       addressRegion: "SP",
       addressCountry: "BR",
     },
-    image: "https://hdindustrial.ind.br/logo-hd.webp",
-    sameAs: ["https://www.instagram.com/hd_solucoes_industriais/"],
+    image: `${SITE_URL}/logo-hd.png`,
+    logo: `${SITE_URL}/logo-hd.png`,
+    sameAs: SOCIAL_LINKS.map((s) => s.url),
   },
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "HD Soluções Industriais",
-    url: "https://hdindustrial.ind.br",
-    logo: "https://hdindustrial.ind.br/logo-hd.webp",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo-hd.png`,
+    sameAs: SOCIAL_LINKS.map((s) => s.url),
+    founder: { "@type": "Person", name: "Helder Gesteira" },
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: `+${WHATSAPP_NUMBER}`,
+      email: LEAD_EMAIL,
+      contactType: "sales",
+      areaServed: "BR",
+      availableLanguage: "Portuguese",
+    },
     foundingDate: "2003",
     knowsAbout: [
       "HVAC Industrial",
@@ -77,7 +92,7 @@ const jsonLd = [
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "HD Soluções Industriais",
-    url: "https://hdindustrial.ind.br",
+    url: SITE_URL,
   },
 ];
 

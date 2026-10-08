@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { HomePageClient } from "@/components/HomePageClient";
-import { getAllPosts } from "./blog/posts";
+import { cleanDescription, getPublishedPosts, seoTitle } from "./blog/library";
 
 export const metadata = {
+  alternates: { canonical: "/" },
   title:
     "HD Soluções Industriais | Engenharia HVAC e Consultoria Industrial em São Paulo",
   description:
@@ -10,7 +11,7 @@ export const metadata = {
 };
 
 export default function Home() {
-  const posts = getAllPosts().slice(0, 3);
+  const posts = getPublishedPosts().slice(0, 3);
 
   return (
     <>
@@ -49,7 +50,7 @@ export default function Home() {
               >
                 <div className="space-y-2">
                   <h3 className="text-base font-semibold text-slate-50 sm:text-lg">
-                    {post.title}
+                    {seoTitle(post)}
                   </h3>
                   <p className="text-[11px] text-slate-400">
                     {new Date(post.publishedAt).toLocaleDateString("pt-BR", {
@@ -59,7 +60,7 @@ export default function Home() {
                     })}
                   </p>
                   <p className="text-sm leading-relaxed text-slate-300 line-clamp-3">
-                    {post.description}
+                    {cleanDescription(post)}
                   </p>
                 </div>
 

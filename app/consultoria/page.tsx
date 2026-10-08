@@ -1,4 +1,5 @@
 export const metadata = {
+  alternates: { canonical: "/consultoria" },
   title:
     "Consultoria Industrial | Otimização de Processos e Reestruturação Operacional",
   description:

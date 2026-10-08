@@ -1,14 +1,15 @@
 import Link from "next/link";
-import { getAllPosts } from "./posts";
+import { cleanDescription, fullTitle, getPublishedPosts } from "./library";
 
 export const metadata = {
+  alternates: { canonical: "/blog" },
   title: "Blog | HD Soluções Industriais - Artigos sobre HVAC Industrial",
   description:
     "Artigos técnicos sobre HVAC industrial, filtração, salas limpas e consultoria operacional.",
 };
 
 export default function BlogPage() {
-  const posts = getAllPosts();
+  const posts = getPublishedPosts();
 
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-slate-950">
@@ -37,7 +38,7 @@ export default function BlogPage() {
                   Artigo técnico
                 </p>
                 <h2 className="text-base font-semibold text-slate-50 sm:text-lg">
-                  {post.title}
+                  {fullTitle(post)}
                 </h2>
                 <p className="text-[11px] text-slate-400">
                   {new Date(post.publishedAt).toLocaleDateString("pt-BR", {
@@ -47,7 +48,7 @@ export default function BlogPage() {
                   })}
                 </p>
                 <p className="text-sm leading-relaxed text-slate-300">
-                  {post.description}
+                  {cleanDescription(post)}
                 </p>
               </div>
 

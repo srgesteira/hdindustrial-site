@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: { canonical: "/projetos" },
   title:
     "Projetos HVAC Industriais | Salas Limpas e Ambientes Controlados",
   description:

@@ -1,4 +1,7 @@
+import { LeadCapture } from "@/components/LeadCapture";
+
 export const metadata = {
+  alternates: { canonical: "/contato" },
   title: "Contato | HD Soluções Industriais",
   description:
     "Fale com nossa engenharia para orçamentos de equipamentos HVAC, projetos de salas limpas e consultoria industrial.",
@@ -52,88 +55,12 @@ export default function ContatoPage() {
           </a>
         </div>
 
-        {/* Formulário */}
-        <form className="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/70 p-5 text-sm text-slate-300 sm:p-5 sm:space-y-4">
-          <h2 className="text-base font-semibold text-slate-50 sm:text-lg">
-            Envie uma mensagem
-          </h2>
-          <p className="text-xs text-slate-400 sm:text-sm">
-            Preencha os dados abaixo para que possamos entender melhor sua
-            necessidade. Retornaremos o contato utilizando o canal informado.
-          </p>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="space-y-1">
-              <label className="text-xs text-slate-300" htmlFor="nome">
-                Nome
-              </label>
-              <input
-                id="nome"
-                name="nome"
-                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
-              />
-            </div>
-            <div className="space-y-1">
-              <label className="text-xs text-slate-300" htmlFor="empresa">
-                Empresa
-              </label>
-              <input
-                id="empresa"
-                name="empresa"
-                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
-              />
-            </div>
-          </div>
-          <div className="grid gap-3 sm:grid-cols-2">
-            <div className="space-y-1">
-              <label className="text-xs text-slate-300" htmlFor="email">
-                E-mail
-              </label>
-              <input
-                id="email"
-                name="email"
-                type="email"
-                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
-              />
-            </div>
-            <div className="space-y-1">
-              <label className="text-xs text-slate-300" htmlFor="telefone">
-                Telefone / WhatsApp
-              </label>
-              <input
-                id="telefone"
-                name="telefone"
-                className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
-              />
-            </div>
-          </div>
-          <div className="space-y-1">
-            <label className="text-xs text-slate-300" htmlFor="assunto">
-              Assunto
-            </label>
-            <input
-              id="assunto"
-              name="assunto"
-              className="w-full min-h-[48px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
-            />
-          </div>
-          <div className="space-y-1">
-            <label className="text-xs text-slate-300" htmlFor="mensagem">
-              Mensagem
-            </label>
-            <textarea
-              id="mensagem"
-              name="mensagem"
-              rows={4}
-              className="w-full min-h-[120px] rounded-lg border border-slate-700/80 bg-slate-950/60 px-4 py-3 text-base text-slate-100 outline-none ring-0 transition focus:border-cyan-400/80 sm:min-h-0 sm:py-2 sm:px-3 sm:text-sm"
-            />
-          </div>
-          <button
-            type="submit"
-            className="mt-2 inline-flex min-h-[48px] items-center justify-center rounded-full bg-cyan-400 px-8 py-3 text-xs font-semibold text-slate-950 shadow-glow transition active:bg-cyan-300 sm:text-sm sm:hover:bg-cyan-300"
-          >
-            Enviar mensagem
-          </button>
-        </form>
+        {/* Formulário — agora envia de verdade (e-mail + WhatsApp). Antes não enviava para lugar nenhum. */}
+        <LeadCapture
+          origem="Página de contato"
+          titulo="Envie uma mensagem"
+          subtitulo="Conte o que você precisa. Retornamos pelo canal informado em até 1 dia útil."
+        />
       </section>
     </div>
   );
