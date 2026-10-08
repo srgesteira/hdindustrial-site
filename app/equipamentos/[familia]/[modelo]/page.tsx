@@ -25,6 +25,43 @@ type Familia = {
 
 const familias: Familia[] = [
   {
+    nome: "Unidade de Tratamento de Ar (UTA)",
+    slug: "uta",
+    descricao: "Tratamento e distribuição do ar configurados para cada aplicação.",
+    modelos: [
+      {
+        codigo: "UTA-AG",
+        slug: "agua-gelada",
+        nome: "UTA Água Gelada",
+        imagem: "/equipamentos/uta/uta-ag-1.webp",
+        descricao:
+          "Condicionamento por serpentina de água gelada, integrada à central de água gelada do sistema, com ventilação eletrônica e configuração sob medida.",
+        caracteristicas: [
+          "Serpentina de água gelada",
+          "Ventilador eletrônico com automação",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas HVAC com central de água gelada"],
+        beneficios: ["Vazão constante", "Integração com IHM e supervisório"],
+      },
+      {
+        codigo: "UTA-DX",
+        slug: "expansao-direta",
+        nome: "UTA Expansão Direta",
+        imagem: "/equipamentos/uta/uta-dx-1.webp",
+        descricao:
+          "Condicionamento por expansão direta de fluido refrigerante, compatível com o sistema de climatização previsto, com ventilação eletrônica e configuração sob medida.",
+        caracteristicas: [
+          "Serpentina de expansão direta",
+          "Ventilador eletrônico com automação",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas HVAC com expansão direta"],
+        beneficios: ["Vazão constante", "Integração com IHM e supervisório"],
+      },
+    ],
+  },
+  {
     nome: "Flanges de Sucção DAIKIN",
     slug: "fxsq",
     descricao:
@@ -365,6 +402,129 @@ const conteudoModelosCaixasTerminais = {
       { label: "Teste", value: "leitura de aerossol" },
       { label: "Difusão", value: "4 vias" },
       { label: "Construção", value: "galvanizado, inox ou alumínio" },
+    ],
+  },
+} as const;
+
+const conteudoModelosUta = {
+  "UTA-AG": {
+    titulo: "UTA Água Gelada · Unidade de Tratamento de Ar",
+    subtitulo:
+      "Tratamento de ar com condicionamento por água gelada, configurado sob projeto.",
+    resumo: [
+      "A UTA Água Gelada HD integra ventilação, filtragem e condicionamento térmico por serpentina de água gelada em um único equipamento, interligado à central de água gelada e aos demais componentes do sistema HVAC.",
+      "Equipada com ventiladores eletrônicos com automação, mantém vazão constante ao longo da vida útil dos filtros, com operação por IHM e integração ao sistema supervisório quando necessário.",
+      "Cada unidade é desenvolvida sob medida: dimensões, posição das conexões e acessos, estágios de filtragem e materiais são definidos conforme o projeto e o espaço de instalação.",
+    ],
+    highlights: [
+      { label: "Condicionamento", value: "serpentina de água gelada" },
+      { label: "Ventilação", value: "ventilador eletrônico com automação" },
+      { label: "Controle", value: "IHM e supervisório opcional" },
+      { label: "Filtragem", value: "múltiplos estágios, conforme projeto" },
+      { label: "Monitoramento", value: "pressão diferencial nos filtros" },
+      { label: "Configuração", value: "sob medida" },
+    ],
+    secoesLivres: [
+      {
+        titulo: "Construção",
+        paragrafos: [
+          "Gabinete em painéis com estrutura em perfis e portas de inspeção para manutenção.",
+          "Dimensões, materiais e posição das conexões são definidos conforme o projeto e o espaço de instalação.",
+        ],
+      },
+      {
+        titulo: "Condicionamento Térmico",
+        paragrafos: ["Serpentina de água gelada dimensionada para a capacidade térmica e as condições de operação da aplicação, interligada à central de água gelada do sistema."],
+      },
+      {
+        titulo: "Ventilação e Automação",
+        paragrafos: [
+          "Ventiladores eletrônicos de alta eficiência com controle automático de vazão, que mantêm o fluxo de ar estável mesmo com a saturação progressiva dos filtros.",
+          "Operação por IHM local e, quando necessário, integração ao sistema supervisório da planta.",
+        ],
+      },
+      {
+        titulo: "Sistema de Filtragem",
+        paragrafos: [
+          "Estágios de filtragem definidos pelos requisitos de qualidade do ar do ambiente atendido.",
+        ],
+      },
+      {
+        titulo: "Monitoramento",
+        paragrafos: [
+          "Manômetros de pressão diferencial para acompanhamento da perda de carga dos filtros.",
+        ],
+      },
+    ],
+    caracteristicas: [
+      "Serpentina de água gelada",
+      "Ventilador eletrônico de alta eficiência",
+      "Vazão constante com automação",
+      "IHM e supervisório opcional",
+      "Filtragem em múltiplos estágios",
+      "Monitoramento de pressão diferencial",
+      "Portas de inspeção",
+      "Configuração sob medida",
+    ],
+  },
+  "UTA-DX": {
+    titulo: "UTA Expansão Direta · Unidade de Tratamento de Ar",
+    subtitulo:
+      "Tratamento de ar com condicionamento por expansão direta, configurado sob projeto.",
+    resumo: [
+      "A UTA Expansão Direta HD integra ventilação, filtragem e condicionamento térmico por serpentina de expansão direta de fluido refrigerante em um único equipamento, selecionada conforme a compatibilidade com o sistema de climatização previsto.",
+      "Equipada com ventiladores eletrônicos com automação, mantém vazão constante ao longo da vida útil dos filtros, com operação por IHM e integração ao sistema supervisório quando necessário.",
+      "Cada unidade é desenvolvida sob medida: dimensões, posição das conexões e acessos, estágios de filtragem e materiais são definidos conforme o projeto e o espaço de instalação.",
+    ],
+    highlights: [
+      { label: "Condicionamento", value: "serpentina de expansão direta" },
+      { label: "Ventilação", value: "ventilador eletrônico com automação" },
+      { label: "Controle", value: "IHM e supervisório opcional" },
+      { label: "Filtragem", value: "múltiplos estágios, conforme projeto" },
+      { label: "Monitoramento", value: "pressão diferencial nos filtros" },
+      { label: "Configuração", value: "sob medida" },
+    ],
+    secoesLivres: [
+      {
+        titulo: "Construção",
+        paragrafos: [
+          "Gabinete em painéis com estrutura em perfis e portas de inspeção para manutenção.",
+          "Dimensões, materiais e posição das conexões são definidos conforme o projeto e o espaço de instalação.",
+        ],
+      },
+      {
+        titulo: "Condicionamento Térmico",
+        paragrafos: ["Serpentina de expansão direta de fluido refrigerante, dimensionada para a capacidade térmica da aplicação e compatível com a unidade condensadora do sistema de climatização previsto."],
+      },
+      {
+        titulo: "Ventilação e Automação",
+        paragrafos: [
+          "Ventiladores eletrônicos de alta eficiência com controle automático de vazão, que mantêm o fluxo de ar estável mesmo com a saturação progressiva dos filtros.",
+          "Operação por IHM local e, quando necessário, integração ao sistema supervisório da planta.",
+        ],
+      },
+      {
+        titulo: "Sistema de Filtragem",
+        paragrafos: [
+          "Estágios de filtragem definidos pelos requisitos de qualidade do ar do ambiente atendido.",
+        ],
+      },
+      {
+        titulo: "Monitoramento",
+        paragrafos: [
+          "Manômetros de pressão diferencial para acompanhamento da perda de carga dos filtros.",
+        ],
+      },
+    ],
+    caracteristicas: [
+      "Serpentina de expansão direta",
+      "Ventilador eletrônico de alta eficiência",
+      "Vazão constante com automação",
+      "IHM e supervisório opcional",
+      "Filtragem em múltiplos estágios",
+      "Monitoramento de pressão diferencial",
+      "Portas de inspeção",
+      "Configuração sob medida",
     ],
   },
 } as const;
@@ -768,7 +928,11 @@ export default function EquipamentoModeloPage() {
                 ? conteudoModelosCabinePintura[
                     codigoModelo as keyof typeof conteudoModelosCabinePintura
                   ]
-                : undefined;
+                : familia.slug === "uta"
+                  ? conteudoModelosUta[
+                      codigoModelo as keyof typeof conteudoModelosUta
+                    ]
+                  : undefined;
 
   return (
     <div className="h-screen overflow-y-auto">
@@ -1152,6 +1316,35 @@ export default function EquipamentoModeloPage() {
                   </div>
                 );
               })()
+            ) : "secoesLivres" in conteudoModelo ? (
+              <div className="space-y-6">
+                {conteudoModelo.secoesLivres.map((secao) => (
+                  <section
+                    key={secao.titulo}
+                    className="space-y-3 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-5 text-[13px] text-slate-200 sm:p-6"
+                  >
+                    <h2 className="text-sm font-semibold text-slate-50 sm:text-base">
+                      {secao.titulo}
+                    </h2>
+                    {secao.paragrafos.map((p) => (
+                      <p key={p}>{p}</p>
+                    ))}
+                  </section>
+                ))}
+                <section className="space-y-3 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-5 text-[13px] text-slate-200 sm:p-6">
+                  <h2 className="text-sm font-semibold text-slate-50 sm:text-base">
+                    Principais Características
+                  </h2>
+                  <div className="grid gap-2 text-[13px] text-slate-300 sm:grid-cols-2">
+                    {conteudoModelo.caracteristicas.map((item) => (
+                      <div key={item} className="flex gap-2">
+                        <span className="mt-[6px] h-1.5 w-1.5 rounded-full bg-cyan-300" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </div>
             ) : (
               <>
                 {/* Construção */}

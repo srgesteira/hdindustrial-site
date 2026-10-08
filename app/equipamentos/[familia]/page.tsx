@@ -23,9 +23,63 @@ type Familia = {
   descricao: string;
   modelos: Modelo[];
   subtitulo?: string;
+  destaques?: { titulo: string; texto: string }[];
+  cta?: string;
 };
 
 const familias: Familia[] = [
+  {
+    nome: "Unidade de Tratamento de Ar (UTA)",
+    slug: "uta",
+    subtitulo: "Tratamento e distribuição do ar configurados para cada aplicação.",
+    descricao:
+      "As Unidades de Tratamento de Ar (UTAs) HD tratam e movimentam o ar em sistemas HVAC. Conforme o projeto, integram ventilação, filtragem em múltiplos estágios e condicionamento térmico, para atender aos requisitos de qualidade do ar, temperatura e operação de cada ambiente.\n\nA configuração é definida pela aplicação e pelas características da instalação: vazão de ar, estágios de filtragem, capacidade térmica, espaço disponível e integração com os demais equipamentos do sistema.",
+    destaques: [
+      {
+        titulo: "Engenharia sob medida",
+        texto:
+          "Cada UTA HD é desenvolvida a partir dos requisitos do projeto. Dimensões, posição das conexões e acessos, seleção de filtros e serpentinas e materiais de construção são definidos para o espaço, o processo e a infraestrutura existente, sem adaptações em campo.",
+      },
+      {
+        titulo: "Ventilação eletrônica com automação",
+        texto:
+          "Ventiladores eletrônicos de alta eficiência com controle automático de vazão, que mantêm o fluxo de ar estável mesmo com a saturação progressiva dos filtros. A operação pode ser feita por IHM local e, quando necessário, integrada ao sistema supervisório da planta.",
+      },
+    ],
+    cta: "Precisa especificar uma UTA para sua aplicação? Fale com nossa engenharia.",
+    modelos: [
+      {
+        codigo: "UTA-AG",
+        slug: "agua-gelada",
+        nome: "UTA Água Gelada",
+        imagem: "/equipamentos/uta/uta-ag-1.webp",
+        descricao:
+          "Condicionamento por serpentina de água gelada, integrada à central de água gelada do sistema, com ventilação eletrônica e configuração sob medida.",
+        caracteristicas: [
+          "Serpentina de água gelada",
+          "Ventilador eletrônico com automação",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas HVAC com central de água gelada"],
+        beneficios: ["Vazão constante", "Integração com IHM e supervisório"],
+      },
+      {
+        codigo: "UTA-DX",
+        slug: "expansao-direta",
+        nome: "UTA Expansão Direta",
+        imagem: "/equipamentos/uta/uta-dx-1.webp",
+        descricao:
+          "Condicionamento por expansão direta de fluido refrigerante, compatível com o sistema de climatização previsto, com ventilação eletrônica e configuração sob medida.",
+        caracteristicas: [
+          "Serpentina de expansão direta",
+          "Ventilador eletrônico com automação",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas HVAC com expansão direta"],
+        beneficios: ["Vazão constante", "Integração com IHM e supervisório"],
+      },
+    ],
+  },
   {
     nome: "Flanges de Sucção DAIKIN",
     slug: "fxsq",
@@ -382,6 +436,27 @@ export default function EquipamentosFamiliaPage() {
           </div>
         </header>
 
+        {familia.destaques && familia.destaques.length > 0 && (
+          <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {familia.destaques.map((d) => (
+              <div
+                key={d.titulo}
+                className="space-y-2 rounded-3xl border border-cyan-500/30 bg-slate-950/80 p-5 sm:p-6"
+              >
+                <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">
+                  Diferencial HD
+                </p>
+                <h2 className="text-sm font-semibold text-slate-50 sm:text-base">
+                  {d.titulo}
+                </h2>
+                <p className="text-[13px] leading-relaxed text-slate-300 sm:text-sm">
+                  {d.texto}
+                </p>
+              </div>
+            ))}
+          </section>
+        )}
+
         <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
           {familia.modelos.map((modelo) => {
             const imgSrc =
@@ -431,6 +506,17 @@ export default function EquipamentosFamiliaPage() {
             );
           })}
         </section>
+
+        {familia.cta && (
+          <section className="flex flex-col items-start justify-between gap-4 rounded-3xl border border-slate-800/80 bg-slate-950/90 p-5 text-[13px] text-slate-200 sm:flex-row sm:items-center sm:p-6">
+            <p className="max-w-xl text-sm font-medium text-slate-100">
+              {familia.cta}
+            </p>
+            <Link href="/contato" className="btn-primary px-6 py-2.5 text-[12px]">
+              Falar com engenharia
+            </Link>
+          </section>
+        )}
       </div>
     </div>
   );

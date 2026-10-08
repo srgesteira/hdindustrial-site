@@ -21,6 +21,40 @@ type Familia = {
 
 const familias: Familia[] = [
   {
+    nome: "Unidade de Tratamento de Ar (UTA)",
+    slug: "uta",
+    descricao:
+      "As UTAs HD integram ventilação, filtragem em múltiplos estágios e condicionamento térmico por água gelada ou expansão direta. Desenvolvidas sob medida para cada projeto, com ventiladores eletrônicos com automação e controle por IHM e supervisório.",
+    modelos: [
+      {
+        codigo: "UTA-AG",
+        nome: "UTA Água Gelada",
+        descricao:
+          "Condicionamento por serpentina de água gelada, integrada à central de água gelada do sistema, com ventilação eletrônica e configuração sob medida.",
+        caracteristicas: [
+          "Serpentina de água gelada",
+          "Ventilador eletrônico com automação",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas HVAC com central de água gelada"],
+        beneficios: ["Vazão constante", "Integração com IHM e supervisório"],
+      },
+      {
+        codigo: "UTA-DX",
+        nome: "UTA Expansão Direta",
+        descricao:
+          "Condicionamento por expansão direta de fluido refrigerante, compatível com o sistema de climatização previsto, com ventilação eletrônica e configuração sob medida.",
+        caracteristicas: [
+          "Serpentina de expansão direta",
+          "Ventilador eletrônico com automação",
+          "Configuração sob medida",
+        ],
+        aplicacoes: ["Sistemas HVAC com expansão direta"],
+        beneficios: ["Vazão constante", "Integração com IHM e supervisório"],
+      },
+    ],
+  },
+  {
     nome: "Flanges de Sucção DAIKIN",
     slug: "fxsq",
     descricao:
@@ -303,6 +337,7 @@ const familias: Familia[] = [
 ];
 
 const familiaImagens: Record<string, string> = {
+  uta: "/equipamentos/uta/familia.webp",
   fxsq: "/equipamentos/fxsq/fxsq.jpeg",
   "fluxo-laminar": "/equipamentos/fluxo%20laminar/fluxo%20laminar.jpeg",
   "caixas-terminais": "/equipamentos/caixas-terminais/familia.webp",

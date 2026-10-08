@@ -8,6 +8,13 @@ export type Equipment = {
 
 export const equipments: Equipment[] = [
   {
+    id: "uta",
+    name: "UTA",
+    description: "Unidades de Tratamento de Ar sob medida, com ventilação eletrônica.",
+    image: "/hero/uta.webp",
+    href: "/equipamentos/uta",
+  },
+  {
     id: "fxsq",
     name: "Flanges de Sucção DAIKIN",
     description: "Interface de sucção padronizada para FXSQ/FXMQ.",
