@@ -32,3 +32,11 @@ export function whatsappLink(message: string): string {
 export function absoluteUrl(path: string): string {
   return `${SITE_URL}${path.startsWith("/") ? path : `/${path}`}`;
 }
+
+/**
+ * Banco de dados do painel (Supabase) — onde os pedidos do site ficam guardados.
+ * A chave abaixo é a PÚBLICA (feita para ficar no site): ela só consegue
+ * INSERIR pedidos, não lê nem apaga nada (regra no banco, migração 015_leads.sql).
+ */
+export const LEADS_SUPABASE_URL = process.env.LEADS_SUPABASE_URL ?? "https://emyozhdphxaodbiacbdy.supabase.co";
+export const LEADS_SUPABASE_KEY = process.env.LEADS_SUPABASE_KEY ?? "sb_publishable_cM5BojqI2VG87bn65DoMow_cg6w8xJg";

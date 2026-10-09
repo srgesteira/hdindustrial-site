@@ -4,7 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LeadCapture } from "@/components/LeadCapture";
 import { Markdown } from "@/components/Markdown";
-import { AUTHOR, SITE_NAME, SITE_URL, absoluteUrl, whatsappLink } from "@/lib/site";
+import { WhatsAppLink } from "@/components/WhatsAppLink";
+import { AUTHOR, SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/site";
 import {
   articleBody,
   cleanDescription,
@@ -171,14 +172,13 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               ))}
             </div>
             <div className="mt-4 flex flex-wrap gap-3">
-              <a
-                href={whatsappLink(`Olá! Li o artigo "${title}" no site da HD e quero falar sobre um orçamento.`)}
-                target="_blank"
-                rel="noreferrer"
+              <WhatsAppLink
+                message={`Olá! Li o artigo "${title}" no site da HD e quero falar sobre um orçamento.`}
+                origem={`${origem} (botão orçamento)`}
                 className="inline-flex min-h-[44px] items-center rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white hover:brightness-110"
               >
                 Pedir orçamento no WhatsApp
-              </a>
+              </WhatsAppLink>
               <a
                 href="#orcamento"
                 className="inline-flex min-h-[44px] items-center rounded-full border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 hover:border-cyan-400 hover:text-cyan-200"

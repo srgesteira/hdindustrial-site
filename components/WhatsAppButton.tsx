@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { whatsappLink } from "@/lib/site";
+import { trackWhatsappClick } from "@/lib/track";
 
 /**
  * Botão flutuante do WhatsApp.
@@ -22,6 +23,7 @@ export function WhatsAppButton() {
     // monta a mensagem na hora do clique (título da página já carregado)
     const msg = `Olá! Vim pelo site da HD (página: ${pageLabel()}) e gostaria de falar com a engenharia.`;
     e.currentTarget.href = whatsappLink(msg);
+    trackWhatsappClick(`Botão flutuante — ${pageLabel()}`);
   }
 
   return (

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { LEAD_EMAIL, whatsappLink } from "@/lib/site";
+import { trackWhatsappClick } from "@/lib/track";
 
 type LeadFormState = {
   nome: string;
@@ -35,6 +36,7 @@ export function LeadCapture({
   subtitulo = "Conte o seu caso. Um engenheiro da HD responde com uma avaliação técnica e, se fizer sentido, uma proposta.",
 }: LeadCaptureProps) {
   const [form, setForm] = useState<LeadFormState>(EMPTY);
+  const [website, setWebsite] = useState(""); // armadilha anti-robô
   const [submitting, setSubmitting] = useState(false);
   const [sent, setSent] = useState<LeadFormState | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -55,6 +57,11 @@ export function LeadCapture({
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (website) {
+      // robô: não envia nada
+      setSent(form);
+      return;
+    }
     if (!form.nome.trim() || (!form.email.trim() && !form.telefone.trim())) {
       setError("Informe seu nome e um e-mail ou telefone para retornarmos.");
       return;
@@ -87,7 +94,7 @@ export function LeadCapture({
       fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, origem, pagina }),
+        body: JSON.stringify({ ...form, origem, pagina, website }),
       }),
     ]);
 
@@ -132,6 +139,7 @@ export function LeadCapture({
               href={whatsappLink(resumo(sent))}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackWhatsappClick(`${origem ?? "Formulário"} (após enviar formulário)`)}
               className="inline-flex min-h-[44px] items-center gap-2 rounded-full bg-[#25D366] px-5 py-2.5 text-sm font-semibold text-white hover:brightness-110"
             >
               {error ? "Enviar pelo WhatsApp" : "Quer resposta mais rápida? Fale no WhatsApp"}
@@ -139,6 +147,16 @@ export function LeadCapture({
           </div>
         ) : (
           <form className="mt-2 grid grid-cols-1 gap-3 sm:grid-cols-2" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              name="website"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
             <input type="text" name="nome" placeholder="Nome *" value={form.nome} onChange={handleChange} className={inputCls} required />
             <input type="text" name="empresa" placeholder="Empresa" value={form.empresa} onChange={handleChange} className={inputCls} />
             <input type="email" name="email" placeholder="E-mail" value={form.email} onChange={handleChange} className={inputCls} />
