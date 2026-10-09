@@ -17,6 +17,8 @@ type LeadCaptureProps = {
   origem?: string;
   titulo?: string;
   subtitulo?: string;
+  /** Texto extra anexado ao pedido (ex.: resultado de uma calculadora). */
+  anexo?: string;
 };
 
 const EMPTY: LeadFormState = { nome: "", empresa: "", email: "", telefone: "", mensagem: "" };
@@ -32,6 +34,7 @@ const EMPTY: LeadFormState = { nome: "", empresa: "", email: "", telefone: "", m
  */
 export function LeadCapture({
   origem,
+  anexo,
   titulo = "Receba uma análise técnica gratuita",
   subtitulo = "Conte o seu caso. Um engenheiro da HD responde com uma avaliação técnica e, se fizer sentido, uma proposta.",
 }: LeadCaptureProps) {
@@ -69,6 +72,9 @@ export function LeadCapture({
     setSubmitting(true);
     setError(null);
     const pagina = window.location.href;
+    const mensagemFinal = [form.mensagem.trim(), anexo ? `--- Dados enviados pela página ---\n${anexo}` : ""]
+      .filter(Boolean)
+      .join("\n\n");
 
     const payload = {
       _subject: `Novo pedido pelo site${origem ? ` — ${origem}` : ""}`,
@@ -78,7 +84,7 @@ export function LeadCapture({
       Empresa: form.empresa,
       Email: form.email,
       Telefone: form.telefone,
-      Mensagem: form.mensagem,
+      Mensagem: mensagemFinal,
       Origem: origem ?? "",
       Pagina: pagina,
     };
@@ -94,7 +100,7 @@ export function LeadCapture({
       fetch("/api/lead", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, origem, pagina, website }),
+        body: JSON.stringify({ ...form, mensagem: mensagemFinal, origem, pagina, website }),
       }),
     ]);
 
