@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { APLICACOES } from "@/data/aplicacoes";
+import { ESPECIFICACOES } from "@/data/especificacoes";
 import { FAMILIAS_SEO } from "@/data/equipment-seo";
 import { SITE_URL } from "@/lib/site";
 import { getPublishedPosts } from "./blog/library";
@@ -26,6 +27,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ferramentas", priority: 0.7 },
     { path: "/ferramentas/trocas-de-ar", priority: 0.8 },
     { path: "/ferramentas/cascata-de-pressao", priority: 0.8 },
+    { path: "/especificacoes", priority: 0.8 },
+    { path: "/materiais/checklist-qualificacao-sala-limpa", priority: 0.8 },
   ].map(({ path, priority }) => ({
     url: `${SITE_URL}${path}`,
     lastModified: path === "/blog" ? latestPost : undefined,
@@ -45,11 +48,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.9,
   }));
 
+  const especificacaoRoutes: MetadataRoute.Sitemap = ESPECIFICACOES.map((e) => ({
+    url: `${SITE_URL}/especificacoes/${e.slug}`,
+    priority: 0.8,
+  }));
+
   const blogRoutes: MetadataRoute.Sitemap = posts.map((post) => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.publishedAt),
     priority: 0.5,
   }));
 
-  return [...staticRoutes, ...equipmentRoutes, ...aplicacaoRoutes, ...blogRoutes];
+  return [...staticRoutes, ...equipmentRoutes, ...aplicacaoRoutes, ...especificacaoRoutes, ...blogRoutes];
 }

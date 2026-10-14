@@ -19,6 +19,18 @@ const TOOLS = [
     titulo: "Cascata de pressão diferencial",
     texto: "Pressão de cada sala, degraus em Pa e o ar que escapa pelas portas — o excedente de insuflamento necessário.",
   },
+  {
+    href: "/especificacoes",
+    titulo: "Especificações técnicas para memorial",
+    texto: "Textos prontos de especificação de FFU, caixa terminal HEPA, fluxo laminar, BIBO, UTA e caixa de filtragem para copiar no seu projeto.",
+    cta: "Ver especificações →",
+  },
+  {
+    href: "/materiais/checklist-qualificacao-sala-limpa",
+    titulo: "Checklist de qualificação de sala limpa",
+    texto: "O que conferir antes dos ensaios da ISO 14644, a ordem certa dos testes e onde as salas mais reprovam.",
+    cta: "Abrir checklist →",
+  },
 ];
 
 export default function FerramentasPage() {
@@ -28,7 +40,7 @@ export default function FerramentasPage() {
         <header className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300/80">Ferramentas gratuitas</p>
           <h1 className="text-[1.4rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-3xl">
-            Calculadoras de engenharia para salas limpas
+            Calculadoras e materiais de engenharia para salas limpas
           </h1>
           <p className="max-w-3xl text-sm text-slate-300">
             Ferramentas que usamos no dia a dia de projeto, abertas para engenheiros, projetistas e equipes de manutenção e
@@ -44,7 +56,7 @@ export default function FerramentasPage() {
             >
               <h2 className="text-base font-semibold text-slate-50 group-hover:text-cyan-200 sm:text-lg">{t.titulo}</h2>
               <p className="mt-2 text-sm text-slate-400">{t.texto}</p>
-              <p className="mt-3 text-[12px] font-semibold text-cyan-300">Abrir calculadora →</p>
+              <p className="mt-3 text-[12px] font-semibold text-cyan-300">{"cta" in t ? t.cta : "Abrir calculadora →"}</p>
             </Link>
           ))}
         </div>

@@ -149,6 +149,16 @@ export default async function AplicacaoPage({ params }: Props) {
                   Calculadoras gratuitas: trocas de ar e cascata de pressão
                 </Link>
               </li>
+              <li>
+                <Link href="/especificacoes" className="text-cyan-300 hover:text-cyan-200">
+                  Especificações técnicas prontas para o memorial descritivo
+                </Link>
+              </li>
+              <li>
+                <Link href="/materiais/checklist-qualificacao-sala-limpa" className="text-cyan-300 hover:text-cyan-200">
+                  Checklist de qualificação de sala limpa
+                </Link>
+              </li>
             </ul>
           </section>
         )}

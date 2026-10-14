@@ -525,3 +525,46 @@ main {
     opacity: 0.8;
   }
 }
+
+/* Impressão (especificações e materiais): só o conteúdo, preto no branco, sem menu e sem botões. */
+@media print {
+  @page {
+    margin: 18mm 16mm;
+  }
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  header,
+  .no-print,
+  .pointer-events-none.fixed,
+  a[href*="wa.me"].fixed {
+    display: none !important;
+  }
+  .h-screen {
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .site-shell {
+    min-height: 0 !important;
+  }
+  .print-page {
+    background: #fff !important;
+  }
+  .print-page > div {
+    padding-top: 0 !important;
+  }
+  .print-area {
+    border: none !important;
+    background: #fff !important;
+    padding: 0 !important;
+  }
+  .print-area,
+  .print-area * {
+    color: #000 !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

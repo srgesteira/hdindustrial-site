@@ -19,6 +19,12 @@ type LeadCaptureProps = {
   subtitulo?: string;
   /** Texto extra anexado ao pedido (ex.: resultado de uma calculadora). */
   anexo?: string;
+  /** Texto do botão de enviar. */
+  botao?: string;
+  /** Placeholder do campo de mensagem. */
+  placeholderMensagem?: string;
+  /** Chamado depois do envio (ex.: liberar um material para download). */
+  onSent?: () => void;
 };
 
 const EMPTY: LeadFormState = { nome: "", empresa: "", email: "", telefone: "", mensagem: "" };
@@ -35,6 +41,9 @@ const EMPTY: LeadFormState = { nome: "", empresa: "", email: "", telefone: "", m
 export function LeadCapture({
   origem,
   anexo,
+  botao = "Solicitar análise técnica",
+  placeholderMensagem = "O que você precisa? (ex.: sala limpa ISO 7 para farmácia, troca de filtros HEPA, fluxo laminar sob medida…)",
+  onSent,
   titulo = "Receba uma análise técnica gratuita",
   subtitulo = "Conte o seu caso. Um engenheiro da HD responde com uma avaliação técnica e, se fizer sentido, uma proposta.",
 }: LeadCaptureProps) {
@@ -105,6 +114,7 @@ export function LeadCapture({
     ]);
 
     setSubmitting(false);
+    onSent?.();
     const emailOk = results[0].status === "fulfilled";
     if (emailOk) {
       setSent(form);
@@ -169,7 +179,7 @@ export function LeadCapture({
             <input type="tel" name="telefone" placeholder="Telefone / WhatsApp" value={form.telefone} onChange={handleChange} className={inputCls} />
             <textarea
               name="mensagem"
-              placeholder="O que você precisa? (ex.: sala limpa ISO 7 para farmácia, troca de filtros HEPA, fluxo laminar sob medida…)"
+              placeholder={placeholderMensagem}
               value={form.mensagem}
               onChange={handleChange}
               rows={3}
@@ -181,7 +191,7 @@ export function LeadCapture({
                 disabled={submitting}
                 className="btn-primary inline-flex min-h-[44px] px-6 py-2.5 text-sm disabled:cursor-not-allowed disabled:opacity-70"
               >
-                {submitting ? "Enviando..." : "Solicitar análise técnica"}
+                {submitting ? "Enviando..." : botao}
               </button>
               {error && <p className="text-[12px] text-rose-300">{error}</p>}
             </div>
