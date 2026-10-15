@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { HubLinks } from "@/components/HubLinks";
 import { LeadCapture } from "@/components/LeadCapture";
 import { Markdown } from "@/components/Markdown";
 import { WhatsAppLink } from "@/components/WhatsAppLink";
@@ -205,6 +206,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         )}
 
         <LeadCapture origem={origem} />
+
+        <HubLinks titulo="Equipamentos, setores e ferramentas para o seu projeto" />
 
         <Link
           href="/blog"
