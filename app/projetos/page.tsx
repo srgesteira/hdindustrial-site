@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { HubLinks } from "@/components/HubLinks";
 
 export const metadata = {
   alternates: { canonical: "/projetos" },
@@ -173,6 +174,48 @@ export default function ProjetosPage() {
           </div>
         </div>
       </section>
+
+      {/* O que entregamos */}
+      <section className="space-y-4">
+        <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">
+          O que o projeto entrega
+        </h2>
+        <div className="grid grid-cols-1 gap-3 text-xs leading-relaxed text-slate-400 sm:grid-cols-2 md:grid-cols-3 md:gap-4">
+          <div className="card-static">
+            <h3 className="text-sm font-semibold text-slate-50">Balanço de ar e cascata de pressão</h3>
+            <p className="mt-2">
+              Vazões de insuflamento, retorno e exaustão por sala, trocas de ar
+              por classe e degraus de pressão entre áreas, considerando o ar que
+              escapa pelas frestas das portas.
+            </p>
+          </div>
+          <div className="card-static">
+            <h3 className="text-sm font-semibold text-slate-50">Filtragem por estágio</h3>
+            <p className="mt-2">
+              Classes de filtro da UTA até o terminal, tipo de vedação e pontos
+              de teste, para a sala passar no ensaio de integridade e na
+              contagem de partículas da ISO 14644.
+            </p>
+          </div>
+          <div className="card-static">
+            <h3 className="text-sm font-semibold text-slate-50">Especificação dos equipamentos</h3>
+            <p className="mt-2">
+              UTAs, FFUs, caixas terminais HEPA, fluxo laminar e caixas de
+              filtragem especificados para o espaço real de instalação, com
+              ficha técnica e desenho dimensional.
+            </p>
+          </div>
+        </div>
+        <p className="text-sm text-slate-400">
+          Quer conferir números antes de falar com a gente? Use as{" "}
+          <Link href="/ferramentas" className="font-semibold text-cyan-300 hover:text-cyan-200">
+            calculadoras gratuitas de trocas de ar e cascata de pressão
+          </Link>
+          .
+        </p>
+      </section>
+
+      <HubLinks titulo="Equipamentos, setores e materiais técnicos" />
 
       {/* CTA final */}
       <section className="space-y-4">

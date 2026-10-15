@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Ferramentas gratuitas para salas limpas e HVAC | HD Industrial",
   description:
-    "Calculadoras gratuitas de engenharia para salas limpas: trocas de ar por hora, vazão de insuflamento, FFUs e cascata de pressão diferencial.",
+    "Calculadoras gratuitas para salas limpas: trocas de ar, quantidade de FFUs, cascata de pressão, perda de carga e troca de filtro HEPA, especificações e checklist de qualificação.",
   alternates: { canonical: "/ferramentas" },
 };
 
@@ -18,6 +18,16 @@ const TOOLS = [
     href: "/ferramentas/cascata-de-pressao",
     titulo: "Cascata de pressão diferencial",
     texto: "Pressão de cada sala, degraus em Pa e o ar que escapa pelas portas — o excedente de insuflamento necessário.",
+  },
+  {
+    href: "/ferramentas/quantidade-de-ffu",
+    titulo: "Quantidade de FFUs e caixas terminais",
+    texto: "Quantas FFUs ou caixas terminais HEPA a sala precisa pela classe e trocas de ar, com cobertura do forro.",
+  },
+  {
+    href: "/ferramentas/perda-de-carga-filtro-hepa",
+    titulo: "Perda de carga e troca do filtro HEPA",
+    texto: "Perda de carga esperada na sua vazão, velocidade de face e quanto falta para trocar pela leitura do manômetro.",
   },
   {
     href: "/especificacoes",

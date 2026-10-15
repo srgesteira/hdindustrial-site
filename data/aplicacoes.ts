@@ -234,7 +234,7 @@ export const APLICACOES: Aplicacao[] = [
     setor: "Indústria cosmética",
     title: "Equipamentos para sala limpa na indústria cosmética | HD",
     description:
-      "FFU, fluxo laminar, caixas terminais HEPA e UTAs sob medida para manipulação e envase de cosméticos. Projeto e fabricação HD em São Paulo.",
+      "FFU, fluxo laminar, caixas terminais HEPA e UTAs sob medida para manipulação e envase de cosméticos. Projeto e fabricação HD.",
     h1: "Salas limpas e filtragem de ar para a indústria cosmética",
     intro:
       "Na fabricação de cosméticos, áreas de manipulação e envase precisam de ar controlado para proteger o produto e atender às Boas Práticas exigidas pela ANVISA. A HD projeta e fabrica os equipamentos que fazem isso de forma confiável e com manutenção simples.",
@@ -269,6 +269,172 @@ export const APLICACOES: Aplicacao[] = [
       },
     ],
     artigos: ["classificacao-iso-14644-sala-limpa", "controle-umidade-sala-limpa-desumidificador", "erros-projeto-hvac-sala-limpa-evitar"],
+  },
+  {
+    slug: "industria-eletronica",
+    setor: "Indústria eletrônica",
+    title: "Sala limpa para indústria eletrônica: FFU e fluxo laminar | HD",
+    description:
+      "FFU, fluxo laminar e caixas terminais HEPA sob medida para montagem eletrônica, óptica e áreas sensíveis a partículas. Projeto e fabricação HD em São Paulo.",
+    h1: "Equipamentos de ar para salas limpas da indústria eletrônica",
+    intro:
+      "Na eletrônica, uma partícula no lugar errado vira defeito em placa, sensor ou componente óptico — e o defeito muitas vezes só aparece no teste final ou no campo. O ar da área de montagem precisa chegar filtrado, com fluxo estável sobre as bancadas e temperatura e umidade sob controle. A HD fabrica sob medida os equipamentos que levam esse ar até o ponto de trabalho.",
+    desafios: [
+      "Proteger bancadas e linhas de montagem com fluxo unidirecional onde a peça fica exposta.",
+      "Montar ou ampliar áreas limpas modulares sem parar a produção existente.",
+      "Manter temperatura e umidade estáveis, que afetam processo, solda e descarga eletrostática.",
+      "Reduzir a carga de partículas na rede de ar para prolongar a vida dos filtros finais.",
+    ],
+    normas: [
+      "ABNT NBR ISO 14644-1 (classificação de limpeza do ar por partículas)",
+      "ISO 14644-8 (contaminação molecular no ar), quando o processo é sensível a contaminantes químicos",
+    ],
+    equipamentos: [
+      { nome: "Fan Filter Unit (FFU)", href: "/equipamentos/fan-filter-unit", porque: "Insuflamento HEPA modular, ideal para montar e ampliar salas limpas por etapas." },
+      { nome: "Fluxo Laminar Unidirecional (UFL)", href: "/equipamentos/fluxo-laminar", porque: "Proteção sobre bancadas e pontos de montagem críticos." },
+      { nome: "Caixas Terminais HEPA", href: "/equipamentos/caixas-terminais", porque: "Distribuição final do ar filtrado quando a sala é atendida por UTA." },
+      { nome: "Unidade de Tratamento de Ar (UTA)", href: "/equipamentos/uta", porque: "Controle de temperatura e umidade sob medida para o processo." },
+    ],
+    faq: [
+      {
+        q: "FFU ou sistema com UTA e caixas terminais para eletrônica?",
+        a: "FFUs facilitam montar e ampliar a sala por módulos e reduzem dutos. Com controle rigoroso de temperatura e umidade, a UTA continua necessária para tratar o ar. Muitas salas usam os dois: UTA para condicionamento e FFUs para a recirculação filtrada.",
+      },
+      {
+        q: "Dá para criar uma área limpa só sobre a linha de montagem?",
+        a: "Sim. Um fluxo laminar ou um conjunto de FFUs sobre a linha protege o ponto crítico sem classificar a fábrica inteira. Dimensionamos pela área a proteger e pela velocidade de ar necessária.",
+      },
+      {
+        q: "Vocês fabricam conforme o projeto do cliente?",
+        a: "Sim. Fabricamos conforme a especificação do seu projeto ou ajudamos a definir a solução a partir do problema e do espaço disponível.",
+      },
+    ],
+    artigos: ["classificacao-iso-14644-sala-limpa", "fan-filter-unit-ffu-como-funciona", "controle-umidade-sala-limpa-desumidificador"],
+  },
+  {
+    slug: "biotecnologia-e-vacinas",
+    setor: "Biotecnologia e vacinas",
+    title: "Sala limpa e contenção para biotecnologia e vacinas | HD Industrial",
+    description:
+      "BIBO, fluxo laminar, FFU e UTAs sob medida para produção biológica e áreas de contenção. Troca segura de filtros e preparo para teste de integridade.",
+    h1: "Equipamentos de ar para biotecnologia, vacinas e áreas de contenção",
+    intro:
+      "Em produção biológica o ar protege duas direções ao mesmo tempo: o produto contra contaminação e as pessoas e o ambiente contra o agente manipulado. Isso exige cascata de pressão bem definida, filtragem absoluta na insuflação e na exaustão, e troca de filtros sem exposição do operador. A HD projeta e fabrica esses equipamentos sob medida.",
+    desafios: [
+      "Combinar proteção do produto (área limpa) com contenção do agente biológico (pressão negativa e exaustão filtrada).",
+      "Trocar filtros contaminados sem expor operador nem ambiente.",
+      "Filtrar a exaustão com HEPA e manter acesso para teste de integridade dos filtros instalados.",
+      "Manter a cascata de pressão estável entre áreas com classes e níveis de contenção diferentes.",
+    ],
+    normas: [
+      "ANVISA RDC 658/2022 (Boas Práticas de Fabricação de medicamentos)",
+      "EU GMP Anexo 1 (fabricação de estéreis) como referência internacional",
+      "Níveis de biossegurança (NB) conforme as diretrizes do Ministério da Saúde para trabalho em contenção com agentes biológicos",
+      "ABNT NBR ISO 14644 (classificação e ensaios de salas limpas)",
+    ],
+    equipamentos: [
+      { nome: "Bag In Bag Out (BIBO)", href: "/equipamentos/bibo", porque: "Troca segura de filtros contaminados na exaustão e em áreas de contenção." },
+      { nome: "Fluxo Laminar Unidirecional (UFL)", href: "/equipamentos/fluxo-laminar", porque: "Proteção do produto em envase e manipulação asséptica." },
+      { nome: "Fan Filter Unit (FFU)", href: "/equipamentos/fan-filter-unit", porque: "Insuflamento HEPA modular com controle de vazão." },
+      { nome: "Unidade de Tratamento de Ar (UTA)", href: "/equipamentos/uta", porque: "Tratamento de ar sob medida, com automação e integração ao supervisório." },
+    ],
+    faq: [
+      {
+        q: "Quando usar Bag In Bag Out?",
+        a: "Sempre que o filtro retém material perigoso — agente biológico, produto potente ou tóxico. O BIBO permite retirar e instalar o filtro dentro de bolsas seladas, sem contato do operador com o contaminante.",
+      },
+      {
+        q: "A exaustão de área de contenção precisa de filtro HEPA?",
+        a: "Em áreas de contenção biológica, a exaustão filtrada com HEPA é a prática usual, definida pela análise de risco e pelo nível de biossegurança do projeto. Fornecemos as caixas preparadas para o teste de integridade em campo.",
+      },
+      {
+        q: "Vocês atendem projetos de ampliação de planta existente?",
+        a: "Sim. Fabricamos conforme o projeto ou ajudamos a resolver problemas da instalação existente, como cascata de pressão instável ou filtro reprovando em integridade.",
+      },
+    ],
+    artigos: ["teste-integridade-filtro-hepa", "cascata-de-pressao-sala-limpa", "protocolo-iq-oq-pq-sala-limpa"],
+  },
+  {
+    slug: "hospitais-veterinarios",
+    setor: "Hospitais veterinários",
+    title: "Ar filtrado para centro cirúrgico veterinário | HD Industrial",
+    description:
+      "Caixas terminais HEPA, FFU, UTA e exaustão filtrada sob medida para centros cirúrgicos, isolamento e laboratórios de hospitais veterinários.",
+    h1: "Equipamentos de ar para hospitais e centros cirúrgicos veterinários",
+    intro:
+      "O hospital veterinário tem os mesmos riscos de um hospital humano — infecção em cirurgia, isolamento de pacientes com doença transmissível, laboratório — e normalmente menos espaço e orçamento. A HD dimensiona e fabrica equipamentos compactos e sob medida para levar ar filtrado ao centro cirúrgico e controlar a pressão nas áreas de isolamento.",
+    desafios: [
+      "Insuflar ar filtrado sobre a mesa cirúrgica em salas pequenas e com forro baixo.",
+      "Manter isolamento com pressão negativa e exaustão filtrada para pacientes com doença infecciosa.",
+      "Controlar odor e renovação de ar em internação e canil.",
+      "Facilitar a manutenção e a troca de filtros pela própria equipe ou pela empresa de manutenção.",
+    ],
+    normas: [
+      "ABNT NBR 7256 (tratamento de ar em estabelecimentos assistenciais de saúde), usada como referência de projeto",
+      "ABNT NBR ISO 14644 (classificação e ensaios), quando a área exige classificação",
+    ],
+    equipamentos: [
+      { nome: "Caixas Terminais HEPA", href: "/equipamentos/caixas-terminais", porque: "Insuflamento filtrado no centro cirúrgico, com acesso para teste." },
+      { nome: "Fan Filter Unit (FFU)", href: "/equipamentos/fan-filter-unit", porque: "Ar filtrado sem grande rede de dutos, bom para reformas." },
+      { nome: "Ventilação e Exaustão (CFVE)", href: "/equipamentos/ventilacao-exaustao", porque: "Exaustão filtrada para isolamento e controle de odor." },
+      { nome: "Unidade de Tratamento de Ar (UTA)", href: "/equipamentos/uta", porque: "Climatização e renovação de ar sob medida." },
+    ],
+    faq: [
+      {
+        q: "Dá para adaptar uma sala existente para centro cirúrgico veterinário?",
+        a: "Na maioria dos casos, sim. FFUs e caixas terminais compactas permitem levar ar filtrado à sala existente. Avaliamos forro, pé-direito e espaço para dutos antes de propor.",
+      },
+      {
+        q: "Como fazer o isolamento de pacientes com doença transmissível?",
+        a: "Com a sala em pressão negativa em relação ao corredor e exaustão filtrada, para que o ar contaminado não escape. Dimensionamos a exaustão e o filtro pela vazão necessária.",
+      },
+      {
+        q: "Vocês fazem só o equipamento ou ajudam no projeto?",
+        a: "Os dois. Fabricamos conforme o projeto ou ajudamos a definir a solução a partir da necessidade do hospital.",
+      },
+    ],
+    artigos: ["cascata-de-pressao-sala-limpa", "filtros-hvac-industrial", "trocas-de-ar-por-hora-sala-limpa"],
+  },
+  {
+    slug: "industria-automotiva-e-pintura",
+    setor: "Indústria automotiva e pintura",
+    title: "Cabine de pintura e exaustão industrial sob medida | HD Industrial",
+    description:
+      "Cabines de pintura com filtragem de overspray, exaustão e caixas de filtragem sob medida para indústria automotiva e metalúrgica. Projeto e fabricação HD.",
+    h1: "Cabines de pintura e sistemas de exaustão para indústria automotiva e metalúrgica",
+    intro:
+      "Na pintura industrial o ar precisa resolver três problemas: tirar o overspray e os solventes de perto do operador, não deixar partícula cair na peça pintada e não jogar contaminante para fora da fábrica. A HD projeta e fabrica cabines e sistemas de exaustão com filtragem em estágios, dimensionados para a peça e para o processo de cada cliente.",
+    desafios: [
+      "Captar o overspray na zona de pintura com velocidade de ar suficiente e uniforme.",
+      "Filtrar o ar de exaustão em estágios (overspray e, quando necessário, carvão ativado para odor e solventes).",
+      "Evitar poeira e partículas caindo na peça durante a pintura e a secagem.",
+      "Facilitar a troca dos filtros de overspray, que saturam rápido.",
+    ],
+    normas: [
+      "NR-9 (avaliação e controle das exposições ocupacionais a agentes químicos)",
+      "Exigências do órgão ambiental do estado para emissões atmosféricas (em São Paulo, a CETESB)",
+    ],
+    equipamentos: [
+      { nome: "Cabine de Pintura (PEM)", href: "/equipamentos/cabine-pintura", porque: "Captação e filtragem de overspray dimensionadas para a peça e o processo." },
+      { nome: "Ventilação e Exaustão (CFVE)", href: "/equipamentos/ventilacao-exaustao", porque: "Ventilador e filtragem integrados para exaustão industrial." },
+      { nome: "Caixas de Filtragem entre Dutos", href: "/equipamentos/caixas-filtragem", porque: "Estágios extras de filtragem na rede de exaustão." },
+      { nome: "Unidade de Tratamento de Ar (UTA)", href: "/equipamentos/uta", porque: "Insuflamento de ar filtrado para compensar a exaustão." },
+    ],
+    faq: [
+      {
+        q: "A cabine de pintura precisa de insuflamento de ar?",
+        a: "Para pintura de qualidade, sim: o ar exaurido precisa ser reposto com ar filtrado, senão a cabine puxa poeira do ambiente. O equilíbrio entre insuflamento e exaustão define a qualidade do acabamento.",
+      },
+      {
+        q: "Quando usar filtro de carvão ativado na exaustão?",
+        a: "Quando o processo gera odor ou vapores de solvente que precisam ser retidos antes de sair para o ambiente externo. A necessidade depende das tintas usadas e das exigências ambientais.",
+      },
+      {
+        q: "Vocês fabricam cabines sob medida?",
+        a: "Sim. Dimensões, vazão, estágios de filtragem e posição de acessos são definidos pela peça, pelo processo e pelo espaço da fábrica.",
+      },
+    ],
+    artigos: ["hvac-industrial", "filtros-hvac-industrial", "hvac-industrial-manutencao-preventiva"],
   },
 ];
 
