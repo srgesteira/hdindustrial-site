@@ -49,7 +49,7 @@ export function Navbar() {
           <Link href="/" className="flex min-w-0 items-center gap-2 sm:gap-3" onClick={() => setMobileOpen(false)}>
             <Image
               src="/logo-hd.webp"
-              alt="HD Soluções Industriais"
+              alt="HD Industrial"
               width={120}
               height={40}
               className="h-9 w-auto object-contain sm:h-10"
@@ -57,7 +57,7 @@ export function Navbar() {
             />
             <span className="truncate text-xs font-semibold text-slate-100 sm:text-sm">
               <span className="sm:hidden">HD</span>
-              <span className="hidden sm:inline">HD Soluções Industriais</span>
+              <span className="hidden sm:inline">HD Industrial</span>
             </span>
           </Link>
 

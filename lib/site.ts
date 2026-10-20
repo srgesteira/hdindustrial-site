@@ -5,7 +5,7 @@
 /** Endereço oficial (com www — é para onde o domínio sem www redireciona). */
 export const SITE_URL = "https://www.hdindustrial.ind.br";
 
-export const SITE_NAME = "HD Soluções Industriais";
+export const SITE_NAME = "HD Industrial";
 
 /** WhatsApp comercial (só números, com DDI). */
 export const WHATSAPP_NUMBER = "5511988795861";
@@ -13,9 +13,10 @@ export const WHATSAPP_NUMBER = "5511988795861";
 /** E-mail que recebe os pedidos do formulário do site. */
 export const LEAD_EMAIL = "contato@hdindustrial.ind.br";
 
-/** Perfis oficiais. Acrescente o LinkedIn aqui quando tiver o link. */
+/** Perfis oficiais. */
 export const SOCIAL_LINKS: { name: string; url: string }[] = [
   { name: "Instagram", url: "https://www.instagram.com/hd_solucoes_industriais/" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/company/hdindustrialbrasil/" },
 ];
 
 /** Autor dos artigos técnicos (dá credibilidade no Google — E-E-A-T). */

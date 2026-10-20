@@ -2,7 +2,7 @@
  * Título e descrição para o Google de cada família e modelo de equipamento.
  *
  * Antes TODAS as páginas de equipamento tinham o mesmo título
- * ("HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial"),
+ * ("HD Industrial | Equipamentos HVAC e Consultoria Industrial"),
  * então o Google não sabia que a página de Fluxo Laminar é sobre fluxo laminar.
  *
  * Ao criar família/modelo novo em app/equipamentos/[familia]/page.tsx,

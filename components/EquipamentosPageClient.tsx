@@ -467,8 +467,7 @@ export function EquipamentosPageClient() {
 
         <footer className="mt-4 text-xs text-slate-500">
           Para detalhes dimensionais, curvas de desempenho e especificações
-          completas, entre em contato com a equipe de engenharia da HD Soluções
-          Industriais.
+          completas, entre em contato com a equipe de engenharia da HD Industrial.
         </footer>
       </div>
     </div>

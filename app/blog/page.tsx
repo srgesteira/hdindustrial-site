@@ -3,7 +3,7 @@ import { cleanDescription, fullTitle, getPublishedPosts } from "./library";
 
 export const metadata = {
   alternates: { canonical: "/blog" },
-  title: "Blog | HD Soluções Industriais - Artigos sobre HVAC Industrial",
+  title: "Blog | HD Industrial - Artigos sobre HVAC Industrial",
   description:
     "Artigos técnicos sobre HVAC industrial, filtração, salas limpas e consultoria operacional.",
 };
@@ -19,7 +19,7 @@ export default function BlogPage() {
             Conteúdo técnico
           </p>
           <h1 className="text-[1.2rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-3xl">
-            Blog HD Soluções Industriais
+            Blog HD Industrial
           </h1>
           <p className="max-w-2xl text-sm text-slate-400">
             Artigos selecionados sobre HVAC industrial, salas limpas, filtração

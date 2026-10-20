@@ -377,7 +377,7 @@ export default function ConsultoriaPage() {
               Diferenciais
             </p>
             <h2 className="text-xl font-semibold tracking-tight text-slate-50 sm:text-[1.4rem]">
-              Por que trabalhar com a HD Projetos
+              Por que trabalhar com a HD Industrial
             </h2>
             <div className="grid gap-3 text-[13px] text-slate-200 sm:grid-cols-2">
               {[

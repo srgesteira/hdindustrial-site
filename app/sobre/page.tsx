@@ -12,7 +12,7 @@ export default function SobrePage() {
           Engenharia aplicada a resultados industriais
         </h1>
         <p className="max-w-2xl text-sm text-slate-400">
-          A HD Soluções Industriais nasceu com o propósito de conectar
+          A HD Industrial nasceu com o propósito de conectar
           engenharia HVAC, confiabilidade operacional e performance de
           ambientes críticos.
         </p>

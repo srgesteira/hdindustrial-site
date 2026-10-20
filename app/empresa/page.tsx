@@ -42,7 +42,7 @@ export default function EmpresaPage() {
           </p>
           <div className="space-y-3 text-[13px] leading-relaxed text-slate-400">
             <p>
-              A trajetória da HD Soluções Industriais começa em 2003, quando
+              A trajetória da HD Industrial começa em 2003, quando
               Helder Gesteira iniciou sua atuação no setor de ventilação,
               filtragem e tratamento de ar para aplicações industriais.
             </p>
@@ -170,7 +170,7 @@ export default function EmpresaPage() {
             Atuação
           </h2>
           <p className="text-[13px] leading-relaxed text-slate-300 sm:text-sm">
-            A HD Soluções Industriais atua no desenvolvimento de:
+            A HD Industrial atua no desenvolvimento de:
           </p>
           <ul className="grid gap-2 sm:grid-cols-2">
             {areasAtuacao.map((area) => (

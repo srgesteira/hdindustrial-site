@@ -65,7 +65,7 @@ export function HomePageClient() {
               <div className="relative h-16 w-16 sm:h-28 sm:w-28 md:h-32 md:w-32 lg:h-40 lg:w-40">
                 <Image
                   src="/logo-hd.webp"
-                  alt="HD Soluções Industriais"
+                  alt="HD Industrial"
                   fill
                   className="object-contain"
                   priority
@@ -73,7 +73,7 @@ export function HomePageClient() {
               </div>
             </div>
             <h1 className="text-balance text-[1.15rem] font-semibold leading-tight tracking-tight text-slate-50 sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.6rem]">
-              HD Soluções Industriais
+              HD Industrial
             </h1>
             <p className="mx-auto max-w-2xl text-[11px] leading-snug text-slate-200 sm:text-sm sm:text-[15px]">
               Engenharia HVAC para ambientes críticos e infraestrutura
