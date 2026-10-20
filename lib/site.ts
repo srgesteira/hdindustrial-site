@@ -15,7 +15,7 @@ export const LEAD_EMAIL = "contato@hdindustrial.ind.br";
 
 /** Perfis oficiais. */
 export const SOCIAL_LINKS: { name: string; url: string }[] = [
-  { name: "Instagram", url: "https://www.instagram.com/hd_solucoes_industriais/" },
+  { name: "Instagram", url: "https://www.instagram.com/hdindustrialbr/" },
   { name: "LinkedIn", url: "https://www.linkedin.com/company/hdindustrialbrasil/" },
 ];
 
