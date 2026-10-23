@@ -74,8 +74,35 @@ export default function ManualPaineisDaikinPage() {
             href="/manual/paineis-daikin/manual-troca-filtro.pdf"
             className="inline-flex items-center rounded-full border border-slate-600/80 bg-slate-900/60 px-5 py-2.5 text-[13px] font-semibold text-slate-100 transition hover:border-cyan-400/70 hover:text-cyan-200"
           >
-            Baixar manual em PDF
+            Baixar manual e ficha técnica em PDF
           </a>
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">Ficha técnica</h2>
+          <a
+            href="/manual/paineis-daikin/ficha-tecnica.jpg"
+            target="_blank"
+            rel="noreferrer"
+            className="block overflow-hidden rounded-2xl border border-slate-800 bg-white"
+          >
+            <Image
+              src="/manual/paineis-daikin/ficha-tecnica.jpg"
+              alt="Ficha técnica: construção em aço galvanizado 0,5 mm, espuma de vedação na porta, 4 fechos HD, filtro plissado articulado G4 conforme ABNT NBR 16101 com moldura de papelão, e medidas por modelo"
+              width={2480}
+              height={1754}
+              className="h-auto w-full"
+            />
+          </a>
+          <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-300">
+            <li>Estrutura em chapa de aço galvanizado 0,5 mm, unida por rebites de repuxo.</li>
+            <li>2 portas laterais com espuma de vedação e 4 fechos giratórios HD.</li>
+            <li>
+              Filtro plissado articulado classe G4 (ABNT NBR 16101 / EN 779), meio filtrante em poliéster e
+              moldura de papelão, 25 mm de espessura.
+            </li>
+            <li>Furação compatível com o espelho de sucção das evaporadoras Daikin FXSQ e FXMQ.</li>
+          </ul>
         </section>
 
         <section className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
