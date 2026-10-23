@@ -2,26 +2,14 @@ import Image from "next/image";
 
 export const metadata = {
   alternates: { canonical: "/manual/paineis-daikin" },
-  title: "Manual do painel de filtragem para Daikin FXSQ / FXMQ | HD Industrial",
+  title: "Manual do painel de filtragem para evaporadoras Daikin | HD Industrial",
   description:
-    "Como abrir o painel de filtragem HD para evaporadoras Daikin FXSQ e FXMQ, retirar e recolocar o filtro articulado G4. Medidas dos filtros de reposição por modelo.",
+    "Como abrir o painel de filtragem HD para evaporadoras dutadas Daikin, retirar e recolocar o filtro plano G4 articulado. Descritivo técnico do painel e do filtro.",
 };
 
 const WHATSAPP =
   "https://wa.me/5511988795861?text=Ol%C3%A1!%20Preciso%20de%20filtro%20de%20reposi%C3%A7%C3%A3o%20para%20o%20painel%20Daikin%20";
 
-const modelos = [
-  { modelo: "FXSQ 20 / 25 / 32", painel: "550 x 245 x 75", filtro: "500 x 200 x 25" },
-  { modelo: "FXSQ 40", painel: "700 x 245 x 75", filtro: "650 x 200 x 25" },
-  { modelo: "FXSQ 50 / 63 / 80", painel: "1000 x 245 x 75", filtro: "950 x 200 x 25" },
-  { modelo: "FXSQ 100 / 125", painel: "1400 x 245 x 75", filtro: "1350 x 200 x 25" },
-  { modelo: "FXSQ 140", painel: "1550 x 245 x 75", filtro: "1500 x 200 x 25" },
-  { modelo: "FXMQ 48 MFVJU", painel: "655 x 400 x 75", filtro: "600 x 340 x 25" },
-  { modelo: "FXMQ 72 / 96 MFVJU", painel: "1255 x 400 x 75", filtro: "1200 x 340 x 25" },
-  { modelo: "FXMQ 80 BFVM", painel: "675 x 300 x 75", filtro: "620 x 240 x 25" },
-  { modelo: "FXMQ 140 BFVM", painel: "975 x 300 x 75", filtro: "920 x 240 x 25" },
-  { modelo: "FXMQ 200 / 250 BFVM", painel: "1375 x 300 x 75", filtro: "1320 x 240 x 25" },
-];
 
 export default function ManualPaineisDaikinPage() {
   return (
@@ -32,11 +20,11 @@ export default function ManualPaineisDaikinPage() {
             Manual de uso · Painel de filtragem
           </p>
           <h1 className="text-xl font-semibold leading-tight tracking-tight text-slate-50 sm:text-3xl">
-            Painel de filtragem HD para evaporadoras Daikin FXSQ e FXMQ
+            Painel de filtragem HD para evaporadoras Daikin
           </h1>
           <p className="text-sm leading-relaxed text-slate-300">
             O painel de filtragem HD é instalado na tomada de ar da evaporadora Daikin e recebe um
-            filtro plissado G4 (MERV 8) articulado. A troca é feita pelas portas laterais, sem
+            filtro plano G4 articulado. A troca é feita pelas portas laterais, sem
             ferramenta e sem desmontar o painel.
           </p>
         </section>
@@ -88,7 +76,7 @@ export default function ManualPaineisDaikinPage() {
           >
             <Image
               src="/manual/paineis-daikin/ficha-tecnica.jpg"
-              alt="Ficha técnica: construção em aço galvanizado 0,5 mm, espuma de vedação na porta, 4 fechos HD, filtro plissado articulado G4 conforme ABNT NBR 16101 com moldura de papelão, e medidas por modelo"
+              alt="Ficha técnica: construção em aço galvanizado 0,5 mm, espuma de vedação na porta, 4 fechos HD, filtro plano G4 articulado com moldura de papelão e manta de poliéster, e dados de desempenho"
               width={2480}
               height={1754}
               className="h-auto w-full"
@@ -96,12 +84,12 @@ export default function ManualPaineisDaikinPage() {
           </a>
           <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-300">
             <li>Estrutura em chapa de aço galvanizado 0,5 mm, unida por rebites de repuxo.</li>
-            <li>2 portas laterais com espuma de vedação e 4 fechos giratórios HD.</li>
+            <li>2 portas laterais com espuma de vedação e 4 fechos rápidos HD que travam a porta.</li>
             <li>
-              Filtro plissado articulado classe G4 (ABNT NBR 16101 / EN 779), meio filtrante em poliéster e
-              moldura de papelão, 25 mm de espessura.
+              Filtro plano G4 articulado (ABNT NBR 16101 / EN 779), moldura de papelão e meio filtrante em
+              manta de poliéster, 25 mm de espessura.
             </li>
-            <li>Furação compatível com o espelho de sucção das evaporadoras Daikin FXSQ e FXMQ.</li>
+            <li>Furação compatível com o espelho de sucção das evaporadoras dutadas Daikin.</li>
           </ul>
         </section>
 
@@ -109,35 +97,12 @@ export default function ManualPaineisDaikinPage() {
           <h2 className="text-lg font-semibold text-slate-50">Cuidados</h2>
           <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-slate-300">
             <li>Troque o filtro conforme o plano de manutenção (PMOC) do ambiente ou quando ele estiver visivelmente sujo.</li>
-            <li>Use sempre o filtro na medida do seu modelo (tabela abaixo ou etiqueta na porta do painel).</li>
+            <li>Use sempre o filtro na medida do seu modelo (veja a etiqueta na porta do painel).</li>
             <li>Não deixe o equipamento funcionando sem filtro: a poeira vai direto para a serpentina da evaporadora.</li>
             <li>Confira se os 4 fechos HD estão travados depois da troca, para não haver passagem de ar pela porta.</li>
           </ul>
         </section>
 
-        <section className="space-y-4">
-          <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">Medidas por modelo</h2>
-          <div className="overflow-x-auto rounded-2xl border border-slate-800">
-            <table className="w-full text-left text-sm text-slate-300">
-              <thead className="bg-slate-900 text-[11px] uppercase tracking-[0.14em] text-slate-400">
-                <tr>
-                  <th className="px-4 py-3">Modelo Daikin</th>
-                  <th className="px-4 py-3">Painel (mm)</th>
-                  <th className="px-4 py-3">Filtro articulado G4 (mm)</th>
-                </tr>
-              </thead>
-              <tbody>
-                {modelos.map((m) => (
-                  <tr key={m.modelo} className="border-t border-slate-800">
-                    <td className="px-4 py-2.5 font-medium text-slate-100">{m.modelo}</td>
-                    <td className="px-4 py-2.5">{m.painel}</td>
-                    <td className="px-4 py-2.5">{m.filtro}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
 
         <section className="flex flex-col items-start gap-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-5">
           <h2 className="text-lg font-semibold text-slate-50">Filtro de reposição</h2>
