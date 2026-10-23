@@ -23,136 +23,6 @@ const modelos = [
   { modelo: "FXMQ 200 / 250 BFVM", painel: "1375 x 300 x 75", filtro: "1320 x 240 x 25" },
 ];
 
-/* Ilustrações esquemáticas (vista de cima do painel): corpo, portas laterais, fechos e filtro articulado. */
-function Corpo({ portaAberta = false }: { portaAberta?: boolean }) {
-  return (
-    <>
-      <rect x="40" y="40" width="240" height="70" rx="4" fill="#1e293b" stroke="#94a3b8" strokeWidth="2" />
-      {/* porta esquerda */}
-      <rect x="28" y="36" width="12" height="78" rx="2" fill="#475569" stroke="#cbd5e1" strokeWidth="1.5" />
-      {/* porta direita (abre) */}
-      {portaAberta ? (
-        <rect
-          x="280"
-          y="36"
-          width="12"
-          height="78"
-          rx="2"
-          fill="#475569"
-          stroke="#cbd5e1"
-          strokeWidth="1.5"
-          transform="rotate(-70 292 36)"
-        />
-      ) : (
-        <rect x="280" y="36" width="12" height="78" rx="2" fill="#475569" stroke="#cbd5e1" strokeWidth="1.5" />
-      )}
-    </>
-  );
-}
-
-function Fecho({ x, y, aberto = false }: { x: number; y: number; aberto?: boolean }) {
-  return (
-    <g transform={`translate(${x} ${y})`}>
-      <circle r="6" fill="#f97316" />
-      <rect x="-1.5" y="-5" width="3" height="10" rx="1" fill="#0f172a" transform={aberto ? "rotate(90)" : undefined} />
-    </g>
-  );
-}
-
-function Filtro({ dx = 0, dobrado = false }: { dx?: number; dobrado?: boolean }) {
-  // duas metades articuladas no centro
-  return (
-    <g transform={`translate(${dx} 0)`}>
-      <rect x="48" y="66" width="110" height="18" fill="#fde68a" stroke="#b45309" strokeWidth="1.5" />
-      {dobrado ? (
-        <rect x="158" y="66" width="110" height="18" fill="#fde68a" stroke="#b45309" strokeWidth="1.5" transform="rotate(-25 158 75)" />
-      ) : (
-        <rect x="158" y="66" width="110" height="18" fill="#fde68a" stroke="#b45309" strokeWidth="1.5" />
-      )}
-      <circle cx="158" cy="75" r="3" fill="#b45309" />
-    </g>
-  );
-}
-
-function Seta({ x1, y1, x2, y2 }: { x1: number; y1: number; x2: number; y2: number }) {
-  return (
-    <>
-      <defs>
-        <marker id="ponta" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
-          <path d="M0,0 L8,4 L0,8 z" fill="#22d3ee" />
-        </marker>
-      </defs>
-      <line x1={x1} y1={y1} x2={x2} y2={y2} stroke="#22d3ee" strokeWidth="3" markerEnd="url(#ponta)" />
-    </>
-  );
-}
-
-const passos = [
-  {
-    titulo: "1. Desligue a evaporadora",
-    texto:
-      "Antes de abrir o painel, desligue o equipamento pelo controle. Assim o ventilador não puxa poeira nem o filtro durante a troca.",
-    svg: (
-      <svg viewBox="0 0 320 150" className="h-auto w-full">
-        <Corpo />
-        <Filtro />
-        <Fecho x={290} y={48} />
-        <Fecho x={290} y={102} />
-        <Fecho x={30} y={48} />
-        <Fecho x={30} y={102} />
-        <text x="160" y="140" textAnchor="middle" fill="#94a3b8" fontSize="12">Painel fechado: 4 fechos HD, 2 em cada porta lateral</text>
-      </svg>
-    ),
-  },
-  {
-    titulo: "2. Gire os fechos HD da porta lateral",
-    texto:
-      "Cada porta lateral tem 2 fechos laranja com o símbolo HD. Gire os dois fechos do lado que tiver melhor acesso. O filtro sai por qualquer um dos lados.",
-    svg: (
-      <svg viewBox="0 0 320 150" className="h-auto w-full">
-        <Corpo />
-        <Filtro />
-        <Fecho x={290} y={48} aberto />
-        <Fecho x={290} y={102} aberto />
-        <Fecho x={30} y={48} />
-        <Fecho x={30} y={102} />
-        <path d="M300 30 a14 14 0 1 1 -8 -6" fill="none" stroke="#22d3ee" strokeWidth="2.5" />
-        <text x="160" y="140" textAnchor="middle" fill="#94a3b8" fontSize="12">Gire os fechos e libere a porta</text>
-      </svg>
-    ),
-  },
-  {
-    titulo: "3. Abra a porta e puxe o filtro",
-    texto:
-      "Abra a porta lateral e puxe o filtro para fora. O filtro é articulado: ele dobra no meio, o que facilita tirar mesmo com pouco espaço ao lado do equipamento.",
-    svg: (
-      <svg viewBox="0 0 320 150" className="h-auto w-full">
-        <Corpo portaAberta />
-        <Filtro dx={70} dobrado />
-        <Seta x1={240} y1={30} x2={305} y2={30} />
-        <text x="160" y="140" textAnchor="middle" fill="#94a3b8" fontSize="12">Filtro articulado sai pela lateral</text>
-      </svg>
-    ),
-  },
-  {
-    titulo: "4. Coloque o filtro novo e feche",
-    texto:
-      "Encaixe o filtro novo pela mesma lateral, empurrando até o fim, com as duas partes bem assentadas. Feche a porta, gire os 2 fechos HD até travar e religue a evaporadora.",
-    svg: (
-      <svg viewBox="0 0 320 150" className="h-auto w-full">
-        <Corpo />
-        <Filtro />
-        <Fecho x={290} y={48} />
-        <Fecho x={290} y={102} />
-        <Fecho x={30} y={48} />
-        <Fecho x={30} y={102} />
-        <Seta x1={305} y1={30} x2={240} y2={30} />
-        <text x="160" y="140" textAnchor="middle" fill="#94a3b8" fontSize="12">Filtro no lugar, porta fechada e fechos travados</text>
-      </svg>
-    ),
-  },
-];
-
 export default function ManualPaineisDaikinPage() {
   return (
     <div className="h-screen overflow-x-hidden overflow-y-auto bg-slate-950">
@@ -169,29 +39,43 @@ export default function ManualPaineisDaikinPage() {
             filtro plissado G4 (MERV 8) articulado. A troca é feita pelas portas laterais, sem
             ferramenta e sem desmontar o painel.
           </p>
-          <div className="overflow-hidden rounded-2xl border border-slate-800">
+        </section>
+
+        <section className="space-y-4">
+          <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">Como trocar o filtro</h2>
+          <a
+            href="/manual/paineis-daikin/manual-troca-filtro.jpg"
+            target="_blank"
+            rel="noreferrer"
+            className="block overflow-hidden rounded-2xl border border-slate-800 bg-white"
+          >
             <Image
-              src="/manual/paineis-daikin/painel-fxsq.jpg"
-              alt="Painel de filtragem HD para Daikin FXSQ com filtro articulado e fechos laterais"
-              width={976}
-              height={646}
+              src="/manual/paineis-daikin/manual-troca-filtro.jpg"
+              alt="Manual ilustrado: conheça o painel, vista explodida, desligar, girar os fechos HD, abrir a porta lateral, puxar o filtro articulado e montagem concluída"
+              width={2480}
+              height={1754}
               className="h-auto w-full"
               priority
             />
-          </div>
-        </section>
-
-        <section className="space-y-6">
-          <h2 className="text-lg font-semibold text-slate-50 sm:text-xl">Como trocar o filtro</h2>
-          <ol className="grid gap-5 sm:grid-cols-2">
-            {passos.map((p) => (
-              <li key={p.titulo} className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-4">
-                <div className="rounded-xl bg-slate-950/70 p-2">{p.svg}</div>
-                <h3 className="text-sm font-semibold text-amber-400">{p.titulo}</h3>
-                <p className="text-sm leading-relaxed text-slate-300">{p.texto}</p>
-              </li>
-            ))}
+          </a>
+          <p className="text-xs text-slate-400">Toque na imagem para ampliar.</p>
+          <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed text-slate-300">
+            <li>Desligue a evaporadora pelo controle.</li>
+            <li>Gire os 2 fechos HD da porta lateral do lado com melhor acesso.</li>
+            <li>Abra e retire a porta lateral.</li>
+            <li>
+              Puxe o filtro. Ele é <strong className="text-slate-100">articulado</strong>: dobra no meio para
+              facilitar a remoção, mesmo com pouco espaço ao lado do equipamento. Sai por qualquer uma das
+              duas laterais.
+            </li>
+            <li>Coloque o filtro novo, recoloque a porta, gire os fechos até travar e religue a evaporadora.</li>
           </ol>
+          <a
+            href="/manual/paineis-daikin/manual-troca-filtro.pdf"
+            className="inline-flex items-center rounded-full border border-slate-600/80 bg-slate-900/60 px-5 py-2.5 text-[13px] font-semibold text-slate-100 transition hover:border-cyan-400/70 hover:text-cyan-200"
+          >
+            Baixar manual em PDF
+          </a>
         </section>
 
         <section className="space-y-3 rounded-2xl border border-slate-800 bg-slate-900/70 p-5">
