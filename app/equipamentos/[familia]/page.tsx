@@ -471,6 +471,14 @@ export default function EquipamentosFamiliaPage() {
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
+          {familia.slug === "fxsq" && (
+            <a
+              href="/manual/paineis-daikin"
+              className="inline-flex items-center rounded-full border border-cyan-500/50 bg-slate-900/60 px-5 py-2.5 text-[13px] font-semibold text-cyan-200 transition hover:border-cyan-300 hover:text-cyan-100"
+            >
+              Manual de uso e descritivo técnico
+            </a>
+          )}
         </header>
 
         {familia.destaques && familia.destaques.length > 0 && (

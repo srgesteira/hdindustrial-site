@@ -31,7 +31,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/ferramentas/perda-de-carga-filtro-hepa", priority: 0.8 },
     { path: "/especificacoes", priority: 0.8 },
     { path: "/materiais/checklist-qualificacao-sala-limpa", priority: 0.8 },
-    { path: "/manual/paineis-daikin", priority: 0.6 },
+    { path: "/manual/paineis-daikin", priority: 0.5 },
   ].map(({ path, priority }) => ({
     url: `${SITE_URL}${path}`,
     lastModified: path === "/blog" ? latestPost : undefined,
