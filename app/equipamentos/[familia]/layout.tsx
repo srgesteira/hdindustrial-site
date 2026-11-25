@@ -20,7 +20,7 @@ export async function generateMetadata({
   const f = getFamiliaSeo(familia);
   const url = `/equipamentos/${familia}`;
   if (!f) {
-    return { title: "Equipamentos HVAC | HD Soluções Industriais", alternates: { canonical: url } };
+    return { title: "Equipamentos HVAC | HD Industrial", alternates: { canonical: url } };
   }
   return {
     title: f.title,

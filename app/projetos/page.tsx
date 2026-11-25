@@ -49,7 +49,7 @@ export default function ProjetosPage() {
             Atuação em ambientes críticos
           </h2>
           <p className="max-w-3xl text-sm text-slate-400">
-            Os projetos da HD Soluções Industriais são orientados à
+            Os projetos da HD Industrial são orientados à
             disponibilidade, conformidade normativa e eficiência energética.
             Atuamos em plantas industriais onde a climatização e a qualidade do
             ar são determinantes para o processo.

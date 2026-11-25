@@ -8,7 +8,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import { fullTitle, getPublishedPost, getPublishedPosts } from "../library";
 
-export const alt = "HD Soluções Industriais — artigo técnico";
+export const alt = "HD Industrial — artigo técnico";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

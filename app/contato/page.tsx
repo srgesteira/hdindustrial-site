@@ -2,7 +2,7 @@ import { LeadCapture } from "@/components/LeadCapture";
 
 export const metadata = {
   alternates: { canonical: "/contato" },
-  title: "Contato | HD Soluções Industriais",
+  title: "Contato | HD Industrial",
   description:
     "Fale com nossa engenharia para orçamentos de equipamentos HVAC, projetos de salas limpas e consultoria industrial.",
 };
@@ -18,8 +18,7 @@ export default function ContatoPage() {
           Contato
         </h1>
         <p className="max-w-2xl text-sm text-slate-400">
-          Utilize os canais abaixo para falar com a equipe da HD Soluções
-          Industriais e avançar com seu projeto de HVAC ou infraestrutura
+          Utilize os canais abaixo para falar com a equipe da HD Industrial e avançar com seu projeto de HVAC ou infraestrutura
           industrial.
         </p>
       </header>

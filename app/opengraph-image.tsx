@@ -6,7 +6,7 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const alt = "HD Soluções Industriais — Engenharia HVAC para ambientes críticos";
+export const alt = "HD Industrial — Engenharia HVAC para ambientes críticos";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

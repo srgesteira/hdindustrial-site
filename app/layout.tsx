@@ -19,22 +19,22 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title:
-    "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
+    "HD Industrial | Equipamentos HVAC e Consultoria Industrial",
   description:
     "Equipamentos HVAC industriais, filtração HEPA, salas limpas e consultoria técnica especializada para ambientes críticos, indústrias e processos controlados.",
   openGraph: {
     title:
-      "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
+      "HD Industrial | Equipamentos HVAC e Consultoria Industrial",
     description:
       "Equipamentos HVAC industriais, filtração HEPA, salas limpas e consultoria técnica especializada para ambientes críticos, indústrias e processos controlados.",
-    siteName: "HD Soluções Industriais",
+    siteName: "HD Industrial",
     locale: "pt_BR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title:
-      "HD Soluções Industriais | Equipamentos HVAC e Consultoria Industrial",
+      "HD Industrial | Equipamentos HVAC e Consultoria Industrial",
     description:
       "Equipamentos HVAC industriais, filtração HEPA, salas limpas e consultoria técnica especializada para ambientes críticos, indústrias e processos controlados.",
   },
@@ -47,7 +47,8 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    name: "HD Soluções Industriais",
+    name: "HD Industrial",
+    alternateName: ["HD Soluções Industriais", "HD Projetos e Soluções em HVAC"],
     description:
       "Engenharia HVAC para ambientes críticos e infraestrutura industrial. Equipamentos HVAC, projetos de salas limpas, filtração industrial e consultoria operacional.",
     url: SITE_URL,
@@ -67,7 +68,8 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "HD Soluções Industriais",
+    name: "HD Industrial",
+    alternateName: ["HD Soluções Industriais", "HD Projetos e Soluções em HVAC"],
     url: SITE_URL,
     logo: `${SITE_URL}/logo-hd.png`,
     sameAs: SOCIAL_LINKS.map((s) => s.url),
@@ -91,7 +93,7 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "HD Soluções Industriais",
+    name: "HD Industrial",
     url: SITE_URL,
   },
 ];

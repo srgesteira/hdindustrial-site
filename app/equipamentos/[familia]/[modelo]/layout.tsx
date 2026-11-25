@@ -19,7 +19,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   const { f, m } = find(familia, modelo);
   const url = `/equipamentos/${familia}/${modelo}`;
   if (!f || !m) {
-    return { title: "Equipamentos HVAC | HD Soluções Industriais", alternates: { canonical: url } };
+    return { title: "Equipamentos HVAC | HD Industrial", alternates: { canonical: url } };
   }
   const title = `${m.nome} | ${f.nome} — HD Industrial`;
   const full = `${m.nome} (${m.codigo}). ${f.description}`;

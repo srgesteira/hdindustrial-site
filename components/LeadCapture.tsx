@@ -199,7 +199,7 @@ export function LeadCapture({
         )}
 
         <p className="text-[11px] text-slate-500">
-          Seus dados são usados apenas para contato técnico-comercial da HD Soluções Industriais.
+          Seus dados são usados apenas para contato técnico-comercial da HD Industrial.
         </p>
       </div>
     </section>
