@@ -355,6 +355,16 @@ const familias: Familia[] = [
       },
     ],
   },
+  {
+    nome: "Caixa Gaveta porta-filtro (CFG)",
+    slug: "caixa-gaveta",
+    descricao:
+      "Caixa porta-filtro para duto circular ou retangular, com troca do filtro pela lateral (gaveta). Filtros G4, M5 ou HEPA H14, em aço galvanizado, pintado ou inox, sob medida.",
+    modelos: [
+      { codigo: "CFG-C", nome: "CFG colarinho circular", descricao: "", caracteristicas: [], aplicacoes: [], beneficios: [] },
+      { codigo: "CFG-R", nome: "CFG colarinho retangular", descricao: "", caracteristicas: [], aplicacoes: [], beneficios: [] },
+    ],
+  },
 ];
 
 const familiaImagens: Record<string, string> = {
@@ -368,6 +378,7 @@ const familiaImagens: Record<string, string> = {
   "ventilacao-exaustao": "/equipamentos/ventilacao-exaustao/familia.webp",
   bibo: "/equipamentos/bibo/familia.webp",
   "cabine-pintura": "/equipamentos/cabine-pintura/familia.webp",
+  "caixa-gaveta": "/equipamentos/caixa-gaveta/familia.webp",
 };
 
 export function EquipamentosPageClient() {

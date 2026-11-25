@@ -27,6 +27,14 @@ const filtros = [
     imagem: "/filtros/filtro-g4-plano-v2.webp",
     href: "/filtros/filtro-g4-plano",
   },
+  {
+    codigo: "CFG",
+    nome: "Caixa Gaveta porta-filtro (CFG)",
+    descricao:
+      "A caixa para o seu filtro: instala G4, M5 ou H14 no duto, com troca pela lateral. Sob medida.",
+    imagem: "/equipamentos/caixa-gaveta/cfg-circular.webp",
+    href: "/equipamentos/caixa-gaveta",
+  },
 ];
 
 export default function FiltrosPage() {
@@ -65,7 +73,7 @@ export default function FiltrosPage() {
                   <Image src={f.imagem} alt={f.nome} fill sizes="(max-width: 768px) 100vw, 384px" loading="lazy" className="object-contain" />
                 </div>
                 <div className="flex-1 space-y-1.5">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">Classe {f.codigo}</p>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300/80">{f.codigo === "CFG" ? "Caixa porta-filtro" : `Classe ${f.codigo}`}</p>
                   <h2 className="text-sm font-semibold text-slate-50 sm:text-[15px]">{f.nome}</h2>
                   <p className="text-[13.5px] leading-relaxed text-slate-200 sm:text-sm">{f.descricao}</p>
                 </div>

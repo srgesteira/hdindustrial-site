@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/equipamentos", priority: 0.9 },
     { path: "/filtros", priority: 0.9 },
     { path: "/filtros/filtro-g4-plano", priority: 0.9 },
+    { path: "/equipamentos/caixa-gaveta", priority: 0.9 },
     { path: "/projetos", priority: 0.7 },
     { path: "/consultoria", priority: 0.8 },
     { path: "/empresa", priority: 0.6 },
