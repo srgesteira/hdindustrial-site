@@ -39,7 +39,7 @@ export default function FiltrosPage() {
     ],
   };
   return (
-    <div className="h-screen overflow-x-hidden overflow-y-auto">
+    <div className="fixed inset-0 overflow-x-hidden overflow-y-auto overscroll-contain px-4 sm:px-8 lg:px-20 xl:px-32" style={{ WebkitOverflowScrolling: "touch", touchAction: "pan-y" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto flex max-w-6xl flex-col gap-6 py-6 pt-20 sm:gap-8 sm:py-10 sm:pt-24">
         <header className="space-y-2 sm:space-y-3">
