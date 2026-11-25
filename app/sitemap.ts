@@ -18,6 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { path: "/", priority: 1 },
     { path: "/equipamentos", priority: 0.9 },
+    { path: "/equipamentos/filtros", priority: 0.8 },
+    { path: "/equipamentos/filtros/filtro-g4-plano", priority: 0.9 },
     { path: "/projetos", priority: 0.7 },
     { path: "/consultoria", priority: 0.8 },
     { path: "/empresa", priority: 0.6 },

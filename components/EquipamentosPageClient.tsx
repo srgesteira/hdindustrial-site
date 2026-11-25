@@ -355,6 +355,22 @@ const familias: Familia[] = [
       },
     ],
   },
+  {
+    nome: "Filtros de Ar (G4)",
+    slug: "filtros",
+    descricao:
+      "Filtro grosso G4 plano (ISO Coarse) com manta de poliéster e moldura de papelão craft, em 25 ou 50 mm e qualquer medida. Reposição para UTAs, fancoils, splits e caixas de filtragem.",
+    modelos: [
+      {
+        codigo: "G4",
+        nome: "Filtro G4 Plano",
+        descricao: "Pré-filtro descartável sob medida, 25 ou 50 mm.",
+        caracteristicas: [],
+        aplicacoes: [],
+        beneficios: [],
+      },
+    ],
+  },
 ];
 
 const familiaImagens: Record<string, string> = {
@@ -368,6 +384,7 @@ const familiaImagens: Record<string, string> = {
   "ventilacao-exaustao": "/equipamentos/ventilacao-exaustao/familia.webp",
   bibo: "/equipamentos/bibo/familia.webp",
   "cabine-pintura": "/equipamentos/cabine-pintura/familia.webp",
+  filtros: "/equipamentos/filtros/familia.webp",
 };
 
 export function EquipamentosPageClient() {
