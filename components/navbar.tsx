@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 const links = [
   { href: "/", label: "Home" },
   { href: "/equipamentos", label: "Equipamentos" },
+  { href: "/filtros", label: "Filtros" },
   { href: "/aplicacoes", label: "Aplicações" },
   { href: "/projetos", label: "Projetos" },
   { href: "/consultoria", label: "Consultoria" },
@@ -95,6 +96,7 @@ export function Navbar() {
                       : pathname.startsWith(item.href);
                   const isPrimary =
                     item.href === "/equipamentos" ||
+                    item.href === "/filtros" ||
                     item.href === "/aplicacoes" ||
                     item.href === "/projetos" ||
                     item.href === "/consultoria" ||
