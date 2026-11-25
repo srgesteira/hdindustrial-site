@@ -23,7 +23,7 @@ const filtros = [
     codigo: "G4",
     nome: "Filtro G4 Plano (Filtro Grosso)",
     descricao:
-      "Pré-filtro com manta de poliéster e moldura de papelão craft, 25 ou 50 mm, em qualquer medida.",
+      "Pré-filtro 100% sem metal — manta de poliéster, papel craft e cola — 25 ou 50 mm, em qualquer medida.",
     imagem: "/filtros/filtro-g4-plano-v2.webp",
     href: "/filtros/filtro-g4-plano",
   },

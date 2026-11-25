@@ -14,7 +14,7 @@ const IMG = "/filtros/filtro-g4-plano-v2.webp";
 
 const TITLE = "Filtro G4 Plano (Filtro Grosso) — 25 e 50 mm sob medida | HD";
 const DESCRIPTION =
-  "Filtro de ar G4 plano (pré-filtro grosso) com manta de poliéster e moldura de papelão craft, espessuras de 25 e 50 mm, em qualquer medida. Classe G4 pela EN 779 / grupo ISO Coarse pela ISO 16890. Orçamento sob consulta.";
+  "Filtro de ar G4 plano (pré-filtro grosso) 100% sem metal: manta de poliéster, moldura de papel craft e cola, espessuras de 25 e 50 mm, em qualquer medida. Classe G4 pela EN 779 / grupo ISO Coarse pela ISO 16890. Orçamento sob consulta.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,7 +46,8 @@ const destaques = [
   { label: "Classe", value: "G4 (EN 779)" },
   { label: "ISO 16890", value: "grupo ISO Coarse" },
   { label: "Manta", value: "100% poliéster" },
-  { label: "Moldura", value: "papelão craft com grade" },
+  { label: "Moldura", value: "papel craft com grade" },
+  { label: "Metal", value: "nenhum — sem grampos" },
   { label: "Espessura", value: "25 mm ou 50 mm" },
   { label: "Medidas", value: "sob medida" },
 ];
@@ -86,8 +87,12 @@ const faq = [
     a: "Quando a perda de carga chega à perda de carga final — 250 Pa de referência para este filtro — ou quando a manta estiver visivelmente saturada. Com um manômetro diferencial na caixa de filtragem dá para acompanhar a saturação. Em muitos sistemas a troca ocorre entre 1 e 3 meses, dependendo da poeira do local.",
   },
   {
+    q: "O filtro tem alguma parte metálica?",
+    a: "Não. O Filtro G4 Plano HD é feito só de papel craft, manta de poliéster e cola — não tem grampos, reforço metálico nem cantoneira de flandres. Não enferruja, não corre o risco de soltar grampo dentro do duto e facilita o descarte, porque não há metal para separar.",
+  },
+  {
     q: "O filtro é lavável?",
-    a: "Não. É um filtro descartável: moldura de papelão e manta de poliéster. A troca é rápida e evita que a sujeira volte para o sistema.",
+    a: "Não. É um filtro descartável: moldura de papel craft e manta de poliéster. A troca é rápida e evita que a sujeira volte para o sistema.",
   },
   {
     q: "Qual o preço?",
@@ -111,7 +116,7 @@ export default function FiltroG4Page() {
       category: "Filtros de ar para HVAC",
       brand: { "@type": "Brand", name: "HD Industrial" },
       manufacturer: { "@type": "Organization", name: "HD Industrial", url: SITE_URL },
-      material: "Manta de poliéster; moldura de papelão craft",
+      material: "Manta de poliéster; moldura de papel craft; cola — sem partes metálicas",
       additionalProperty: [
         { "@type": "PropertyValue", name: "Classe EN 779", value: "G4" },
         { "@type": "PropertyValue", name: "Grupo ISO 16890", value: "ISO Coarse" },
@@ -156,7 +161,7 @@ export default function FiltroG4Page() {
               Filtro G4 Plano — Filtro Grosso para Ar Condicionado e Ventilação
             </h1>
             <p className="max-w-3xl text-xs leading-relaxed text-slate-300 sm:text-[13px] md:text-sm">
-              Pré-filtro descartável com manta de poliéster e moldura de papelão craft, em qualquer
+              Pré-filtro descartável 100% sem metal — só manta de poliéster, papel craft e cola — em qualquer
               medida, nas espessuras de 25 mm e 50 mm.
             </p>
           </div>
@@ -167,7 +172,7 @@ export default function FiltroG4Page() {
             <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-slate-100 sm:w-1/2 sm:rounded-2xl">
               <Image
                 src={IMG}
-                alt="Filtro G4 plano com moldura de papelão craft e manta de poliéster"
+                alt="Filtro G4 plano sem metal, com moldura de papel craft e manta de poliéster"
                 fill
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -186,8 +191,11 @@ export default function FiltroG4Page() {
                   ventilador e aos filtros finos e HEPA — que custam muito mais caro para trocar.
                 </p>
                 <p>
-                  A manta de poliéster fica presa numa moldura de papelão craft com grade de reforço,
+                  A manta de poliéster fica presa numa moldura de papel craft com grade de reforço,
                   que mantém o filtro rígido e a manta bem distribuída em toda a área de passagem do ar.
+                  O filtro não tem nenhuma parte metálica: é só papel craft, manta e cola — sem grampos,
+                  sem reforço metálico e sem cantoneira de flandres. Não enferruja, não solta grampo
+                  dentro do duto ou da caixa e facilita o descarte — não há metal para separar.
                 </p>
                 <p>
                   Fabricamos na medida que você precisa, em 25 mm ou 50 mm de espessura, para
@@ -270,7 +278,8 @@ export default function FiltroG4Page() {
             <ul className="space-y-2 text-slate-300">
               {[
                 "Manta filtrante 100% poliéster, branca",
-                "Moldura de papelão craft com grade de reforço em X",
+                "Moldura de papel craft com grade de reforço em X",
+                "Sem nenhuma parte metálica: sem grampos, reforço metálico ou flandres",
                 "Espessuras padrão: 25 mm e 50 mm",
                 "Largura e altura sob medida",
                 "Descartável — troca rápida, sem lavagem",
