@@ -60,6 +60,14 @@ const aplicacoes = [
   "Hospitais, farmácias, laboratórios, indústria e comércio",
 ];
 
+const tabela = [
+  { nominal: '12" x 12"', real: "295 x 295", vazao: "800" },
+  { nominal: '12" x 24"', real: "295 x 595", vazao: "1.600" },
+  { nominal: '20" x 20"', real: "495 x 495", vazao: "2.200" },
+  { nominal: '20" x 24"', real: "495 x 595", vazao: "2.650" },
+  { nominal: '24" x 24"', real: "595 x 595", vazao: "3.200" },
+];
+
 const faq = [
   {
     q: "O que é um filtro G4?",
@@ -75,7 +83,7 @@ const faq = [
   },
   {
     q: "Quando devo trocar o filtro G4?",
-    a: "Quando a perda de carga chega ao limite final do projeto — para filtros grossos, a referência usual (EN 13053) é de 150 Pa — ou quando a manta estiver visivelmente saturada. Em muitos sistemas isso ocorre entre 1 e 3 meses, dependendo da poeira do local.",
+    a: "Quando a perda de carga chega à perda de carga final — 250 Pa de referência para este filtro — ou quando a manta estiver visivelmente saturada. Com um manômetro diferencial na caixa de filtragem dá para acompanhar a saturação. Em muitos sistemas a troca ocorre entre 1 e 3 meses, dependendo da poeira do local.",
   },
   {
     q: "O filtro é lavável?",
@@ -220,6 +228,39 @@ export default function FiltroG4Page() {
           <p>
             Na prática, projetos, cadernos de manutenção e o mercado continuam pedindo &quot;filtro G4&quot;
             — é o mesmo filtro. Por isso informamos as duas classificações.
+          </p>
+        </section>
+
+        <section className="space-y-3 rounded-3xl border border-slate-800/80 bg-slate-950/80 p-5 text-[13px] text-slate-200 sm:p-6">
+          <h2 className="text-sm font-semibold text-slate-50 sm:text-base">Medidas padrão, vazão e perda de carga</h2>
+          <div className="overflow-x-auto">
+            <table className="w-full min-w-[520px] border-collapse text-left text-[13px]">
+              <thead>
+                <tr className="border-b border-slate-700 text-[11px] uppercase tracking-[0.12em] text-slate-400">
+                  <th className="py-2 pr-3 font-semibold">Medida nominal</th>
+                  <th className="py-2 pr-3 font-semibold">Medida real L x A (mm)</th>
+                  <th className="py-2 pr-3 font-semibold">Vazão (m³/h)</th>
+                  <th className="py-2 pr-3 font-semibold">Perda de carga inicial (Pa)</th>
+                  <th className="py-2 font-semibold">Perda de carga final (Pa)</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tabela.map((t) => (
+                  <tr key={t.real} className="border-b border-slate-800/80">
+                    <td className="py-2 pr-3 text-slate-100">{t.nominal}</td>
+                    <td className="py-2 pr-3">{t.real}</td>
+                    <td className="py-2 pr-3">{t.vazao}</td>
+                    <td className="py-2 pr-3">70</td>
+                    <td className="py-2">250</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[12px] text-slate-400">
+            Vazão calculada para velocidade de face de 2,5 m/s. Espessuras de 25 mm e 50 mm.
+            Valores de referência para filtros planos em manta de poliéster. Fazemos também
+            qualquer outra medida sob encomenda.
           </p>
         </section>
 
