@@ -80,7 +80,7 @@ const faq = [
   },
   {
     q: "Vocês fazem em qualquer medida?",
-    a: "Sim. A linha padrão tem colarinho circular de Ø100, 125, 150, 200, 250, 315, 355 e 400 mm, e fabricamos qualquer outra medida — circular ou retangular — sob encomenda. Um modelo usual é a 270 x 270 x 550 mm com colarinho Ø150 mm, que leva dois filtros planos de 250 x 250 x 48 mm.",
+    a: "Sim. A linha padrão tem colarinho circular de Ø100, 125, 150, 200, 250, 315, 355 e 400 mm, e fabricamos qualquer outra medida — circular ou retangular — sob encomenda. O modelo usual é compacto — frente de 282 x 262 mm, corpo de 183 mm (324 mm com os colarinhos), para duto Ø125 mm — e leva dois filtros planos de 250 x 250 x 48 mm.",
   },
   {
     q: "Qual o material?",
@@ -181,8 +181,9 @@ export default function CaixaGavetaPage() {
                 </p>
                 <p>
                   A entrada e a saída podem ser com colarinho circular, na linha padrão de Ø100 a
-                  Ø400 mm, ou retangular. Também fabricamos na medida do projeto; um modelo usual é a
-                  270 x 270 x 550 mm com colarinho Ø150 mm e dois filtros planos de 250 x 250 x 48 mm.
+                  Ø400 mm, ou retangular. Também fabricamos na medida do projeto. O modelo usual é compacto: frente de 282 x 262 mm,
+                  corpo de 183 mm (324 mm com os colarinhos), colarinho para duto Ø125 mm e dois filtros
+                  planos de 250 x 250 x 48 mm.
                 </p>
               </div>
 
