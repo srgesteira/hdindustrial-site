@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { CaixasTerminaisExtra } from "@/components/CaixasTerminaisExtra";
 
 type Modelo = {
   codigo: string;
@@ -551,6 +552,8 @@ export default function EquipamentosFamiliaPage() {
             );
           })}
         </section>
+
+        {familia.slug === "caixas-terminais" && <CaixasTerminaisExtra />}
 
         {familia.cta && (
           <section className="flex flex-col items-start justify-between gap-4 rounded-3xl border border-slate-800/80 bg-slate-950/90 p-5 text-[13px] text-slate-200 sm:flex-row sm:items-center sm:p-6">

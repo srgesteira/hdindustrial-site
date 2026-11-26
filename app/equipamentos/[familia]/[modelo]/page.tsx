@@ -4,6 +4,7 @@ import { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
+import { CaixasTerminaisExtra } from "@/components/CaixasTerminaisExtra";
 
 type Modelo = {
   codigo: string;
@@ -380,7 +381,7 @@ const conteudoModelosCaixasTerminais = {
     subtitulo:
       "Unidade de insuflação com conexão superior para duto circular, projetada para distribuição final do ar filtrado em ambientes controlados.",
     resumo: [
-      "A CTSC - Caixa Terminal Entrada Superior Circular é uma unidade terminal de insuflação desenvolvida para aplicações que exigem distribuição final do ar com elevado nível de controle, estanqueidade e confiabilidade operacional. Sua configuração com entrada superior para duto redondo permite integração eficiente ao sistema HVAC, especialmente em instalações com alimentação vertical pelo entreforro.",
+      "A CTSC é a caixa terminal HEPA com entrada superior para duto circular: o duto (rígido ou flexível) desce do entreforro direto sobre a caixa. É a configuração mais compacta em planta e a mais usada em salas limpas de farmácias de manipulação, hospitais e laboratórios, quando há altura disponível acima do forro.",
       "Projetada para uso em salas limpas, laboratórios, hospitais e ambientes industriais críticos, a CTSC combina construção robusta, facilidade de instalação e recursos que favorecem monitoramento, validação e manutenção do sistema de filtragem.",
     ],
     highlights: [
@@ -397,7 +398,7 @@ const conteudoModelosCaixasTerminais = {
     subtitulo:
       "Unidade de insuflação com conexão lateral para duto retangular, projetada para distribuição final do ar filtrado em ambientes controlados.",
     resumo: [
-      "A CTLR - Caixa Terminal Entrada Lateral Retangular é uma unidade terminal de insuflação desenvolvida para aplicações que exigem distribuição final do ar com elevado nível de controle, estanqueidade e confiabilidade operacional. Sua configuração com entrada lateral para duto retangular permite integração eficiente ao sistema HVAC, especialmente em instalações com limitação de altura no entreforro.",
+      "A CTLR é a caixa terminal HEPA com entrada lateral para duto retangular. Como o ar entra pelo lado, a altura total do conjunto fica menor — é a escolha para entreforros baixos e para redes de dutos retangulares que correm paralelas ao forro, comuns em indústrias farmacêuticas e áreas de produção.",
       "Projetada para uso em salas limpas, laboratórios, hospitais e ambientes industriais críticos, a CTLR combina construção robusta, facilidade de instalação e recursos que favorecem monitoramento, validação e manutenção do sistema de filtragem.",
     ],
     highlights: [
@@ -414,7 +415,7 @@ const conteudoModelosCaixasTerminais = {
     subtitulo:
       "Unidade de insuflação com conexão lateral para duto circular, projetada para distribuição final do ar filtrado em ambientes controlados.",
     resumo: [
-      "A CTLC - Caixa Terminal Entrada Lateral Circular é uma unidade terminal de insuflação desenvolvida para aplicações que exigem distribuição final do ar com elevado nível de controle, estanqueidade e confiabilidade operacional. Sua configuração com entrada lateral para duto circular permite integração eficiente ao sistema HVAC em sistemas que utilizam distribuição por dutos redondos.",
+      "A CTLC é a caixa terminal HEPA com entrada lateral para duto circular. Une a altura reduzida da entrada lateral com a praticidade do duto redondo ou flexível — ideal em reformas e retrofits de salas limpas, onde o entreforro é baixo e a rede chega em dutos circulares.",
       "Projetada para uso em salas limpas, laboratórios, hospitais e ambientes industriais críticos, a CTLC combina construção robusta, facilidade de instalação e recursos que favorecem monitoramento, validação e manutenção do sistema de filtragem.",
     ],
     highlights: [
@@ -1194,6 +1195,8 @@ export default function EquipamentoModeloPage() {
             </div>
           </div>
         </section>
+
+        {familia.slug === "caixas-terminais" && <CaixasTerminaisExtra />}
 
         {conteudoModelo ? (
           <>
