@@ -98,9 +98,9 @@ export const FAMILIAS_SEO: FamiliaSeo[] = [
   {
     slug: "bibo",
     nome: "Bag In Bag Out (BIBO)",
-    title: "Bag In Bag Out (BIBO) — troca segura de filtros | HD",
+    title: "Bag In Bag Out (BIBO) — caixa para troca segura de filtro HEPA | Fabricante HD",
     description:
-      "Sistemas Bag In Bag Out (BIBO) para troca segura de filtros contaminados, sem exposição do operador. Para laboratórios, áreas de contenção e indústria farmacêutica.",
+      "Caixa Bag In Bag Out (BIBO) sob medida para troca segura de filtros contaminados por bolsa selada: pré-filtro, fino e HEPA, com ou sem ventilador. Para laboratórios, contenção e farmacêutica.",
     modelos: [
       { slug: "bibo-c", codigo: "BIBO-C", nome: "BIBO-C — Caixa de Filtragem" },
       { slug: "bibo-v", codigo: "BIBO-V", nome: "BIBO-V — Caixa de Ventilação e Filtragem" },

@@ -7,9 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { SITE_URL, absoluteUrl } from "@/lib/site";
 
-const TITLE = "Filtros de Ar para HVAC — Filtro G4 e pré-filtros | HD Industrial";
+const TITLE = "Filtros de Ar para HVAC, UTA e Dutos — Filtro G4 | HD Industrial";
 const DESCRIPTION =
-  "Filtros de ar para ar condicionado, ventilação e salas limpas: filtro grosso G4 plano (ISO Coarse) em 25 e 50 mm, sob medida. Fabricante em São Paulo.";
+  "Filtros de ar para UTA, caixas de filtragem, ar condicionado e salas limpas: filtro G4 plano (ISO Coarse) em 25 e 50 mm, sob medida, e caixa gaveta porta-filtro. Fabricante em São Paulo.";
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -62,6 +62,13 @@ export default function FiltrosPage() {
           <p className="max-w-3xl text-[13px] text-slate-300 sm:text-sm">
             Filtros de reposição para sistemas de ar condicionado, ventilação e salas limpas,
             fabricados sob medida pela HD Industrial.
+          </p>
+          <p className="max-w-3xl text-[13px] text-slate-300 sm:text-sm">
+            Servem como pré-filtro de{" "}
+            <Link href="/equipamentos/uta" className="text-cyan-300 underline hover:text-cyan-200">UTA (unidade de tratamento de ar)</Link>,{" "}
+            <Link href="/equipamentos/caixas-filtragem" className="text-cyan-300 underline hover:text-cyan-200">caixas de filtragem para duto</Link>{" "}
+            e da{" "}
+            <Link href="/equipamentos/caixa-gaveta" className="text-cyan-300 underline hover:text-cyan-200">caixa gaveta porta-filtro</Link>.
           </p>
         </header>
 
